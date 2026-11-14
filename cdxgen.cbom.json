@@ -1,0 +1,2288 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:eab16a48-b458-47bb-9395-dc78f70fa11b",
+  "version": 2,
+  "metadata": {
+    "timestamp": "2026-11-13T23:55:03Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "dosai-linux-amd64"
+        },
+        {
+          "type": "application",
+          "name": "go"
+        },
+        {
+          "group": "@cdxgen",
+          "name": "cdxgen",
+          "version": "13.7.0",
+          "purl": "pkg:npm/%40cdxgen/cdxgen@13.7.0",
+          "type": "application",
+          "bom-ref": "pkg:npm/@cdxgen/cdxgen@13.7.0",
+          "publisher": "OWASP Foundation",
+          "authors": [
+            {
+              "name": "OWASP Foundation"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {
+        "name": "OWASP Foundation"
+      }
+    ],
+    "lifecycles": [
+      {
+        "phase": "pre-build"
+      }
+    ],
+    "component": {
+      "group": "example.cbom",
+      "name": "crypto-showcase",
+      "version": "1.0.0",
+      "type": "application",
+      "purl": "pkg:maven/example.cbom/crypto-showcase@1.0.0?type=jar",
+      "bom-ref": "pkg:maven/example.cbom/crypto-showcase@1.0.0?type=jar",
+      "properties": [
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/Java/pom.xml"
+        }
+      ],
+      "components": [
+        {
+          "group": "",
+          "name": "baseline",
+          "version": "latest",
+          "purl": "pkg:pypi/baseline@latest",
+          "type": "application",
+          "bom-ref": "pkg:pypi/baseline@latest"
+        },
+        {
+          "group": "",
+          "name": "example.com/cbom-corpus",
+          "purl": "pkg:golang/example.com/cbom-corpus",
+          "type": "application",
+          "bom-ref": "pkg:golang/example.com/cbom-corpus"
+        },
+        {
+          "group": "",
+          "name": "CryptoShowcase",
+          "version": "1.0.0",
+          "purl": "pkg:nuget/CryptoShowcase@1.0.0",
+          "type": "application",
+          "bom-ref": "pkg:nuget/CryptoShowcase@1.0.0",
+          "properties": [
+            {
+              "name": "cdx:dotnet:output_type",
+              "value": "Exe"
+            },
+            {
+              "name": "cdx:dotnet:target_framework",
+              "value": "net10.0"
+            },
+            {
+              "name": "internal:Namespaces",
+              "value": "CbomCorpus"
+            }
+          ]
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "cdx:bom:componentNamespaces",
+        "value": "github.com/cloudflare\\ngolang.org/x\\norg.bouncycastle"
+      },
+      {
+        "name": "cdx:bom:componentSrcFiles",
+        "value": "/home/claude/work/scan-whole/baseline/CSharp/CryptoShowcase.csproj\\n/home/claude/work/scan-whole/baseline/CSharp/Program.cs\\n/home/claude/work/scan-whole/baseline/CSharp/obj/project.assets.json\\n/home/claude/work/scan-whole/baseline/Java/pom.xml\\n/home/claude/work/scan-whole/baseline/Python/requirements.txt\\n/home/claude/work/scan-whole/baseline/TypeScript/src/main.ts\\nCSharp/Program.cs\\nEcbKey\\nGcmIv\\nGcmKey\\nPBKDF2\\nPyPI package: NaCl\\nPyPI package: argon2\\nPyPI package: python-bcrypt\\naes\\nmd5\\nrsa\\nsha-1\\nsha-256\\nsha-512\\nshake128\\nx25519"
+      },
+      {
+        "name": "cdx:bom:componentTypes",
+        "value": "golang\\nmaven\\nnuget\\npypi"
+      }
+    ]
+  },
+  "components": [
+    {
+      "group": "org.bouncycastle",
+      "name": "bcprov-jdk18on",
+      "version": "1.86",
+      "purl": "pkg:maven/org.bouncycastle/bcprov-jdk18on@1.86?type=jar",
+      "type": "framework",
+      "bom-ref": "pkg:maven/org.bouncycastle/bcprov-jdk18on@1.86?type=jar",
+      "properties": [
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/Java/pom.xml"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 0.6,
+                "value": "/home/claude/work/scan-whole/baseline/Java/pom.xml"
+              }
+            ],
+            "concludedValue": "/home/claude/work/scan-whole/baseline/Java/pom.xml"
+          }
+        ]
+      },
+      "tags": [
+        "framework"
+      ]
+    },
+    {
+      "group": "org.bouncycastle",
+      "name": "bcpkix-jdk18on",
+      "version": "1.86",
+      "purl": "pkg:maven/org.bouncycastle/bcpkix-jdk18on@1.86?type=jar",
+      "type": "framework",
+      "bom-ref": "pkg:maven/org.bouncycastle/bcpkix-jdk18on@1.86?type=jar",
+      "properties": [
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/Java/pom.xml"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 0.6,
+                "value": "/home/claude/work/scan-whole/baseline/Java/pom.xml"
+              }
+            ],
+            "concludedValue": "/home/claude/work/scan-whole/baseline/Java/pom.xml"
+          }
+        ]
+      },
+      "tags": [
+        "framework"
+      ]
+    },
+    {
+      "group": "",
+      "name": "cryptography",
+      "version": "50.0.2",
+      "scope": "required",
+      "purl": "pkg:pypi/cryptography@50.0.2",
+      "type": "library",
+      "bom-ref": "pkg:pypi/cryptography@50.0.2",
+      "properties": [
+        {
+          "name": "internal:ImportedModules",
+          "value": "cryptography.hazmat.primitives.kdf.hkdf.HKDF,cryptography.hazmat.primitives.ciphers.Cipher,cryptography.hazmat.primitives.asymmetric.ec,cryptography.hazmat.primitives.ciphers.aead.AESGCM,cryptography.hazmat.primitives.ciphers.algorithms,cryptography.x509,cryptography.hazmat.primitives.hashes,cryptography.hazmat.primitives.asymmetric.x25519,cryptography.x509.oid.NameOID,cryptography.hazmat.primitives.ciphers.modes,cryptography.hazmat.primitives.asymmetric.mlkem,cryptography.hazmat.primitives.padding,cryptography.hazmat.primitives.asymmetric.rsa,cryptography.exceptions.InvalidSignature,cryptography.hazmat.primitives.kdf.scrypt.Scrypt,cryptography.hazmat.primitives.asymmetric.mldsa,cryptography.hazmat.primitives.asymmetric.padding"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/Python/requirements.txt"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0.5,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 0.5,
+                "value": "/home/claude/work/scan-whole/baseline/Python/requirements.txt"
+              }
+            ],
+            "concludedValue": "/home/claude/work/scan-whole/baseline/Python/requirements.txt"
+          }
+        ]
+      },
+      "tags": [
+        "algorithm",
+        "crypto"
+      ]
+    },
+    {
+      "group": "",
+      "name": "pycryptodome",
+      "version": "4.2.0",
+      "scope": "optional",
+      "purl": "pkg:pypi/pycryptodome@4.2.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/pycryptodome@4.2.0",
+      "properties": [
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/Python/requirements.txt"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0.5,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 0.5,
+                "value": "/home/claude/work/scan-whole/baseline/Python/requirements.txt"
+              }
+            ],
+            "concludedValue": "/home/claude/work/scan-whole/baseline/Python/requirements.txt"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "PyNaCl",
+      "version": "1.6.2",
+      "scope": "optional",
+      "purl": "pkg:pypi/pynacl@1.6.2",
+      "type": "library",
+      "bom-ref": "pkg:pypi/pynacl@1.6.2",
+      "properties": [
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/Python/requirements.txt"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0.5,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 0.5,
+                "value": "/home/claude/work/scan-whole/baseline/Python/requirements.txt"
+              }
+            ],
+            "concludedValue": "/home/claude/work/scan-whole/baseline/Python/requirements.txt"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "argon2-cffi",
+      "version": "25.1.0",
+      "scope": "optional",
+      "purl": "pkg:pypi/argon2-cffi@25.1.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/argon2-cffi@25.1.0",
+      "properties": [
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/Python/requirements.txt"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0.5,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 0.5,
+                "value": "/home/claude/work/scan-whole/baseline/Python/requirements.txt"
+              }
+            ],
+            "concludedValue": "/home/claude/work/scan-whole/baseline/Python/requirements.txt"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "bcrypt",
+      "version": "5.0.0",
+      "scope": "required",
+      "purl": "pkg:pypi/bcrypt@5.0.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/bcrypt@5.0.0",
+      "properties": [
+        {
+          "name": "internal:ImportedModules",
+          "value": "bcrypt"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/Python/requirements.txt"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0.5,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 0.5,
+                "value": "/home/claude/work/scan-whole/baseline/Python/requirements.txt"
+              }
+            ],
+            "concludedValue": "/home/claude/work/scan-whole/baseline/Python/requirements.txt"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Ilya Moroz <flamewowilia@gmail.com>"
+        }
+      ],
+      "group": "",
+      "name": "argon2",
+      "version": "0.1.10",
+      "description": "Bindings for the argon2 password hasher",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "523a3d3b88f3a46244b4976a6ca81994705848538bbe9e41426ea54ccb75eb90"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "CC0-1.0",
+            "url": "https://opensource.org/licenses/CC0-1.0",
+            "properties": [
+              {
+                "name": "cdx:license:category",
+                "value": "Public Domain"
+              },
+              {
+                "name": "cdx:license:foss",
+                "value": "true"
+              },
+              {
+                "name": "cdx:license:osiApproved",
+                "value": "false"
+              },
+              {
+                "name": "cdx:license:fsfLibre",
+                "value": "true"
+              },
+              {
+                "name": "cdx:license:deprecated",
+                "value": "false"
+              }
+            ]
+          }
+        }
+      ],
+      "purl": "pkg:pypi/argon2@0.1.10",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://files.pythonhosted.org/packages/5c/55/94605d5bfa140601fde256f548ed1733a5327f2d7d159b60a727e8613170/argon2-0.1.10.tar.gz",
+          "comment": "argon2-0.1.10.tar.gz"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/argon2@0.1.10",
+      "properties": [
+        {
+          "name": "cdx:license:category",
+          "value": "Public Domain"
+        },
+        {
+          "name": "cdx:pypi:artifactDigestBlake2b256",
+          "value": "5c5594605d5bfa140601fde256f548ed1733a5327f2d7d159b60a727e8613170"
+        },
+        {
+          "name": "cdx:pypi:artifactDigestMd5",
+          "value": "7b42937bdf16d063b3d60357ac421fb8"
+        },
+        {
+          "name": "cdx:pypi:artifactDigestSha256",
+          "value": "523a3d3b88f3a46244b4976a6ca81994705848538bbe9e41426ea54ccb75eb90"
+        },
+        {
+          "name": "cdx:pypi:classifiers",
+          "value": "Development Status :: 4 - Beta"
+        },
+        {
+          "name": "cdx:pypi:modulesFrom",
+          "value": "distribution-name"
+        },
+        {
+          "name": "cdx:pypi:packageCreatedTime",
+          "value": "2015-12-06T09:14:18.750480Z"
+        },
+        {
+          "name": "cdx:pypi:priorPublishTime",
+          "value": "2015-12-07T08:13:04.832744Z"
+        },
+        {
+          "name": "cdx:pypi:priorUploaderSetCount",
+          "value": "0"
+        },
+        {
+          "name": "cdx:pypi:priorVersion",
+          "value": "0.1.9"
+        },
+        {
+          "name": "cdx:pypi:publishTime",
+          "value": "2015-12-20T22:40:47.144150Z"
+        },
+        {
+          "name": "cdx:pypi:releaseGapBaselineDays",
+          "value": "0.96"
+        },
+        {
+          "name": "cdx:pypi:releaseGapDays",
+          "value": "13.60"
+        },
+        {
+          "name": "cdx:pypi:releaseGapSampleSize",
+          "value": "1"
+        },
+        {
+          "name": "cdx:pypi:uploaderSetCount",
+          "value": "0"
+        },
+        {
+          "name": "cdx:pypi:versionCount",
+          "value": "3"
+        },
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ""
+        },
+        {
+          "name": "internal:ImportedModules",
+          "value": "argon2.low_level.Type,argon2.low_level.hash_secret_raw"
+        },
+        {
+          "name": "internal:Namespaces",
+          "value": "argon2"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "version",
+            "confidence": 0.5,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.5,
+                "value": "PyPI package: argon2"
+              }
+            ],
+            "concludedValue": "PyPI package: argon2"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Damien Miller"
+        },
+        {
+          "name": "maintained by @kageurufu <kage.urufu@gmail.com>"
+        }
+      ],
+      "group": "",
+      "name": "python-bcrypt",
+      "version": "0.3.2",
+      "description": "Blowfish password hashing",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ad7a373ebc17b866e5ae832377652ffaea232db34aa3a849e9222e6df6bc5b98"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD",
+            "properties": [
+              {
+                "name": "cdx:license:category",
+                "value": "Unstated License"
+              },
+              {
+                "name": "cdx:license:foss",
+                "value": "false"
+              },
+              {
+                "name": "cdx:license:osiApproved",
+                "value": "false"
+              },
+              {
+                "name": "cdx:license:fsfLibre",
+                "value": "false"
+              },
+              {
+                "name": "cdx:license:deprecated",
+                "value": "false"
+              }
+            ]
+          }
+        }
+      ],
+      "purl": "pkg:pypi/python-bcrypt@0.3.2",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://files.pythonhosted.org/packages/5e/7f/78b41e3c70ac95673eec60cdc4f4f11d84c7ce4966689ab8ecfca1185eca/python-bcrypt-0.3.2.tar.gz",
+          "comment": "python-bcrypt-0.3.2.tar.gz"
+        },
+        {
+          "type": "distribution",
+          "url": "https://files.pythonhosted.org/packages/8c/22/252f6440a99e858eec7e3a5ee69e6e3afd013a4713fa5452a87f13e1cfe0/python_bcrypt-0.3.2-py2.7-linux-x86_64.egg",
+          "comment": "python_bcrypt-0.3.2-py2.7-linux-x86_64.egg"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/python-bcrypt@0.3.2",
+      "properties": [
+        {
+          "name": "cdx:license:category",
+          "value": "Unstated License"
+        },
+        {
+          "name": "cdx:pypi:artifactDigestBlake2b256",
+          "value": "8c22252f6440a99e858eec7e3a5ee69e6e3afd013a4713fa5452a87f13e1cfe0, 5e7f78b41e3c70ac95673eec60cdc4f4f11d84c7ce4966689ab8ecfca1185eca"
+        },
+        {
+          "name": "cdx:pypi:artifactDigestMd5",
+          "value": "d9bf37cbf4bc52c8b51484fb132dfcbb, 988d59598d2616b655d1ea054ca9b980"
+        },
+        {
+          "name": "cdx:pypi:artifactDigestSha256",
+          "value": "ad7a373ebc17b866e5ae832377652ffaea232db34aa3a849e9222e6df6bc5b98, b203ef09dd6543869ccedcf349aac39506db29dd5053ded315a829b9625214aa"
+        },
+        {
+          "name": "cdx:pypi:classifiers",
+          "value": "Programming Language :: Python\nProgramming Language :: Python :: 2\nProgramming Language :: Python :: 2.6\nProgramming Language :: Python :: 2.7\nProgramming Language :: Python :: 3\nProgramming Language :: Python :: 3.2\nProgramming Language :: Python :: 3.3\nProgramming Language :: Python :: 3.4\nProgramming Language :: Python :: 3.5\nProgramming Language :: Python :: 3.6"
+        },
+        {
+          "name": "cdx:pypi:modulesFrom",
+          "value": "alias-map,distribution-name"
+        },
+        {
+          "name": "cdx:pypi:packageCreatedTime",
+          "value": "2014-07-22T22:31:10.697767Z"
+        },
+        {
+          "name": "cdx:pypi:priorPublishTime",
+          "value": "2014-07-22T22:31:10.697767Z"
+        },
+        {
+          "name": "cdx:pypi:priorUploaderSetCount",
+          "value": "0"
+        },
+        {
+          "name": "cdx:pypi:priorVersion",
+          "value": "0.3.1"
+        },
+        {
+          "name": "cdx:pypi:publishTime",
+          "value": "2017-02-16T19:56:25.589229Z"
+        },
+        {
+          "name": "cdx:pypi:releaseGapDays",
+          "value": "939.89"
+        },
+        {
+          "name": "cdx:pypi:releaseGapSampleSize",
+          "value": "0"
+        },
+        {
+          "name": "cdx:pypi:uploaderSetCount",
+          "value": "0"
+        },
+        {
+          "name": "cdx:pypi:versionCount",
+          "value": "2"
+        },
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ""
+        },
+        {
+          "name": "internal:ImportedModules",
+          "value": "bcrypt"
+        },
+        {
+          "name": "internal:Namespaces",
+          "value": "bcrypt\npython_bcrypt"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "version",
+            "confidence": 0.5,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.5,
+                "value": "PyPI package: python-bcrypt"
+              }
+            ],
+            "concludedValue": "PyPI package: python-bcrypt"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "UNKNOWN <UNKNOWN>"
+        }
+      ],
+      "group": "",
+      "name": "NaCl",
+      "version": "0.0.0",
+      "description": "UNKNOWN",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN",
+            "properties": [
+              {
+                "name": "cdx:license:category",
+                "value": "Unstated License"
+              },
+              {
+                "name": "cdx:license:foss",
+                "value": "false"
+              },
+              {
+                "name": "cdx:license:osiApproved",
+                "value": "false"
+              },
+              {
+                "name": "cdx:license:fsfLibre",
+                "value": "false"
+              },
+              {
+                "name": "cdx:license:deprecated",
+                "value": "false"
+              }
+            ]
+          }
+        }
+      ],
+      "purl": "pkg:pypi/nacl@0.0.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/nacl@0.0.0",
+      "properties": [
+        {
+          "name": "cdx:license:category",
+          "value": "Unstated License"
+        },
+        {
+          "name": "cdx:pypi:modulesFrom",
+          "value": "distribution-name"
+        },
+        {
+          "name": "cdx:pypi:priorUploaderSetCount",
+          "value": "0"
+        },
+        {
+          "name": "cdx:pypi:uploaderSetCount",
+          "value": "0"
+        },
+        {
+          "name": "cdx:pypi:versionCount",
+          "value": "0"
+        },
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ""
+        },
+        {
+          "name": "internal:ImportedModules",
+          "value": "nacl.signing.SigningKey,nacl.exceptions.BadSignatureError"
+        },
+        {
+          "name": "internal:Namespaces",
+          "value": "nacl"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "version",
+            "confidence": 0.5,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.5,
+                "value": "PyPI package: NaCl"
+              }
+            ],
+            "concludedValue": "PyPI package: NaCl"
+          }
+        ]
+      }
+    },
+    {
+      "group": "",
+      "name": "github.com/cloudflare/circl",
+      "version": "v1.6.5",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3bae05dba1c4a8d8739ddfe1ac2e4a65754a62e28cdabc7875e6434dce228500"
+        }
+      ],
+      "purl": "pkg:golang/github.com/cloudflare/circl@v1.6.5",
+      "type": "library",
+      "bom-ref": "pkg:golang/github.com/cloudflare/circl@v1.6.5"
+    },
+    {
+      "group": "",
+      "name": "golang.org/x/crypto",
+      "version": "v0.58.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "08e9182ebe24ee70c8e2be90b4c30bd807f3788b30587009b612d2e8afccff9e"
+        }
+      ],
+      "purl": "pkg:golang/golang.org/x/crypto@v0.58.0",
+      "type": "library",
+      "bom-ref": "pkg:golang/golang.org/x/crypto@v0.58.0"
+    },
+    {
+      "group": "",
+      "name": "golang.org/x/sys",
+      "version": "v0.49.0",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5dbce481824776a87ff26d94bb45bf750bfc9e4b71c780451e9d4cd2044e4d70"
+        }
+      ],
+      "purl": "pkg:golang/golang.org/x/sys@v0.49.0",
+      "type": "library",
+      "bom-ref": "pkg:golang/golang.org/x/sys@v0.49.0"
+    },
+    {
+      "group": "",
+      "name": "BouncyCastle.Cryptography",
+      "version": "2.7.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "53ed7675ff141161e0062d386157ff2e08b6772dd222d94862f1e38c455afc19e00902330c20d1064e740c307209f0ef49b7b9a51345af76fb52b54ada431c2f"
+        }
+      ],
+      "purl": "pkg:nuget/BouncyCastle.Cryptography@2.7.0",
+      "type": "framework",
+      "bom-ref": "pkg:nuget/BouncyCastle.Cryptography@2.7.0",
+      "properties": [
+        {
+          "name": "cdx:dosai:reachability:confidence",
+          "value": "High"
+        },
+        {
+          "name": "cdx:dosai:reachability:evidence",
+          "value": "AssemblyReflection, ExternalSummary, SourceRoslynDirect, Unknown"
+        },
+        {
+          "name": "cdx:dosai:reachability:kind",
+          "value": "InternalCallGraphNode"
+        },
+        {
+          "name": "cdx:dosai:reachability:reasons",
+          "value": "Package URL is supported by dependency/import metadata. | Reachability is supported by direct source or IL call evidence."
+        },
+        {
+          "name": "internal:CalledMethods",
+          "value": ".ctor, Abs, Accept, Add, Add33At, Add33To, AddAcceptedCertificate, AddAll, AddAllowedArmorHeader, AddAlpnExtensionClient, AddAlpnExtensionServer, AddArchiveTimeStamp, AddAttribute, AddAttributeCertificate, AddAttributeCertificates, AddBothTo, AddBytes, AddCapability, AddCertPathChecker, AddCertificate, AddCertificateAuthoritiesExtension, AddCertificateResponse, AddCertificates, AddCertification, AddChild, AddClientCertificateTypeExtensionClient, AddClientCertificateTypeExtensionServer, AddClientCertificateUrlExtension, AddCmpCertificate, AddComment, AddCompressCertificateExtension, AddConnectionIDExtension, AddControl, AddCookieExtension, AddCounterSigners, AddCrl, AddCrlEntry, AddCrls, AddCryptedBlocks, AddCustomSubpacket, AddDWordAt, AddDWordTo, AddData, AddDigestAlgorithm, AddDigests, AddEarlyDataIndication, AddEarlyDataMaxSize, AddEllipsizedComment, AddEmbeddedSignature, AddEmptyExtensionData, AddEncryptThenMacExtension, AddExcludedSubtree, AddExt, AddExtendedMasterSecretExtension, AddExtension, AddExtensions, AddGeneralInfo, AddHeader, AddHeartbeatExtension, AddIfSupported, AddIntendedRecipientFingerprint, AddIssuer, AddKekRecipient, AddKeyAgreementRecipient, AddKeyAgreementRecipients, AddKeyShareClientHello, AddKeyShareHelloRetryRequest, AddKeyShareServerHello, AddKeyTransRecipient, AddMaxFragmentLengthExtension, AddMethod, AddMethodRaw, AddMethodUtf8, AddNotationData, AddObject, AddOidFiltersExtension, AddOne, AddOptional, AddOptionalTagged, AddOtherRevocationInfo, AddOtherRevocationInfos, AddPadding, AddPaddingExtension, AddPasswordRecipient, AddPolicyUrl, AddPostHandshakeAuthExtension, AddPreSharedKeyClientHello, AddPreSharedKeyServerHello, AddPskKeyExchangeModesExtension, AddPublicKeyRing, AddRecipientGenerator, AddRecipientInfoGenerator, AddRecordSizeLimitExtension, AddRequest, AddResponse, AddRevocationKey, AddSecretKeyRing, AddSeedMaterial, AddServerCertificateTypeExtensionClient, AddServerCertificateTypeExtensionServer, AddServerNameExtensionClient, AddServerNameExtensionServer, AddSessionInfo, AddSignatureAlgorithmsCertExtension, AddSignatureAlgorithmsExtension, AddSigner, AddSignerInfoGenerator, AddSignerUserId, AddSigners, AddSplitMultilineComment, AddSrpExtension, AddStatusRequestExtension, AddStatusRequestV2Extension, AddStoreAttrCert, AddStoreCert, AddStoreCrl, AddSubKey, AddSupportedGroupsExtension, AddSupportedPointFormatsExtension, AddSupportedVersionsExtensionClient, AddSupportedVersionsExtensionServer, AddTagged, AddTargetGroup, AddTargetName, AddTo, AddToEachOther, AddToSet, AddTruncatedHmacExtension, AddTrustedCAKeysExtensionClient, AddTrustedCAKeysExtensionServer, AddUseSrtpExtension, AddWordAt, AddWordTo, AdjustScale, AdoptSecret, AdvancePosition, AllPgpObjects, AllowLegacyResumption, And, AndNot, Apm, Append, AppendTypeAndValue, ApproximateDivisionByN, Arbitrary, AreAllZeroes, AreEqual, AreEqualVar, Argon2BytesGenerator, Argon2S2k, AsRawBytes, AsUint32ArrayLittleEndian, AsUnsignedByteArray, AsUtf8Encoding, AsVersion, BS2POLT, BS2POLVECp, BS2POLVECq, BS2POLmsg, BS2POLp, BeginClearText, BeginInvoke, Binomial, BitLength, BitLengthVar, Blake2bDigest, BlockUpdate, Boolean, Branch, Build, BuildCipher, BuildCtr, BuildHMac, BuildHash, Builder, ByteArray, Bytes, Bytes2, CAdd, CAddTo, CMov, CNegate, CSub, CSwap, CalculateA, CalculateAgreement, CalculateClientEvidenceMessage, CalculateDHAgreement, CalculateDigest, CalculateECDHAgreement, CalculateExporterSeed, CalculateFingerprint, CalculateGA, CalculateGx, CalculateHash, CalculateHmac, CalculateK, CalculateKey, CalculateKeyBlock, CalculateKeyWithConfirmation, CalculateKeyingMaterial, CalculateM1, CalculateM2, CalculateMac, CalculateMacConstantTime, CalculateMacTag, CalculateMessage, CalculateS, CalculateSecret, CalculateServerEvidenceMessage, CalculateSessionKey, CalculateStrength, CalculateU, CalculateVersion, CalculateX, CalculateX2s, CalculateZeroKnowledgeProof, CanBeNegotiated, Cancel, CanonicalString, Canonicalize, Carry, Check, CheckContextTag, CheckContextTagClass, CheckDN, CheckEmail, CheckExcludedDN, CheckExcludedEmail, CheckExcludedName, CheckFieldElements, CheckKey, CheckName, CheckNorm, CheckPassword, CheckPeerSigAlgs, CheckPermittedDN, CheckPermittedEmail, CheckPermittedName, CheckPointEncoding, CheckTag, CheckTagClass, CheckUint16, CheckUint24, CheckUint32, CheckUint48, CheckUint64, CheckUint8, CheckUsageInRole, CheckValidity, CheckedModOddInverse, CheckedModOddInverseVar, ChooseSignatureAndHashAlgorithm, Cksm, Clamp, ClampPrivateKey, CleanPoint, Clear, ClearBit, ClearHeaders, ClearKey, ClearSalt, ClearThreadProperties, Clone, CloneDigest, CloneHash, Close, CloseInput, Coef, Collect, CollectMatches, Compare, CompareTo, CompareUnsigned, Compose, Concatenate, ConcatenateAll, ConditionalAddQ, Configure, ConfigureBasepoint, Connect, ConstantTimeAreEqual, Contains, ContainsAlias, ContainsAnySignatureAlgorithm, ContainsHash, ContainsKey, ContainsNonAscii, ContainsSignatureAlgorithm, Context, Convert, ConvertInput, ConvertOutput, ConvertToChars, ConvertToDefiniteLength, ConvertToIndexes, ConvertValueToObject, Copy, Copy64, CopyAndAddExtension, CopyBuffer, CopyBufferTo, CopyBufferToSegment, CopyContextTo, CopyIDTo, CopyIVTo, CopyKeyTo, CopyOf, CopyOfRange, CopyOfRangeExact, CopySBoxTo, CopySaltTo, CopySeedTo, CopySegment, CopyTo, CopyToAsync, CopyUkmTo, CopyWithNewPassword, CopyWithNewPasswordRaw, CopyWithNewPasswordUtf8, Create, Create64, CreateAAData, CreateAlpnExtensionClient, CreateAlpnExtensionServer, CreateAuthorityKeyIdentifier, CreateBuffer, CreateCacheSafeLookupTable, CreateCalculator, CreateCertificate, CreateCertificateAuthoritiesExtension, CreateCertificateTypeExtensionClient, CreateCertificateTypeExtensionServer, CreateCipher, CreateClientCertificateUrlExtension, CreateCompressCertificateExtension, CreateConnectionIDExtension, CreateContentCipher, CreateCookieExtension, CreateDH, CreateDHDomain, CreateDHKeyExchange, CreateDHanonKeyExchangeClient, CreateDHanonKeyExchangeServer, CreateDecryptorBuilder, CreateDeltaCertificateExtension, CreateDheKeyExchangeClient, CreateDheKeyExchangeServer, CreateDigest, CreateECDH, CreateECDHKeyExchange, CreateECDHanonKeyExchangeClient, CreateECDHanonKeyExchangeServer, CreateECDheKeyExchangeClient, CreateECDheKeyExchangeServer, CreateECDomain, CreateEarlyDataIndication, CreateEarlyDataMaxSize, CreateEmptyExtensionData, CreateEncryptThenMacExtension, CreateEncryptedPrivateKeyInfo, CreateEncryptor, CreateEngine, CreateExt, CreateExt64, CreateExtendedMasterSecretExtension, CreateHash, CreateHeartbeatExtension, CreateHmac, CreateHmacForHash, CreateHybridSecret, CreateKem, CreateKemDomain, CreateKey, CreateKeyGenerator, CreateKeyParameter, CreateKeyShareClientHello, CreateKeyShareHelloRetryRequest, CreateKeyShareServerHello, CreateMac, CreateMaxFragmentLengthExtension, CreateNamedDHConfig, CreateNamedECConfig, CreateNonceGenerator, CreateOidFiltersExtension, CreatePaddingExtension, CreatePoint, CreatePostHandshakeAuthExtension, CreatePreSharedKeyClientHello, CreatePreSharedKeyServerHello, CreatePrehash, CreatePrivateKeyInfo, CreatePskKeyExchangeClient, CreatePskKeyExchangeModesExtension, CreatePskKeyExchangeServer, CreateRandomBigInteger, CreateRandomInRange, CreateRandomPrime, CreateRawSigner, CreateRecordSizeLimitExtension, CreateRound1PayloadToSend, CreateRound2PayloadToSend, CreateRound3PayloadToSend, CreateRsaKeyExchange, CreateSecret, CreateServerNameExtensionClient, CreateServerNameExtensionServer, CreateSha1KeyIdentifier, CreateSignatureAlgorithmsCertExtension, CreateSignatureAlgorithmsExtension, CreateSrp6Client, CreateSrp6Server, CreateSrp6VerifierGenerator, CreateSrpExtension, CreateSrpKeyExchangeClient, CreateSrpKeyExchangeServer, CreateStatusRequestExtension, CreateStatusRequestV2Extension, CreateStore, CreateSubjectKeyIdentifier, CreateSubjectPublicKeyInfo, CreateSupportedGroupsExtension, CreateSupportedPointFormatsExtension, CreateSupportedVersionsExtensionClient, CreateSupportedVersionsExtensionServer, CreateTable, CreateTruncatedHmacExtension, CreateTruncatedSha1KeyIdentifier, CreateTruncatedSubjectKeyIdentifier, CreateTrustedCAKeysExtensionClient, CreateTrustedCAKeysExtensionServer, CreateUseSrtpExtension, CreateUserKeyingMaterial, CreateV1Packet, CreateV4Packet, CreateV5Packet, CreateV6Packet, CreateVerifier, CreateVerifierFactory, CreateWithCounter, CreateWithoutCounter, CreateWrapper, CurrentUnixMs, DH, DHKeyPair, DateTimeToUnixMs, Dec, DecAt, Decapsulate, Decode, Decode255, Decode448, DecodeCiphertext, DecodeOpaque16, DecodeOpaque8, DecodeParameter, DecodePoint, DecodePublicKey, DecodeStrict, DecodeString, DecodeUint16, DecodeUint16ArrayWithUint8Length, DecodeUint32, DecodeUint8, DecodeUint8ArrayWithUint8Length, Decompose, DecomposeScalar, DecompressPrivateKey, Decrypt, DecryptKey, DecryptPreMasterSecret, DecryptPrivateKeyInfo, DefaultParameters, DefaultSecureRandom, DeleteEntry, DeriveCertificateID, DeriveSeed, DeriveUsingPrf, Destroy, Diff, DigestAlgorithm, Dispose, Divide, DivideAndRemainder, DoFinal, DownTo, Drain, DsaSigToMpi, Dump, DumpAsString, Ed25519PrivateKeyParameters, Ed25519Signer, EnableCrc, Encapsulate, Encode, EncodeOpaque16, EncodeOpaque24, EncodeOpaque8, EncodeParameter, EncodePlaintext, EncodePoint, EncodePrivateKey, EncodePublicKey, EncodePublicPoint, EncodeSupportedSignatureAlgorithms, EncodeTo, EncodeUint16, EncodeUint16ArrayWithUint16Length, EncodeUint16ArrayWithUint8Length, EncodeUint24, EncodeUint32, EncodeUint8, EncodeUint8ArrayWithUint8Length, EncodeVersion, Encrypt, EncryptKey, End, EndClearText, EndInvoke, EnhancedMRProbablePrimeTest, EnsureExtensionsInitialised, EnumerateMatches, Eq, Eq64, EqualTo, EqualTo64, EqualToOne, EqualToOne64, EqualToZero, EqualToZero64, Equals, Equivalent, ExceptWith, ExpandMatrix, ExpandPrivateKey, ExponentiateX, ExportChannelBinding, ExportEarlyKeyingMaterial, ExportKeyingMaterial, ExportSessionParameters, Extract, ExtractDeltaCertificate, ExtractKeyShard, ExtractPrivateKey, ExtractPrivateKeyRaw, ExtractPrivateKeyUtf8, ExtractSecret, ExtractTo, F, Fill, FilterPgpObjects, Find, FindControl, FindCrls, Finish, FixedTimeEquals, FlipBit, Floor, Flush, ForDigest, ForParameters, ForceBuffering, ForkPrfHash, From, FromAsciiByteArray, FromBigInteger, FromBigInteger64, FromByteArray, FromCollection, FromContents, FromContentsOptional, FromElement, FromElements, FromElementsOptional, FromEncoding, FromEnumerable, FromExtensionValue, FromExtensions, FromPkiBody, FromSeed, FromSequence, FromStream, FromSubpackets, FromUnsignedByteArray, FromUtf8ByteArray, FromVector, FromX509Certificate, FromX962Parameters, FromX9ECParameters, GFFrac, GFInv, GFIsZero, GFMul, GFMulExt, GFMulPoly, GFReduce, GFSq, GFSqExt, GFSqrPoly, Gcd, GenMatrix, GenSecret, Generate, GenerateAgreement, GenerateAlgorithmParameters, GenerateAttributeCertificateInfo, GenerateBlindingFactor, GenerateBytes, GenerateCertification, GenerateCipherParameters, GenerateClientCredentials, GenerateClientKeyExchange, GenerateCompactNaf, GenerateCompactWindowNaf, GenerateCounterSigners, GenerateDerivedMacParameters, GenerateDerivedParameters, GenerateEncapsulated, GenerateEncryptedPreMasterSecret, GenerateEncryptionAlgID, GenerateEphemeral, GenerateFailResponse, GenerateGrantedResponse, GenerateHssKeyPair, GenerateJsf, GenerateKey, GenerateKeyPair, GenerateKeyParameter, GenerateKeys, GenerateLmsContext, GenerateNaf, GenerateNonce, GenerateOnePassVersion, GenerateParameters, GeneratePayload, GeneratePreMasterSecret, GeneratePreTbsCertList, GeneratePreTbsCertificate, GeneratePrivateKey, GeneratePrivateValue, GeneratePublicKey, GeneratePublicKeyFromPrivateKey, GeneratePublicKeyRing, GenerateRawSignature, GenerateRsaPreMasterSecret, GenerateSTRandomPrime, GenerateSalted, GenerateSaltedAndIterated, GenerateSecret, GenerateSecretKeyRing, GenerateSeed, GenerateServerCredentials, GenerateServerKeyExchange, GenerateSign, GenerateSignature, GenerateTbsCertList, GenerateTbsCertificate, GenerateVerifier, GenerateWindowNaf, GenerateWithInput, GenerateX1, GenerateX2, Get, GetAAData, GetAccessDescriptions, GetAdditional, GetAffinePointEncodingLength, GetAgreementAlgorithm, GetAlgorithmName, GetAll, GetAllCoordinateSystems, GetAllUsages, GetAllUsagesArray, GetAlpnExtensionClient, GetAlpnExtensionServer, GetArchiveTimeStampChains, GetArchiveTimestamps, GetArmorHeaderLine, GetArmorHeaders, GetAssociatedText, GetAttrCertCheckers, GetAttributeCertificates, GetAttributeValues, GetAttributes, GetAuthAttrs, GetAuthEncryptedContentInfo, GetAuthTag, GetAuthTagLength, GetAuthentication, GetAuthorityKeyIdentifier, GetAvailableInputBytes, GetAvailableOutputBytes, GetBaseObject, GetBaseUniversal, GetBasicAgreement, GetBasicAgreementWithKdf, GetBasicConstraints, GetBinaryExtensionField, GetBit, GetBitLength, GetBitLength64, GetBitStream, GetBlockSize, GetBoolean, GetByName, GetByNameLazy, GetByOid, GetByOidLazy, GetByteArray, GetByteLength, GetBytes, GetBytesLength, GetC, GetCACerts, GetCAPubs, GetCanonicalAlgorithmName, GetCapabilitiesForOid, GetCertHash, GetCertID, GetCertPathCheckers, GetCertReqID, GetCertReqIDValues, GetCertReqIDs, GetCertSha1Hash, GetCertStatus, GetCertStructs, GetCertTemplate, GetCertificate, GetCertificateAlias, GetCertificateAt, GetCertificateAuthoritiesExtension, GetCertificateBytes, GetCertificateChain, GetCertificateEntryAt, GetCertificateEntryList, GetCertificateIssuer, GetCertificateList, GetCertificatePair, GetCertificateRequest, GetCertificateRequestContext, GetCertificateStatus, GetCertificates, GetCertificationRequestInfo, GetCerts, GetCheckAfter, GetCipher, GetCipherParameters, GetCipherSuites, GetCipherTextSize, GetCipherType, GetCiphertextDecodeLimit, GetCiphertextEncodeLimit, GetClientCertificateType, GetClientCertificateTypeExtensionClient, GetClientCertificateTypeExtensionServer, GetClientCertificateTypes, GetClientCredentials, GetClientExtensions, GetClientSupplementalData, GetCmpCertificates, GetCombSize, GetCommonCipherSuite13, GetCommonCipherSuites, GetCompressCertificateExtension, GetConnectionIDExtension, GetContent, GetContentDigest, GetContentInfo, GetContentStream, GetContents, GetContentsOfAdmissions, GetContext, GetContextBaseUniversal, GetContextInstance, GetContextOptional, GetControl, GetConvertedValue, GetCookieExtension, GetCounterSignatures, GetCreationDate, GetCredentials, GetCriticalExtensionOids, GetCriticalTags, GetCrlOcspRefs, GetCrlVals, GetCrls, GetCryptoHashAlgorithm, GetCurveBits, GetCurveName, GetDHConfig, GetDHGroup, GetDHGroupVerifier, GetData, GetDataStream, GetDataStreamRaw, GetDataStreamUtf8, GetDataToSign, GetDatagroupHash, GetDateTime, GetDecapsulator, GetDecodedBlockSize, GetDecoderStream, GetDefaultDke, GetDefaultDssSignatureAlgorithms, GetDefaultECDsaSignatureAlgorithms, GetDefaultRsaSignatureAlgorithms, GetDefaultSignatureAlgorithm, GetDefaultSignatureAlgorithms, GetDefaultSupportedSignatureAlgorithms, GetDefaultX509Parameters, GetDerEncoded, GetDerivationV, GetDetachedPoint, GetDigest, GetDigestAlgorithm, GetDigestAlgorithmIDs, GetDigestAlgorithmIdentifier, GetDigestAlgorithms, GetDigestIDForName, GetDigestName, GetDigestPrefix, GetDigestSize, GetDigestedContent, GetDistributionPoints, GetDke, GetDomainParameters, GetDsaKeyPair, GetDsaPublicKey, GetECDHConfig, GetECDsaKeyPair, GetECDsaPublicKey, GetECKeyPair, GetECPublicKey, GetEarliestDtls, GetEarliestTls, GetEarlyDataMaxSize, GetEarlyKeyShareGroups, GetElements, GetEmbeddedSignatures, GetEnapsulatedContentInfo, GetEncSessionKey, GetEncapContentInfo, GetEncapsulation, GetEncapsulator, GetEncoded, GetEncodedBlockSize, GetEncodedContents, GetEncodedLength, GetEncodedPublicKey, GetEncodedSignedAttributes, GetEncodingName, GetEncodingV, GetEncryptedCertificate, GetEncryptedContent, GetEncryptedContentInfo, GetEncryptedData, GetEncryptedDataObjects, GetEncryptionAlgorithm, GetEncryptionAlgorithmType, GetEndomorphism, GetEntityNames, GetEntropy, GetEnumerator, GetEnvelopedData, GetEquivalentTlsVersion, GetExcludedCerts, GetExplicitBaseObject, GetExplicitBaseTagged, GetExplicitContextBaseObject, GetExplicitContextBaseTagged, GetExplicitNG, GetExponentsPresent, GetExportable, GetExtendedKeyUsage, GetExtension, GetExtensionData, GetExtensionOids, GetExtensionParsedValue, GetExtensionValue, GetExternalPsk, GetExternalPsks, GetExtraCerts, GetExtraInfo, GetExtraPublicKeys, GetFailInfo, GetFeatures, GetFieldSize, GetFinalHash, GetFingerprint, GetFiniteFieldBits, GetFiniteFieldName, GetFirst, GetFirstOrNull, GetFirstRecipient, GetFirstSigner, GetFixedPointPreCompInfo, GetG, GetGeneralInfo, GetGeneratedDigests, GetGivenName, GetH0, GetH1, GetHandshakeResendTimeMillis, GetHandshakeTimeoutMillis, GetHash, GetHashAlgorithm, GetHashCode, GetHashData, GetHashForHmac, GetHashForPrf, GetHashInternalSize, GetHashOutputSize, GetHashTreeLeaf, GetHashValue, GetHashedMessage, GetHashedSubPackets, GetHeartbeat, GetHeartbeatExtension, GetHeartbeatPolicy, GetHint, GetHybridFirst, GetHybridSecond, GetI, GetID, GetIV, GetIVBytesSize, GetIVLength, GetId, GetIkm, GetImageAttribute, GetImageData, GetImplicitBaseTagged, GetImplicitContextBaseTagged, GetIndex, GetIndexOfIdentity, GetInfo, GetInitialPolicies, GetInputBlockSize, GetInputLimit, GetInputStream, GetInstance, GetInstanceChoice, GetInt32, GetInt64, GetIntendedRecipientFingerprint, GetIntendedRecipientFingerprints, GetIssuer, GetIssuerAlternativeNameExtension, GetIssuerAlternativeNames, GetIssuerFingerprint, GetIssuerKeyHash, GetIssuerKeyId, GetIssuerNameHash, GetIssuerUniqueID, GetIssuerX509Principal, GetK, GetKemName, GetKey, GetKeyBytesSize, GetKeyEncryptionOID, GetKeyExchangeAlgorithm, GetKeyExchangeAlgorithms, GetKeyExchangeFactory, GetKeyExpirationTime, GetKeyFlags, GetKeyGenerator, GetKeyHash, GetKeyID, GetKeyIdentifier, GetKeyLength, GetKeyLengthInBits, GetKeyLengthInOctets, GetKeyPair, GetKeyPairGenerator, GetKeyPairHist, GetKeyRings, GetKeySha1Hash, GetKeyShareClientHello, GetKeyShareHelloRetryRequest, GetKeyShareServerHello, GetKeySignatures, GetKeySize, GetKeyUsage, GetKeys, GetKeysWithSignaturesBy, GetLMinus1, GetLatestDtls, GetLatestTls, GetLdsVersion, GetLegacyClientCertType, GetLegacySignatureAlgorithm, GetLegacySignatureAlgorithmClient, GetLegacySignatureAlgorithmClientCert, GetLegacySignatureAlgorithmServer, GetLegacySignatureAlgorithmServerCert, GetLegacySupportedSignatureAlgorithms, GetLength, GetLengthForBits, GetLengthForBits64, GetLengthofByteArray, GetLengthofByteArrayUnsigned, GetLengthofUInt32Array, GetLengthofUInt32ArrayUnsigned, GetLevelAndTrust, GetLevelAndTrustAmount, GetLmsParameters, GetLoginParameters, GetLowestSetBit, GetLucas, GetMLDsaObjectidentifier, GetMLDsaSignatureScheme, GetMac, GetMacAlgorithm, GetMacBlock, GetMacSize, GetMasterSecret, GetMasterSeed, GetMaxCertificateChainLength, GetMaxEncodingSize, GetMaxFragmentLengthExtension, GetMaxHandshakeMessageSize, GetMaxOutputSize, GetMaxResultLength, GetMaxSignatureSize, GetMaximumChar2CurveBits, GetMaximumCurveBits, GetMaximumFiniteFieldBits, GetMaximumPrimeCurveBits, GetMessageImprintDigest, GetMinimumCurveBits, GetMinimumFiniteFieldBits, GetMinimumVersion, GetMu, GetMultiplier, GetNafWeight, GetName, GetNameRegistrationAuthorities, GetNamedDHGroup, GetNamedGroup, GetNamedGroupForDHParameters, GetNamedGroupRoles, GetNames, GetNecessaryACAttributes, GetNewSessionID, GetNewSessionTicket, GetNextBytes, GetNextVersion, GetNonCriticalExtensionOids, GetNonce, GetNotationDataOccurrences, GetNotationName, GetNotationValue, GetNotationValueBytes, GetNoticeNumbers, GetObject, GetObjectData, GetObjectDigest, GetObjectIdentifier, GetOcspResponses, GetOcspVals, GetOctetOutputStream, GetOctetStream, GetOctets, GetOctetsLength, GetOid, GetOidFiltersExtension, GetOidForHash, GetOidForHashAlgorithm, GetOidList, GetOids, GetOptional, GetOptionalContextTagged, GetOptionalTagged, GetOriginatorInfo, GetOtherCertIDs, GetOtherRevInfos, GetOtsParameters, GetOutputBlockSize, GetOutputSize, GetPadBits, GetPaddedBytes, GetPaddedData, GetPadding, GetPaddingExtension, GetParameters, GetParametersByID, GetParams, GetParsedValue, GetPassword, GetPersonalisation, GetPkroot, GetPkseed, GetPlaintextDecodeLimit, GetPlaintextEncodeLimit, GetPlaintextLimit, GetPointEncoding, GetPolicies, GetPolicyInformation, GetPolicyUrl, GetPolicyUrls, GetPostal, GetPreComp, GetPreCompInfo, GetPreSharedKeyClientHello, GetPreSharedKeyServerHello, GetPreferences, GetPreferredAeadAlgorithms, GetPreferredCompressionAlgorithms, GetPreferredHashAlgorithms, GetPreferredSymmetricAlgorithms, GetPreviousVersion, GetPrf, GetPrimeField, GetPrincipals, GetPrivateKey, GetPrivateKeySize, GetProfessionInfos, GetProfessionItems, GetProfessionOids, GetProhibitedACAttributes, GetProperty, GetProtocolVersions, GetPsk, GetPskIdentity, GetPskIdentityManager, GetPskKeyExchangeModes, GetPskKeyExchangeModesExtension, GetPubInfos, GetPubKeyDH, GetPubKeyDss, GetPubKeyEC, GetPubKeyEd25519, GetPubKeyEd448, GetPubKeyMLDsa, GetPubKeyRsa, GetPubKeySlhDsa, GetPublicKey, GetPublicKeyEncoded, GetPublicKeyParameters, GetPublicKeyRing, GetPublicKeySize, GetPublicKeys, GetPublicSeed, GetQ, GetRandom, GetRawAgreement, GetRawFileName, GetRawId, GetRawOutputStream, GetRawRegex, GetRawUrl, GetRawUserIds, GetReadable, GetReason, GetReceiveLimit, GetRecipientInfos, GetRecipients, GetRecordSizeLimitExtension, GetRecoveredMessage, GetReducedHashTree, GetRegInfo, GetRegex, GetRegularExpression, GetRegularExpressions, GetRequestList, GetRequestedExtensions, GetRequests, GetResponderId, GetResponse, GetResponseObject, GetResponses, GetResult, GetRevCerts, GetRevocable, GetRevocationDescription, GetRevocationKeys, GetRevocationReason, GetRevokedCertificate, GetRevokedCertificateEnumeration, GetRevokedCertificates, GetRfc5054Default, GetRho, GetRoleAuthorityAsString, GetRoleNameAsString, GetRoot, GetRsaKeyPair, GetRsaPublicKey, GetSBox, GetSBoxName, GetSalt, GetSecKeyData, GetSecret, GetSecretKey, GetSecretKeyData, GetSecretKeyRing, GetSecretKeys, GetSecureRandom, GetSeed, GetSelectedCipherSuite, GetSendLimit, GetServerCertificateTypeExtensionClient, GetServerCertificateTypeExtensionServer, GetServerExtensions, GetServerExtensionsForConnection, GetServerNameExtensionClient, GetServerSupplementalData, GetServerVersion, GetSessionKeySize, GetSessionToResume, GetSharedSecret, GetSi, GetSigAlgParams, GetSigParameters, GetSigPolicyQualifiers, GetSigma, GetSignature, GetSignatureAlgorithm, GetSignatureAlgorithmsCertExtension, GetSignatureAlgorithmsExtension, GetSignatureAndHashAlgorithm, GetSignatureBytes, GetSignatureContext, GetSignatureCreationTime, GetSignatureExpirationTime, GetSignatureName, GetSignatureOctets, GetSignatureTarget, GetSignatureTimestamps, GetSignatureTrailer, GetSignatures, GetSignaturesForId, GetSignaturesForKeyID, GetSignaturesForUserAttribute, GetSignaturesOfType, GetSignedContent, GetSignedPubKeys, GetSigner, GetSignerInfos, GetSignerUserId, GetSigners, GetSkprf, GetSkseed, GetSlhDsaObjectidentifier, GetSlhDsaSignatureScheme, GetSpolyBigF, GetSpolyLittleF, GetSrpConfigVerifier, GetSrpExtension, GetSrpIdentity, GetSrpLoginParameters, GetSrpPassword, GetStandardGroupForDHParameters, GetStandardName, GetStatus, GetStatusMessages, GetStatusRequestExtension, GetStatusRequestV2Extension, GetStatusString, GetStoresAttrCert, GetStoresCert, GetStoresCrl, GetStreamSigner, GetStreamVerifier, GetString, GetSubjectAlternativeNameExtension, GetSubjectAlternativeNames, GetSubjectKeyIdentifier, GetSubjectPublicKeyInfo, GetSubjectPublicKeyInfoDer, GetSubjectX509Principal, GetSubpacket, GetSubpackets, GetSuppPrivInfoPartA, GetSuppPrivInfoPartB, GetSupportedCipherSuites, GetSupportedExtensions, GetSupportedGroups, GetSupportedGroupsExtension, GetSupportedPointFormatsExtension, GetSupportedSignatureAlgorithms, GetSupportedVersionsExtensionClient, GetSupportedVersionsExtensionServer, GetSymmetricAlgorithm, GetSymmetricCipherName, GetT1, GetTagClassText, GetTagText, GetTagged, GetTaggedChoice, GetTargetConstraintsAttrCert, GetTargetConstraintsCert, GetTargetGroups, GetTargetNames, GetTargets, GetTargetsObjects, GetTbsCertList, GetTbsCertificate, GetTbsRequest, GetTbsResponseData, GetTemporalEvidence, GetText, GetThreadProperty, GetTime, GetTimeStampDigestValue, GetTrailer, GetTrust, GetTrustAnchors, GetTrustData, GetTrustedACIssuers, GetTrustedCAKeysExtensionClient, GetTw, GetTweak, GetTypesAndValues, GetUkm, GetUnauthAttrs, GetUnderlyingDigest, GetUnhashedSubPackets, GetUnicodeVersion, GetUnknownMaxLength, GetUnpaddedData, GetUnprotectedAttributes, GetUnprotectedAttrs, GetUnsignedByteLength, GetUpdateOutputSize, GetUsableSignatureAlgorithms, GetUsagesRemaining, GetUseSrtpExtension, GetUserAttributes, GetUserIds, GetUtf8Decoding, GetValidSeconds, GetValueList, GetValueOrKey, GetValueOrNull, GetValues, GetWNafPreCompInfo, GetWindowSize, GetWords, GetWorkingKey, GetWrapper, GetX509Certificates, GetX509Extension, GetY, GetZ, GetZCoord, GetZCoords, Gte, H, H1, H2, HMsg, H_msg, Half, HalfTrace, HasAny, HasAnyCriticalExtensions, HasAnySmallFactors, HasAnyStreamVerifiers, HasAnyStreamVerifiersLegacy, HasCertificateRequestContext, HasClientCertificateUrlExtension, HasContextTag, HasControl, HasCryptoHashAlgorithm, HasCryptoSignatureAlgorithm, HasDHAgreement, HasECDHAgreement, HasEarlyDataIndication, HasEncryptThenMacExtension, HasEncryptionAlgorithm, HasExpectedEmptyExtensionData, HasExpectedPolicy, HasExtendedMasterSecretExtension, HasExtension, HasFingerprint, HasFullMessage, HasHkdfAlgorithm, HasKemAgreement, HasKeyExpirationTime, HasKeyPurposeId, HasMacAlgorithm, HasMoreTokens, HasNamedGroup, HasPostHandshakeAuthExtension, HasRemaining, HasRevocation, HasRsaEncryption, HasServerNameExtensionServer, HasSignatureAlgorithm, HasSignatureAndHashAlgorithm, HasSignatureCreationTime, HasSignatureExpirationTime, HasSignatureScheme, HasSigningCapability, HasSrpAuthentication, HasSubpacket, HasTag, HasTagClass, HasTruncatedHmacExtension, HasTrustedCAKeysExtensionServer, HasValue, Hash, HighestOneBit, HkdfExpand, HkdfExpandLabel, HkdfExtract, HkdfInit, IgnoreRandom, ImportPoint, ImportSession, Inc, IncAt, IncrementIndex, IndexOf, Init, InitSign, InitSigner, InitVerify, InnerProd, Insert, InsertPublicKey, InsertSecretKey, IntegerToBytes, IntersectEmptyPermittedSubtree, IntersectPermittedSubtree, IntersectWith, Inv, InvVar, Invalidate, Inverse, Inverse32, Inverse64, InverseNttToMont, Invert, Invoke, IsAead, IsAeadCipherSuite, IsAlive, IsAlternativeSignatureValid, IsAnonymous, IsAuthEnveloped, IsBlockCipherSuite, IsCA, IsCbc128, IsCbc64, IsCertificateConfirmationContent, IsCertificateEntry, IsCertificateRepMessage, IsCertificateRequestMessages, IsCertification, IsChaCha20Poly1305, IsChar2Curve, IsClearText, IsCritical, IsDHCipherSuite, IsDestroyed, IsECDsa, IsEarlierVersionOf, IsEccCipherSuite, IsEndOfStream, IsEntryOfType, IsEnvelopedData, IsEqualOrEarlierVersionOf, IsEqualOrLaterVersionOf, IsExplicit, IsExportable, IsF2mCurve, IsF2mField, IsFallback, IsFiniteField, IsForwardCheckingSupported, IsFpCurve, IsFpField, IsGcm, IsHelloRetryRequest, IsHmac, IsIA5String, IsIntegrityProtected, IsKeyEntry, IsLaterVersionOf, IsLongLength, IsMLDsaScheme, IsMRProbablePrime, IsMRProbablePrimeToBase, IsNormalized, IsNullOrContainsNull, IsNullOrEmpty, IsNumericString, IsOctetAligned, IsOne, IsOne64, IsOneVar, IsOnlyX509PKCertificates, IsOpenSsl, IsPbeAlgorithm, IsPkcs12, IsPkcs5Scheme1, IsPkcs5Scheme2, IsPrimaryUserId, IsPrimeCurve, IsPrintableString, IsPrivate, IsProbablePrime, IsProperSubsetOf, IsProperSupersetOf, IsReal2Key, IsReal3Key, IsRealEdeKey, IsRecognized, IsRevocable, IsRevoked, IsRsaPss, IsScsv, IsShard, IsSignatureAlgorithmsExtensionAllowed, IsSignatureEncodingEqual, IsSignatureValid, IsSlhDsa, IsSrpCipherSuite, IsSsl, IsStreamCipherSuite, IsSubsetOf, IsSupersetOf, IsSupportedCipherSuite, IsSupportedKeyExchange, IsSupportedNamedGroup, IsTimeout, IsTlsV10, IsTlsV11, IsTlsV12, IsTlsV13, IsTrinomial, IsValid, IsValidCipherSuiteForSignatureAlgorithms, IsValidFieldElement, IsValidIPv4, IsValidIPv4WithNetmask, IsValidIPv6, IsValidIPv6WithNetmask, IsValidSignatureSchemeForServerKeyExchange, IsValidSigningKeyPop, IsValidUint16, IsValidUint24, IsValidUint32, IsValidUint48, IsValidUint64, IsValidUint8, IsValidVersionForCipherSuite, IsValidWithNetMask, IsVerified, IsWeakKey, IsZero, IsZero64, IsZeroVar, ItohTsujii, Join, KemDec, KemEnc, KemKeypair, Key, KeyIDFromFingerprint, KeyIDFromLibrePgpFingerprint, KeyIDFromV4Fingerprint, KeyIDFromV6Fingerprint, KeyParameter, LMOtsGenerateSignature, LMOtsValidateSignature, LMOtsValidateSignatureCalculate, LessThan, Lift, LmsOtsGeneratePublicKey, Load, LoadUnchecked, LongFromLeftMostBytes, LongFromRightMostBytes, Lookup, LookupName, LookupOid, LookupVar, LowestOneBit, MLDsaKeyGenerationParameters, MLDsaKeyPairGenerator, MLDsaSigner, MLKemDecapsulator, MLKemEncapsulator, MLKemKeyGenerationParameters, MLKemKeyPairGenerator, MakeHint, MakeKey, MakeKeyFromPassPhrase, MakeKeyFromPassPhraseRaw, MakeKeyFromPassPhraseUtf8, MakeRandomKey, Map, MapElements, MapPoint, Match, MatchesIssuer, MatrixVectorMul, Max, MemoryConstrainedParameters, Min, Mod, ModDivide, ModInverse, ModMultiply, ModOddInverse, ModOddInverseVar, ModOddIsCoprime, ModOddIsCoprimeVar, ModPow, ModSquare, MontgomeryReduce, MontgomeryTrick, MoveNext, Mul, Mul128, Mul31BothAdd, Mul33Add, Mul33DWordAdd, Mul33WordAdd, MulAddTo, MulByWord, MulByWordAddTo, MulWord, MulWordAddExt, MulWordAddTo, MulWordDwordAdd, MulWordDwordAddAt, MulWordsAdd, Multiply, MultiplyAddToExt, MultiplyExt, MultiplyFromTnaf, MultiplyH, MultiplyMinusProduct, MultiplyPlusProduct, MultiplyPrecomp, MultiplyPrecompAddToExt, MultiplyRTnaf, MultiplyTnaf, NTT, Negate, NewBuilder, Next, NextBytes, NextDouble, NextInt, NextK, NextLong, NextPacketTag, NextPgpObject, NextProbablePrime, NextToken, NoTrailerAvailable, Norm, Normalize, NormalizeAll, Not, NotifyAlertRaised, NotifyAlertReceived, NotifyClientCertificate, NotifyClientVersion, NotifyCloseHandle, NotifyConnectionClosed, NotifyFallback, NotifyHandshakeBeginning, NotifyHandshakeComplete, NotifyIdentityHint, NotifyNewSessionTicket, NotifyOfferedCipherSuites, NotifyPrfDetermined, NotifySecureRenegotiation, NotifySelectedCipherSuite, NotifySelectedPsk, NotifyServerCertificate, NotifyServerVersion, NotifySession, NotifySessionID, NotifySessionToResume, NumberOfLeadingZeros, NumberOfTrailingZeros, OfferInput, On, One, Only, Open, Or, Org.BouncyCastle.Crypto.Agreement.X25519Agreement.AgreementSize.get, Org.BouncyCastle.Crypto.Agreement.X25519Agreement.CalculateAgreement(Org.BouncyCastle.Crypto.ICipherParameters, byte[], int), Org.BouncyCastle.Crypto.Agreement.X25519Agreement.Init(Org.BouncyCastle.Crypto.ICipherParameters), Org.BouncyCastle.Crypto.AsymmetricCipherKeyPair.Private.get, Org.BouncyCastle.Crypto.AsymmetricCipherKeyPair.Public.get, Org.BouncyCastle.Crypto.Digests.Blake2bDigest.BlockUpdate(byte[], int, int), Org.BouncyCastle.Crypto.Digests.Blake2bDigest.DoFinal(byte[], int), Org.BouncyCastle.Crypto.Digests.Blake2bDigest.GetDigestSize(), Org.BouncyCastle.Crypto.Digests.KeccakDigest.BlockUpdate(byte[], int, int), Org.BouncyCastle.Crypto.Digests.ShakeDigest.OutputFinal(byte[], int, int), Org.BouncyCastle.Crypto.Generators.Argon2BytesGenerator.GenerateBytes(byte[], byte[]), Org.BouncyCastle.Crypto.Generators.Argon2BytesGenerator.Init(Org.BouncyCastle.Crypto.Parameters.Argon2Parameters), Org.BouncyCastle.Crypto.Generators.MLDsaKeyPairGenerator.GenerateKeyPair(), Org.BouncyCastle.Crypto.Generators.MLDsaKeyPairGenerator.Init(Org.BouncyCastle.Crypto.KeyGenerationParameters), Org.BouncyCastle.Crypto.Generators.MLKemKeyPairGenerator.GenerateKeyPair(), Org.BouncyCastle.Crypto.Generators.MLKemKeyPairGenerator.Init(Org.BouncyCastle.Crypto.KeyGenerationParameters), Org.BouncyCastle.Crypto.Generators.OpenBsdBCrypt.CheckPassword(string, char[]), Org.BouncyCastle.Crypto.Generators.OpenBsdBCrypt.Generate(string, char[], byte[], int), Org.BouncyCastle.Crypto.Generators.SCrypt.Generate(byte[], byte[], int, int, int, int), Org.BouncyCastle.Crypto.IBufferedCipher.DoFinal(byte[]), Org.BouncyCastle.Crypto.IBufferedCipher.Init(bool, Org.BouncyCastle.Crypto.ICipherParameters), Org.BouncyCastle.Crypto.Kems.MLKemDecapsulator.Decapsulate(byte[], int, int, byte[], int, int), Org.BouncyCastle.Crypto.Kems.MLKemDecapsulator.Init(Org.BouncyCastle.Crypto.ICipherParameters), Org.BouncyCastle.Crypto.Kems.MLKemDecapsulator.SecretLength.get, Org.BouncyCastle.Crypto.Kems.MLKemEncapsulator.Encapsulate(byte[], int, int, byte[], int, int), Org.BouncyCastle.Crypto.Kems.MLKemEncapsulator.EncapsulationLength.get, Org.BouncyCastle.Crypto.Kems.MLKemEncapsulator.Init(Org.BouncyCastle.Crypto.ICipherParameters), Org.BouncyCastle.Crypto.Kems.MLKemEncapsulator.SecretLength.get, Org.BouncyCastle.Crypto.Parameters.Argon2Parameters.Builder.Build(), Org.BouncyCastle.Crypto.Parameters.Argon2Parameters.Builder.WithIterations(int), Org.BouncyCastle.Crypto.Parameters.Argon2Parameters.Builder.WithMemoryAsKB(int), Org.BouncyCastle.Crypto.Parameters.Argon2Parameters.Builder.WithParallelism(int), Org.BouncyCastle.Crypto.Parameters.Argon2Parameters.Builder.WithSalt(byte[]), Org.BouncyCastle.Crypto.Parameters.Argon2Parameters.Builder.WithVersion(int), Org.BouncyCastle.Crypto.Parameters.Ed25519PrivateKeyParameters.GeneratePublicKey(), Org.BouncyCastle.Crypto.Parameters.Ed25519PublicKeyParameters.GetEncoded(), Org.BouncyCastle.Crypto.Parameters.X25519PrivateKeyParameters.GeneratePublicKey(), Org.BouncyCastle.Crypto.Signers.Ed25519Signer.BlockUpdate(byte[], int, int), Org.BouncyCastle.Crypto.Signers.Ed25519Signer.GenerateSignature(), Org.BouncyCastle.Crypto.Signers.Ed25519Signer.Init(bool, Org.BouncyCastle.Crypto.ICipherParameters), Org.BouncyCastle.Crypto.Signers.Ed25519Signer.VerifySignature(byte[]), Org.BouncyCastle.Crypto.Signers.MLDsaSigner.BlockUpdate(byte[], int, int), Org.BouncyCastle.Crypto.Signers.MLDsaSigner.GenerateSignature(), Org.BouncyCastle.Crypto.Signers.MLDsaSigner.Init(bool, Org.BouncyCastle.Crypto.ICipherParameters), Org.BouncyCastle.Crypto.Signers.MLDsaSigner.VerifySignature(byte[]), Org.BouncyCastle.Security.CipherUtilities.GetCipher(string), Org.BouncyCastle.Security.DigestUtilities.CalculateDigest(string, byte[]), Output, OutputFinal, Overlaps, POLT2BS, POLVECp2BS, POLVECq2BS, POLmsg2BS, PRF, PRF_msg, PackZ, Pad, PadCount, PadSessionData, PadUntil, ParametersWithIV, ParametersWithRandom, Parse, ParseAttrCerts, ParseBaseUniversal, ParseCertificate, ParseCertificates, ParseContextBaseUniversal, ParseCrls, ParseExplicitBaseObject, ParseExplicitBaseTagged, ParseExplicitContextBaseObject, ParseExplicitContextBaseTagged, ParseImplicitBaseTagged, ParseImplicitContextBaseTagged, ParseObject, ParsePrivateKey, ParsePrivateKeyBlob, ParsePublicKey, ParseSecretKeyFromSExpr, ParseSecretKeyFromSExprRaw, ParseSecretKeyFromSExprUtf8, ParseSupportedSignatureAlgorithms, PartModReduction, PasswordToByteArray, Peek, Pentanomial, Permute, PipeAll, PipeAllLimited, Pkcs12PasswordToBytes, Pkcs5PasswordToBytes, Pkcs5PasswordToUtf8Bytes, PointwiseAccountMontgomery, PointwiseMontgomery, PolyEtaPack, PolyEtaUnpack, PolyMakeHint, PolyNtt, PolyT0Pack, PolyT0Unpack, PolyT1Pack, PolyT1Unpack, PolyUseHint, PopCount, Pow, Power2Round, PrecompMultiplicand, Precompute, PrecomputeWithPointMap, PreferLocalSupportedGroups, Prepend, PreviewInputRecord, PreviewOutputRecord, Prf, PrfMsg, ProbablePrime, Probe, ProcessAadByte, ProcessAadBytes, ProcessBlock, ProcessByte, ProcessBytes, ProcessClientCertificate, ProcessClientCredentials, ProcessClientExtensions, ProcessClientKeyExchange, ProcessClientSupplementalData, ProcessData, ProcessFourBlocks, ProcessPacket, ProcessServerCertificate, ProcessServerCredentials, ProcessServerExtensions, ProcessServerKeyExchange, ProcessServerSupplementalData, Proxy, Prune, R2Inv, RabinMillerTest, Random, RandomFieldElement, RandomFieldElementMult, RandomMult, RangeTestKeys, RdnAreEqual, Read, ReadAll, ReadAllLimited, ReadAllOrNothing, ReadAlpnExtensionClient, ReadAlpnExtensionServer, ReadApplicationData, ReadAsn1Object, ReadAsync, ReadAttrCert, ReadAttrCerts, ReadBerEncoding, ReadBlock, ReadBlockSpan, ReadByte, ReadBytesFully, ReadCertPair, ReadCertPairs, ReadCertificate, ReadCertificateAuthoritiesExtension, ReadCertificateTypeExtensionClient, ReadCertificateTypeExtensionServer, ReadCertificates, ReadClientCertificateUrlExtension, ReadCompressCertificateExtension, ReadConnectionIDExtension, ReadContextTagged, ReadCookieExtension, ReadCrl, ReadCrls, ReadDHParameter, ReadDerEncoding, ReadEarlyDataIndication, ReadEarlyDataMaxSize, ReadEncryptThenMacExtension, ReadExtendedMasterSecretExtension, ReadFully, ReadHeartbeatExtension, ReadInput, ReadInt16BigEndian, ReadInt16LittleEndian, ReadInt32, ReadInt32BigEndian, ReadInt32LittleEndian, ReadInt64BigEndian, ReadInt64LittleEndian, ReadKeyID, ReadKeyShareClientHello, ReadKeyShareHelloRetryRequest, ReadKeyShareServerHello, ReadMaxFragmentLengthExtension, ReadMpint, ReadMpintPositive, ReadObject, ReadOidFiltersExtension, ReadOnly, ReadOpaque16, ReadOpaque24, ReadOpaque8, ReadOptional, ReadOptionalContextTagged, ReadOptionalTagged, ReadOutput, ReadPacket, ReadPaddedBlock, ReadPaddingExtension, ReadPemObject, ReadPostHandshakeAuthExtension, ReadPreSharedKeyClientHello, ReadPreSharedKeyServerHello, ReadPskKeyExchangeModesExtension, ReadRecordSizeLimitExtension, ReadServerExtensions, ReadServerNameExtensionClient, ReadServerNameExtensionServer, ReadSignatureAlgorithmsCertExtension, ReadSignatureAlgorithmsExtension, ReadSrpExtension, ReadSrpParameter, ReadStatusRequestExtension, ReadStatusRequestV2Extension, ReadStringAscii, ReadStringUtf8, ReadSupportedGroupsExtension, ReadSupportedPointFormatsExtension, ReadSupportedVersionsExtensionClient, ReadSupportedVersionsExtensionServer, ReadTagged, ReadTruncatedHmacExtension, ReadTrustedCAKeysExtensionClient, ReadTrustedCAKeysExtensionServer, ReadU32, ReadUInt16BigEndian, ReadUInt16LittleEndian, ReadUInt32BigEndian, ReadUInt32LittleEndian, ReadUInt64BigEndian, ReadUInt64LittleEndian, ReadUint16, ReadUint16Array, ReadUint24, ReadUint32, ReadUint48, ReadUint8, ReadUint8Array, ReadUint8ArrayWithUint8Length, ReadUseSrtpExtension, ReadVersion, Receive, ReceiveDHConfig, ReceiveECDHConfig, ReceivePeerValue, ReceivePending, ReceivedHandshakeRecord, RecommendedParameters, ReconstructPublicKey, Reduce, Reduce15, Reduce17, Reduce23, Reduce29, Reduce32, Reduce37, Reduce39, Reduce5, Reduce61, Reduce63, ReducePoly, ReferenceMultiply, RefersToASpecificCurve, RefersToASpecificFiniteField, RefersToASpecificGroup, RefersToASpecificHybrid, RefersToASpecificKem, RefersToAnECDHCurve, RefersToAnECDSACurve, RefersToAnXDHCurve, RekeyDecoder, RekeyEncoder, Remainder, Remaining, Remove, RemoveAt, RemoveCertification, RemoveChild, RemoveData, RemoveExtension, RemovePacket, RemovePublicKey, RemovePublicKeyRing, RemoveSecretKey, RemoveSecretKeyRing, RemoveThreadProperty, ReplaceCertificatesAndCrls, ReplaceCertificatesAndRevocations, ReplaceExtension, ReplacePublicKey, ReplacePublicKeys, ReplaceSigners, ReplaceUnsignedAttributes, RequireByte, RequireDerEncoding, RequireNext, RequiresCloseNotify, RequiresExtendedMasterSecret, Reseed, Reset, ResetHeaders, ResumeHandshake, ReturnByte, Reverse, ReverseBytes, ReverseInPlace, RotateLeft, RotateRight, Round, RqInv, RqMul, RqSumZeroFromBytes, RqSumZeroToBytes, RqToS3, RsaSigToMpi, S3FromBytes, S3Inv, S3Mul, S3ToBytes, Save, ScalarMult, ScalarMultBase, ScaleX, ScaleXNegateY, ScaleY, ScaleYNegateX, SealHashAlgorithms, Seek, SegmentsOverlap, Select, Send, Set, SetAccuracyMicros, SetAccuracyMillis, SetAccuracySeconds, SetAdditionalLocationsEnabled, SetAttrCertCheckers, SetAttrStoresCert, SetAttributeCertificates, SetAuthInfoPKMAC, SetAuthInfoPKMacBuilder, SetAuthInfoSender, SetBerEncodeRecipients, SetBit, SetBody, SetBufferSize, SetCertAlgorithm, SetCertPathCheckers, SetCertReq, SetCertificateEntry, SetCertificates, SetChainAddress, SetCharset, SetCipherSuite, SetComment, SetCoordinateSystem, SetCrls, SetDateTimeVector, SetDetectMissingCrc, SetDirectSignature, SetEmbeddedSignature, SetEnableOracleTrustedKeyUsage, SetEndDate, SetEndomorphism, SetEntropyBitsRequired, SetEquals, SetExcludedCerts, SetExplicitNG, SetExportable, SetExtendedMasterSecret, SetExtensions, SetFeature, SetFreeText, SetFriendlyName, SetGeneralInfo, SetHashedSubpackets, SetHeader, SetHolder, SetImageAttribute, SetInitialPolicies, SetIssuer, SetIssuerDN, SetIssuerFingerprint, SetIssuerKeyID, SetIssuerUID, SetIssuerUniqueID, SetIssuerUniqueId, SetIterationCount, SetKey, SetKeyAlgorithm, SetKeyEntry, SetKeyExpirationTime, SetKeyFlags, SetKeyIdentifier, SetLength, SetLocalCertificate, SetMasterSecret, SetMessageID, SetMessageTime, SetMultiplier, SetNecessaryACAttributes, SetNegotiatedVersion, SetNextUpdate, SetNonce, SetNotAfter, SetNotBefore, SetNotationData, SetOddParity, SetOrdering, SetOverwriteFriendlyName, SetPadBits, SetParameters, SetParseForHeaders, SetPeerCertificate, SetPersonalisation, SetPersonalizationString, SetPreferredAeadAlgorithms, SetPreferredCompressionAlgorithms, SetPreferredHashAlgorithms, SetPreferredSymmetricAlgorithms, SetPrimaryUserId, SetProhibitedACAttributes, SetProofOfPossessionAgreeMac, SetProofOfPossessionRaVerified, SetProofOfPossessionSignKeySigner, SetProofOfPossessionSubsequentMessage, SetProtectionAlg, SetPskIdentity, SetPublicKey, SetPublicKeyMac, SetRecipKID, SetRecipNonce, SetRegInfo, SetRejectPrefixedDashesInCsfMessages, SetReqPolicy, SetRequestExtensions, SetRequestorName, SetResponseExtensions, SetReverseCertificates, SetRevocable, SetRevocationKey, SetRevocationReason, SetSaltLength, SetSecureRandom, SetSecurityStrength, SetSeed, SetSender, SetSenderKID, SetSenderNonce, SetSerialNumber, SetServerExtensions, SetSignature, SetSignatureCreationTime, SetSignatureExpirationTime, SetSignatureTarget, SetSignerUserId, SetSigningAlg, SetSrpIdentity, SetStartDate, SetStoresAttrCert, SetStoresCert, SetStoresCrl, SetSubject, SetSubjectDN, SetSubjectPublicKeyInfo, SetSubjectUID, SetSubjectUniqueID, SetTargetConstraintsAttrCert, SetTargetConstraintsCert, SetTargetGroups, SetTargetNames, SetThisUpdate, SetThreadBoolean, SetThreadInt32, SetThreadInt64, SetThreadProperty, SetThrowForUnknownCriticalPackets, SetTransactionID, SetTransactionId, SetTrust, SetTrustAnchors, SetTrustedACIssuers, SetTsa, SetUnhashedSubpackets, SetUseDerEncoding, SetValidateClearsignedMessageHeaders, SetValidity, SetVersion, ShakeDigest, ShamirsTrick, ShiftDownBit, ShiftDownBits, ShiftDownBits64, ShiftDownWord, ShiftLeft, ShiftRight, ShiftUpBit, ShiftUpBit64, ShiftUpBits, ShiftUpBits64, ShiftUpBitsXor64, ShouldCheckSigAlgOfPeerCerts, ShouldUseCompatibilityMode, ShouldUseExtendedMasterSecret, ShouldUseExtendedPadding, ShouldUseGmtUnixTime, Shrink, Sign, SignKeyPair, SignOpen, SignPrehash, SignRequest, SignatureAlgorithm, Size, Skip, SkipBlock, SkipClientCredentials, SkipExtractParameters, SkipIdentityHint, SkipMarkerPackets, SkipServerCredentials, SkipServerKeyExchange, Split, SplitMessageKeyAndIv, SqFromBytes, SqMul, SqToBytes, Sqr, Sqrt, SqrtRatioVar, Square, SquareAddToExt, SquareExt, SquareMinusProduct, SquareN, SquarePlusProduct, SquarePow, SquareWordAddTo, StopTracking, Stream128Init, Stream128SqueezeBlocks, Stream256Init, Stream256SqueezeBlocks, StripInternalSpaces, Sub, Sub33At, Sub33From, SubBothFrom, SubDWordAt, SubDWordFrom, SubFrom, SubInt32From, SubOne, SubWordAt, SubWordFrom, Subtract, SubtractExt, SumOfMultiplies, SumOfTwoMultiplies, SupportsCoordinateSystem, SupportsFeature, SupportsMLDsa, SupportsPkcs1, SupportsPss_Pss, SupportsPss_Rsae, SupportsSeipdV2, SupportsSignatureAlgorithm, SupportsSignatureAlgorithmCA, SupportsSlhDsa, SymmetricExceptWith, T_l, Tau, TauAdicNaf, TauAdicWNaf, TauPow, TestBit, TestBitZero, ThreeTimes, TimesPow2, ToASN1Structure, ToAdjustedDateTime, ToArray, ToAsciiByteArray, ToAsn1EncodableVector, ToAsn1Message, ToAsn1Object, ToAsn1Primitive, ToAsn1Structure, ToAttributeTable, ToAttributeTypeAndValueArray, ToAttributes, ToBase64String, ToBigInteger, ToBigInteger64, ToByteArray, ToByteArrayUnsigned, ToCertReqMsgArray, ToCertStatusArray, ToCertificateListArray, ToChallengeArray, ToCmsSignedData, ToDateTime, ToDictionary, ToHexString, ToInfoTypeAndValueArray, ToIntegerArray, ToPkiMessageArray, ToRSA, ToRSAParameters, ToRequest, ToResponse, ToRevDetailsArray, ToSignerInfo, ToString, ToTimeStampAndCrlArray, ToUInt32ArrayBigEndian, ToUInt32ArrayBigEndianUnsigned, ToUInt32ArrayLittleEndian, ToUInt32ArrayLittleEndianUnsigned, ToUtf8ByteArray, ToX509Certificate, ToX962Parameters, ToX9ECParameters, Trace, TrackHashAlgorithm, TrimDeltaCertificateDescriptor, TrinaryZqToZ3, Trinomial, TryAdd, TryFromID, TryGet, TryGetAttribute, TryGetAvailable, TryGetBaseUniversal, TryGetBoolean, TryGetContextBaseUniversal, TryGetDateTime, TryGetDecapsulator, TryGetEncapsulator, TryGetExplicitBaseObject, TryGetExplicitBaseTagged, TryGetExplicitContextBaseObject, TryGetExplicitContextBaseTagged, TryGetFirst, TryGetImplicitBaseTagged, TryGetImplicitContextBaseTagged, TryGetInt32, TryGetInt64, TryGetIntPositiveValueExact, TryGetIntValueExact, TryGetLongPositiveValueExact, TryGetLongValueExact, TryGetOptionalContextTagged, TryGetOptionalTagged, TryGetValue, TryParseBaseUniversal, TryParseContextBaseUniversal, TryParseExplicitBaseObject, TryParseExplicitBaseTagged, TryParseExplicitContextBaseObject, TryParseExplicitContextBaseTagged, TryParseImplicitBaseTagged, TryParseImplicitContextBaseTagged, TryReadOptionalContextTagged, TryReadOptionalTagged, Twice, TwicePlus, U16Str, U32, U32Str, U64Str, UniformBlocks, UniformEta, UniformGamma1, UnionWith, UnixMsToDateTime, UnpackZ, UnpadSessionData, Unread, Unwrap, UnwrapperForName, Update, Update3, UpdateHash, UpdateWithRecoveredMessage, UseHint, Validate, ValidateBuffer, ValidateBufferArguments, ValidateBufferLength, ValidateCertificate, ValidateGa, ValidateGx4, ValidateKeyUsage, ValidateMacTag, ValidateModulus, ValidateNotNull, ValidateParticipantIdsDiffer, ValidateParticipantIdsEqual, ValidatePoint, ValidatePrivateScalar, ValidatePublicKeyFull, ValidatePublicKeyFullExport, ValidatePublicKeyPartial, ValidatePublicKeyPartialExport, ValidatePublicPoint, ValidatePublicValue, ValidateRange, ValidateRound1PayloadReceived, ValidateRound2PayloadReceived, ValidateRound3PayloadReceived, ValidateSegment, ValidateZeroKnowledgeProof, ValueOf, ValueToString, VectorOfOne, Verify, VerifyAltSignature, VerifyCertification, VerifyClientEvidenceMessage, VerifyPrehash, VerifyRawSignature, VerifyRequest, VerifyServerEvidenceMessage, VerifySignature, VerifySupportedSignatureAlgorithm, WithAdditional, WithCertificate, WithCharToByteConverter, WithContents, WithContentsOptional, WithContext, WithDefaultPSource, WithIterations, WithMemoryAsKB, WithMemoryPowOfTwo, WithParallelism, WithPrecisionCentisecond, WithPrecisionDecisecond, WithPrecisionMillisecond, WithPrecisionSecond, WithPreferredFormat, WithRandom, WithResponseInfo, WithSalt, WithSecret, WithSignedAttributeGenerator, WithSuppPrivInfo, WithSuppPubInfo, WithThreadProperty, WithUnsignedAttributeGenerator, WithVersion, Wrap, WrapperForName, Write, WriteApplicationData, WriteAsync, WriteBlock, WriteBufTo, WriteByte, WriteBytes, WriteDHConfig, WriteDHParameter, WriteECConfig, WriteFileToLiteralData, WriteGmtUnixTime, WriteInt16BigEndian, WriteInt16LittleEndian, WriteInt32BigEndian, WriteInt32LittleEndian, WriteInt64BigEndian, WriteInt64LittleEndian, WriteKeyID, WriteMpint, WriteNamedECParameters, WriteObject, WriteObjects, WriteOpaque16, WriteOpaque24, WriteOpaque8, WritePacket, WriteSrpParameter, WriteStringAscii, WriteStringUtf8, WriteUInt16BigEndian, WriteUInt16LittleEndian, WriteUInt32BigEndian, WriteUInt32LittleEndian, WriteUInt64BigEndian, WriteUInt64LittleEndian, WriteUint16, WriteUint16Array, WriteUint16ArrayWithUint16Length, WriteUint16ArrayWithUint8Length, WriteUint24, WriteUint32, WriteUint48, WriteUint64, WriteUint8, WriteUint8Array, WriteUint8ArrayWithUint8Length, WriteUnsignedByteArray, WriteVersion, X25519Agreement, X25519PrivateKeyParameters, XofGetBytes, Xor, Xor64, XorBothTo, XorBothTo64, XorTo, XorTo64, XorToEachOther, XorToEachOther64, Z3ToZq, Zero, Zero64, ZeroMemory, checkExcluded, checkPermitted, crypto_kem_dec, crypto_kem_enc, crypto_kem_keypair, deflate, deflateEnd, deflateInit, deflateParams, deflateSetDictionary, free, get_A, get_ACInfo, get_AccessLocation, get_AccessMethod, get_Accuracy, get_Action, get_AddProfessionInfo, get_AddedUkm, get_AdmissionAuthority, get_AeadAlgorithm, get_AffineXCoord, get_AffineYCoord, get_AgreementSize, get_AlertDescription, get_AlgID, get_Algorithm, get_AlgorithmDetails, get_AlgorithmID, get_AlgorithmIdentifier, get_AlgorithmName, get_AlgorithmOid, get_Algorithms, get_Aliases, get_Alpha, get_Alphabetic, get_Amount, get_AppDataSplitMode, get_ApplicationDataAvailable, get_ApplicationDataLimit, get_ApplicationProtocol, get_ArchiveTimeStampSequence, get_ArchiveType, get_Argon2Config, get_Asn1Object, get_AttrCertChecking, get_AttrCertValidityPeriod, get_AttrType, get_AttrValues, get_AttributeCert, get_AttributeCertificate, get_AttributeCertificateValid, get_AttributeSet, get_Attributes, get_AuthAttributes, get_AuthAttrs, get_AuthEncryptedContentInfo, get_AuthEnvelopedData, get_AuthInfoValue, get_AuthSafe, get_AuthenticatedAttributeGenerator, get_AuthenticatedAttributes, get_AuthenticatedData, get_AuthorityCertIssuer, get_AuthorityCertSerialNumber, get_AuthorityKeyIdentifier, get_Available, get_B, get_BP, get_BadSinceDate, get_BagAttributeKeys, get_BagAttributes, get_BagID, get_BagValue, get_BagValueEncodable, get_Base, get_BaseCertificateID, get_BaseEntry, get_BaseGraphicString, get_BaseKeyClient, get_BaseKeyServer, get_BasicConstraints, get_Beta, get_Binders, get_BindersSize, get_BiometricDataHash, get_BiometricDataOid, get_BitCount, get_BitLength, get_BitStrength, get_Bits, get_BlindingFactor, get_BlockSize, get_Body, get_Buffer, get_Bytes, get_C, get_CA, get_CACerts, get_CAName, get_CAPublicKey, get_CL, get_CRLs, get_CanRead, get_CanSeek, get_CanWrite, get_CapabilityID, get_Capacity, get_CdfTable, get_CertDetails, get_CertHash, get_CertID, get_CertId, get_CertIssuer, get_CertLocation, get_CertOrEncCert, get_CertPair, get_CertPath, get_CertRef, get_CertReq, get_CertReqID, get_CertRequestID, get_CertStatus, get_CertTemplate, get_CertValue, get_CertValueEncodable, get_Certainty, get_Certificate, get_CertificateAuthorities, get_CertificateChecking, get_CertificateHash, get_CertificateList, get_CertificateSerialNumber, get_CertificateStatus, get_CertificateStructure, get_CertificateType, get_CertificateTypes, get_CertificateValid, get_Certificates, get_CertifiedAttributes, get_CertifiedKeyPair, get_Certs, get_Challenge, get_ChallengeValue, get_CharToByteConverter, get_Characteristic, get_Children, get_ChunkSize, get_CipherKeySize, get_CipherSuite, get_CipherSuites, get_CipherTextSize, get_ClaimedAttributes, get_ClientCertTypes, get_ClientCertificateType, get_ClientRandom, get_ClientServerNames, get_ClientSigAlgs, get_ClientSigAlgsCert, get_ClientSupportedGroups, get_ClientSupportedVersions, get_ClientVersion, get_Coefficient, get_Cofactor, get_CommitmentTypeID, get_CommitmentTypeIdentifier, get_CommitmentTypeQualifier, get_CompleteCrlEnabled, get_CompressedContentType, get_CompressedData, get_CompressionAlgorithmIdentifier, get_CondBytes, get_ConfWidth, get_Config, get_ConnectionIDLocal, get_ConnectionIDPeer, get_Content, get_ContentDescription, get_ContentEncryptionAlgorithm, get_ContentInfo, get_ContentLimit, get_ContentStream, get_ContentType, get_ContentTypeOid, get_ContextLength, get_Controls, get_Cookie, get_CoordinateSystem, get_CostParameter, get_Count, get_CountSmallPrimes, get_Counter, get_CountersignatureType, get_Country, get_CreationTime, get_Critical, get_Crl, get_CrlDetails, get_CrlEntry, get_CrlEntryDetails, get_CrlHash, get_CrlID, get_CrlIDs, get_CrlIdentifier, get_CrlIssuedTime, get_CrlIssuedTimeObject, get_CrlIssuer, get_CrlNum, get_CrlNumber, get_CrlNumberObject, get_CrlTime, get_CrlUrl, get_CrlValue, get_Crls, get_CrtCoefficient, get_Crypto, get_CryptoInfos, get_CryptoObject, get_Ct, get_Currency, get_Current, get_Curve, get_CurveEntry, get_CurveOid, get_CustomizationString, get_D, get_DP, get_DQ, get_Data, get_DataGroupHashValue, get_DataGroupNumber, get_DataType, get_DataUri, get_DataValueDescriptor, get_Date, get_DateAndTime, get_DateOfBirth, get_DefaultBufferSize, get_DefaultKeySize, get_DefaultReverse, get_DefaultSessionKeySize, get_DefaultStrength, get_Degree, get_Delta, get_DeltaCrlIndicatorEnabled, get_Depth, get_Digest, get_DigestAlgOid, get_DigestAlgParams, get_DigestAlgorithm, get_DigestAlgorithmFinder, get_DigestAlgorithmID, get_DigestAlgorithmIdentifier, get_DigestAlgorithms, get_DigestEncryptionAlgorithm, get_DigestLength, get_DigestOid, get_DigestOids, get_DigestParamSet, get_DigestedData, get_DigestedObjectType, get_Dimension, get_DirectReference, get_DistributionPoint, get_DistributionPointName, get_Dke, get_DomainParameters, get_Dpn, get_ECBinary, get_EP, get_EQ, get_ET, get_EarlyExporterMasterSecret, get_EarlySecret, get_EffectiveKeyBits, get_Elements, get_EncAlgorithm, get_EncSymmKey, get_EncValue, get_EncapContentInfo, get_EncapsulatedContentInfo, get_EncapsulationLength, get_Encoded, get_EncodedPoint, get_Encoding, get_Encodings, get_EncryptedCert, get_EncryptedContent, get_EncryptedContentInfo, get_EncryptedData, get_EncryptedDigest, get_EncryptedKey, get_EncryptionAlgOid, get_EncryptionAlgParams, get_EncryptionAlgorithm, get_EncryptionAlgorithmID, get_EncryptionInfo, get_EncryptionInfoType, get_EncryptionInfoValue, get_EncryptionParamSet, get_EncryptionScheme, get_End, get_EndDate, get_Endomorphism, get_Engine, get_Entity, get_EntityName, get_EntropySize, get_EnvelopedData, get_EphemeralPrivateKey, get_EphemeralPublicKey, get_EphemeralPublicPoint, get_ErrorCode, get_ErrorDetails, get_ErsEvidence, get_ExcludedSubtrees, get_ExcludedSubtreesValue, get_ExpectedPolicies, get_ExplicitGroup, get_ExplicitText, get_Exponent, get_Exponent1, get_Exponent2, get_ExporterMasterSecret, get_ExtendedKeyUsage, get_ExtensionOids, get_Extensions, get_ExternalContent, get_ExtnID, get_ExtnValue, get_Factor, get_FailInfo, get_FailureCode, get_Field, get_FieldElementEncodingLength, get_FieldIDEntry, get_FieldName, get_FieldSize, get_FieldType, get_FileName, get_Final, get_First, get_FixedInputData, get_FixedInputDataCounterPrefix, get_FixedInputDataCounterSuffix, get_Flags, get_FlushMode, get_Format, get_Forward, get_ForwardSelector, get_FreeText, get_FullAgeAtCountry, get_FullVersion, get_G, get_G1, get_G2, get_GenTime, get_GenTimeAccuracy, get_Gender, get_GeneratedVersion, get_GetNameConstraints, get_Gx1, get_Gx2, get_H, get_HInv, get_HandshakeSecret, get_HasChildren, get_HasControls, get_HasEfficientPointMap, get_HasEncryptedCertificate, get_HasExtensions, get_HasFastTrace, get_HasFriendlyName, get_HasIdentifier, get_HasMoreTokens, get_HasNewPacketFormat, get_HasPasswordBasedMacProtected, get_HasProofOfPossession, get_HasProtection, get_HasPublicKey, get_HasRevocationReason, get_HasSigningKeyProofOfPossessionWithPkMac, get_HasSubpackets, get_Hash, get_HashAlg, get_HashAlgOid, get_HashAlgorithm, get_HashVal, get_HashedMessage, get_Header, get_Headers, get_Holder, get_Host, get_I, get_ID, get_IDLength, get_IV, get_IVLength, get_IcvLen, get_Id, get_Identifier, get_IdentifierType, get_Identities, get_Identity, get_IdleMillis, get_IgnoreCorruptDtlsRecords, get_IgnoreX509NameOrdering, get_Index, get_IndexLimit, get_IndirectReference, get_Infinity, get_Info, get_InfoFormat, get_InfoType, get_InfoValue, get_Information, get_IntPositiveValueExact, get_IntVal, get_IntValue, get_IntValueExact, get_IntendedAlg, get_InternalBlockSize, get_IrrBytes, get_IsAdditionalLocationsEnabled, get_IsAlphabetic, get_IsAnyPolicyInhibited, get_IsApplicationProtocolSet, get_IsCertificateManagementMessage, get_IsClosed, get_IsConnected, get_IsConstructed, get_IsCounterSignature, get_IsCritical, get_IsDefaultPrf, get_IsDetachedSignature, get_IsDeterministic, get_IsDtls, get_IsEmpty, get_IsEncryptThenMac, get_IsEncryptedValue, get_IsEncryptionKey, get_IsExplicitPolicyRequired, get_IsExtendedMasterSecret, get_IsExtendedPadding, get_IsFailed, get_IsFalse, get_IsHandshaking, get_IsHardwareAccelerated, get_IsHashProtected, get_IsHumanReadable, get_IsIdentifierUtf8String, get_IsImplicitlyCA, get_IsIndirectCrl, get_IsInfinity, get_IsInitiator, get_IsKoblitz, get_IsMasterKey, get_IsMultiValued, get_IsNamedCurve, get_IsNegative, get_IsNotPrimePower, get_IsOne, get_IsOrdered, get_IsPadded, get_IsPartialBlockOkay, get_IsPointCompressed, get_IsPolicyMappingInhibited, get_IsPolicyQualifiersRejected, get_IsPreHash, get_IsPredefined, get_IsPredictionResistant, get_IsPrivate, get_IsPrivateKeyEmpty, get_IsPromoted, get_IsProvablyComposite, get_IsReadOnly, get_IsResumable, get_IsResumableHandshake, get_IsResumedSession, get_IsRevocationEnabled, get_IsSecureRenegotiation, get_IsServer, get_IsSigned, get_IsSigningKey, get_IsSsl, get_IsSupported, get_IsTagged, get_IsTls, get_IsTrinomial, get_IsTrue, get_IsTruncatedHmac, get_IsUseDeltasEnabled, get_IsValidNow, get_IsX509v3PKCert, get_IsZero, get_Issuer, get_IssuerAndSerialNumber, get_IssuerDN, get_IssuerDomainPolicy, get_IssuerKeyHash, get_IssuerName, get_IssuerNameHash, get_IssuerSerial, get_IssuerUID, get_IssuerUid, get_IssuerUniqueID, get_Issuers, get_IssuingDistributionPoint, get_IssuingDistributionPointEnabled, get_Item, get_IterationCount, get_IterationCountObject, get_Iterations, get_IterationsObject, get_Iv, get_J, get_K, get_K1, get_K2, get_K3, get_Kdf, get_KekID, get_Kem, get_Kemct, get_Key, get_KeyAlg, get_KeyAlgorithm, get_KeyAttr, get_KeyAttrId, get_KeyBytes, get_KeyDerivationAlgorithm, get_KeyDerivationFunc, get_KeyEncryptionAlgOid, get_KeyEncryptionAlgParams, get_KeyEncryptionAlgorithm, get_KeyEncryptionAlgorithmID, get_KeyExchange, get_KeyExchangeAlgorithm, get_KeyId, get_KeyIdentifier, get_KeyInfo, get_KeyLength, get_KeyLengthObject, get_KeySize, get_KeySpec, get_KeySpecControls, get_KeyUsage, get_KeyVersion, get_Keys, get_Ki, get_Kind, get_KnowledgeProofForX1, get_KnowledgeProofForX2, get_KnowledgeProofForX2s, get_L, get_LByte, get_LMOtsParameters, get_LMSigParameters, get_LMinus1, get_LPR, get_Lambda, get_Len, get_Length, get_Level, get_Limit, get_LmsParameters, get_LmsPublicKey, get_LocalCertificate, get_LocalVerifyData, get_Locality, get_Locator, get_LocatorValue, get_LogN, get_LongPositiveValueExact, get_LongValue, get_LongValueExact, get_LookupTable, get_LowerSigmaBound, get_Ls, get_M, get_MGen, get_MU, get_Mac, get_MacAlgOid, get_MacAlgParams, get_MacAlgorithm, get_MacAlgorithmID, get_MacData, get_MacKeySize, get_MacLength, get_MacSalt, get_MacSize, get_MacTag, get_MacValue, get_MajorVersion, get_MappedPoint, get_MaskGenAlgorithm, get_MasterSecret, get_MasterSeed, get_MatchAllSubjectAltNames, get_MaxBaseCrlNumber, get_MaxChainLength, get_MaxCrlNumber, get_MaxFragmentLength, get_MaxLength, get_MaxPathLength, get_Maximum, get_MaximumObject, get_MediaType, get_Memory, get_MemorySizeExponent, get_MessageAuthScheme, get_MessageImprint, get_MessageImprintAlgID, get_MessageImprintAlgOid, get_MessageImprintDigest, get_MessageTime, get_MetaData, get_Micros, get_Millis, get_MinCrlNumber, get_MinimalPolynomial, get_Minimum, get_MinimumObject, get_MinimumPrimeBits, get_MinorVersion, get_Mki, get_Mode, get_ModificationTime, get_Modulus, get_Mu, get_N, get_Name, get_NameAssigner, get_NameData, get_NameDistinguisher, get_NameOrPseudonym, get_NameType, get_NamedCurve, get_NamedGroup, get_Names, get_NamingAuthority, get_NamingAuthorityID, get_NamingAuthorityText, get_NamingAuthorityUrl, get_NamingAuthorityUrlData, get_NbIter, get_NegotiatedGroup, get_NegotiatedVersion, get_NewSigCert, get_NewWithNew, get_NewWithOld, get_NextUpdate, get_NoiseSeedBytes, get_Nonce, get_NonceGenerator, get_NonceLength, get_NotAfter, get_NotAfterTime, get_NotBefore, get_NotBeforeTime, get_NotYoungerThan, get_NoticeRef, get_Nu, get_Number, get_Numeric, get_ObfuscatedTicketAge, get_Object, get_ObjectDigest, get_ObjectDigestInfo, get_OcspIDs, get_OcspIdentifier, get_OcspRepHash, get_OcspResponderID, get_OcspResponse, get_OcspResponseList, get_OcspStatusRequest, get_Offset, get_Oid, get_OldWithNew, get_OnlyContainsAttributeCerts, get_OnlyContainsCACerts, get_OnlyContainsUserCerts, get_OnlySomeReasons, get_OptionalSignature, get_Order, get_Ordering, get_Organization, get_OriType, get_OriValue, get_Originator, get_OriginatorInfo, get_OriginatorInformation, get_OriginatorKey, get_OriginatorPublicKey, get_Other, get_OtherCert, get_OtherCertHash, get_OtherCertTag, get_OtherKeyAttribute, get_OtherMetaData, get_OtherObjectTypeID, get_OtherRev, get_OtherRevRefType, get_OtherRevRefsData, get_OtherRevRefsObject, get_OtherRevValType, get_OtherRevVals, get_OtherRevValsData, get_OtherRevValsObject, get_OtsParameters, get_OtsSignature, get_OutputLength, get_OutputSize, get_Owf, get_P, get_PSourceAlgorithm, get_Packet, get_PacketTag, get_PadBits, get_PaddingLength, get_PaddingName, get_Parallelism, get_ParallelizationParameter, get_ParamType, get_ParameterSet, get_Parameters, get_Parent, get_Parser, get_ParticipantId, get_PartyAInfo, get_PartyName, get_Passes, get_Password, get_PathLenConstraint, get_PathLenConstraintInteger, get_Payload, get_PeerCertificate, get_PeerVerifyData, get_PermittedSubtrees, get_PermittedSubtreesValue, get_PgenCounter, get_PhiN, get_PkiStatusInfo, get_PlaceOfBirth, get_Point, get_PointEncoding, get_PointMap, get_PointType, get_Policy, get_PolicyAuthority, get_PolicyIdentifier, get_PolicyQualifierId, get_PolicyQualifiers, get_PolicyTree, get_PolyBytes, get_PolyCoinBytes, get_PolyVecBytes, get_Pop, get_Popo, get_PoposkInput, get_Position, get_PositiveValue, get_PostalAddress, get_PreComp, get_PreCompNeg, get_PredefinedBiometricType, get_PreferredFormat, get_Prf, get_PrfAlgorithm, get_PrfCryptoHashAlgorithm, get_PrfHashLength, get_Prime, get_Prime1, get_Prime2, get_PrimeExponentP, get_PrimeExponentQ, get_PrimeGenCounter, get_PrimeP, get_PrimeQ, get_PrimeSeed, get_PrivateExponent, get_PrivateKey, get_PrivateKeyAlgorithm, get_PrivateKeyData, get_PrivateKeyLength, get_PrivateKeySize, get_PrivateKeyValid, get_ProducedAt, get_ProducedAtData, get_ProofOfPossession, get_Protection, get_ProtectionAlg, get_ProtectionAlgorithm, get_ProtectionMode, get_ProtectionProfiles, get_Pseudonym, get_PskIdentity, get_PubLocation, get_PublicExponent, get_PublicKey, get_PublicKeyAlgorithm, get_PublicKeyAndChallenge, get_PublicKeyBytes, get_PublicKeyData, get_PublicKeyMac, get_PublicKeyPacket, get_PublicKeyParamSet, get_PublicKeySize, get_PublicationInfo, get_Pvno, get_Q, get_QInv, get_Qualifier, get_QualifierData, get_R, get_RByte, get_RC2ParameterVersion, get_RC2ParameterVersionData, get_RKeyID, get_Radix, get_Random, get_ReadCipher, get_ReadDigest, get_ReadMac, get_ReadSigner, get_Reader, get_Reasons, get_RecipKID, get_RecipNonce, get_Recipient, get_RecipientEncryptedKeys, get_RecipientID, get_RecipientIdentifier, get_RecipientInfos, get_RecordSize, get_Regex, get_RegistrationNumber, get_Representation, get_ReqCert, get_ReqPolicy, get_Request, get_RequestExtensions, get_RequestList, get_RequestorName, get_RequiresCertificateVerify, get_RequiresServerKeyExchange, get_Reserved, get_Resolution, get_ResponderID, get_ResponderIDList, get_ResponderId, get_Response, get_ResponseBytes, get_ResponseExtensions, get_ResponseStatus, get_ResponseType, get_Responses, get_RestrictionString, get_ResumableSession, get_Reverse, get_ReverseSelector, get_RevocationDate, get_RevocationReason, get_RevocationTime, get_Rho, get_RoleAuthority, get_RoleName, get_Rounds, get_RsaPreMasterSecretVersion, get_RspInfo, get_S, get_S1, get_S2, get_S2k, get_S2kUsage, get_SBoxLength, get_SIG_FORS, get_SIG_HT, get_Salt, get_SaltLength, get_Scale, get_Seconds, get_SecretKeyBytes, get_SecretLength, get_SecureRandom, get_SecurityParameters, get_Seed, get_SeedBytes, get_SeedLength, get_SemanticsIdentifier, get_Sender, get_SenderKID, get_SenderNonce, get_Seq, get_Serial, get_SerialNumber, get_ServerCertificateType, get_ServerNames, get_ServerRandom, get_ServerSigAlgs, get_ServerSigAlgsCert, get_ServerSupportedGroups, get_ServerVersion, get_Session, get_SessionHash, get_SessionID, get_SessionKeySize, get_Sha1Hash, get_SigAlgName, get_SigAlgOid, get_SigLen, get_SigParameters, get_SigPolicyHash, get_SigPolicyIdentifier, get_SigPolicyQualifierId, get_SigQualifier, get_SigQualifierData, get_SignValue, get_Signature, get_SignatureAlgName, get_SignatureAlgNames, get_SignatureAlgOid, get_SignatureAlgorithm, get_SignatureAndHashAlgorithm, get_SignatureClass, get_SignatureFactory, get_SignaturePolicyId, get_SignatureType, get_SignatureValue, get_SignedAttributeTableGenerator, get_SignedAttributes, get_SignedAttrs, get_SignedContent, get_SignedContentType, get_SignedData, get_Signer, get_SignerID, get_SignerInfo, get_SignerInfos, get_SigningAlg, get_SingleExtensions, get_SingleRequestExtensions, get_Size, get_SkipExtract, get_SmallPrimesList, get_Source, get_SourceDataUri, get_Spki, get_SplitParams, get_SrpIdentity, get_Start, get_StartDate, get_State, get_StatementId, get_StatementInfo, get_StaticPrivateKey, get_StaticPublicKey, get_StaticPublicPoint, get_Status, get_StatusInfo, get_StatusObject, get_StatusRequestVersion, get_StatusString, get_StatusType, get_Stream, get_Stream128BlockBytes, get_Stream256BlockBytes, get_Strength, get_StrictLengthEnabled, get_Subfield, get_Subject, get_SubjectAltPublicKey, get_SubjectAlternativeNames, get_SubjectDN, get_SubjectDomainPolicy, get_SubjectKeyIdentifier, get_SubjectPublicKey, get_SubjectPublicKeyAlgID, get_SubjectPublicKeyInfo, get_SubjectUID, get_SubjectUniqueID, get_SubpacketType, get_SuppPubInfo, get_SupportedSignatureAlgorithms, get_SupportedSignatureAlgorithmsCert, get_SupportsModificationDetection, get_Surname, get_SymmAlg, get_Symmetric, get_SymmetricKeyAlgorithm, get_SymmetricWrapAlgorithm, get_T, get_T0, get_T1, get_Tag, get_TagClass, get_TagNo, get_TargetGroup, get_TargetName, get_Tau, get_TbsCertList, get_TbsCertificate, get_TbsRequest, get_TbsResponseData, get_TemporalEvidence, get_ThirdPerson, get_ThisUpdate, get_Ticket, get_TicketLifetimeHint, get_Time, get_TimeStamp, get_TimeStampInfo, get_TimeStampReq, get_TimeStampToken, get_TimeString, get_TimeoutMillis, get_TlsServerEndPoint, get_TlsUnique, get_TotalIn, get_TotalOut, get_Tr, get_TrafficSecretClient, get_TrafficSecretServer, get_TrailerField, get_TransactionID, get_TrustAmount, get_TrustAnchor, get_TrustedCert, get_Tsa, get_TstEvidence, get_TstInfo, get_Tweak, get_Twice, get_TwoDigitYearMax, get_Type, get_TypeID, get_TypeOfBiometricData, get_TypeOfSubstitution, get_UTF8, get_Ukm, get_UkmLength, get_UnauthAttributes, get_UnauthAttrs, get_UnauthenticatedAttributeGenerator, get_UnauthenticatedAttributes, get_UnderlyingCipher, get_UnprotectedAttributeGenerator, get_UnprotectedAttrs, get_UnsignedAttributeTableGenerator, get_UnsignedAttributes, get_UnsignedAttrs, get_Url, get_UrlAndHashList, get_UsageIndex, get_UseCounter, get_UseDefiniteLength, get_UseDerForCerts, get_UseDerForCrls, get_UseInverseFunction, get_UserAttributes, get_UserCertificate, get_UserIds, get_UserKeyingMaterial, get_UserObject, get_UsesOpaqueRecordType, get_UsingAes, get_UsingEffectiveMasking, get_Utilities, get_V1A, get_V1B, get_V2A, get_V2B, get_ValidDays, get_ValidPolicy, get_ValidationParameters, get_ValidationParams, get_ValidationParms, get_Validity, get_ValidityModel, get_Value, get_ValueCount, get_ValueHint, get_ValueType, get_Values, get_Verifier, get_VerifyDataLength, get_VerifyRequests, get_Version, get_VersionByte, get_VersionInfo, get_VersionNumber, get_W, get_Width, get_WillBeRevokedAt, get_Witness, get_Wrap, get_WriteCipher, get_WriteDigest, get_WriteMac, get_WriteSigner, get_Writer, get_X, get_X0, get_X0L, get_X509CertificateStructure, get_X509Name, get_X509v3PKCert, get_XCoord, get_Y, get_YCoord, inflate, inflateEnd, inflateInit, inflateSetDictionary, inflateSync, isMLDsa, kem_dec, kem_enc, kem_keypair, lm_ots_generate_signature, setIgnoreCrc, set_AppDataSplitMode, set_AttrCertChecking, set_AttributeCert, set_AttributeCertificateValid, set_AuthenticatedAttributeGenerator, set_AuthorityKeyIdentifier, set_BasicConstraints, set_Capacity, set_CertPair, set_Certificate, set_CertificateChecking, set_CertificateType, set_CertificateValid, set_CompleteCrlEnabled, set_ConfWidth, set_Date, set_DateAndTime, set_DefaultReverse, set_DeltaCrlIndicatorEnabled, set_DigestAlgorithmFinder, set_End, set_Endomorphism, set_ExpectedPolicies, set_ExtendedKeyUsage, set_Final, set_First, set_FlushMode, set_ForwardSelector, set_Holder, set_IgnoreX509NameOrdering, set_IsAnyPolicyInhibited, set_IsCritical, set_IsExplicitPolicyRequired, set_IsPolicyMappingInhibited, set_IsPolicyQualifiersRejected, set_IsResumableHandshake, set_IsRevocationEnabled, set_IsUseDeltasEnabled, set_Issuer, set_Issuers, set_IssuingDistributionPoint, set_IssuingDistributionPointEnabled, set_Item, set_IterationCount, set_J, set_KeyIdentifier, set_KeyUsage, set_LookupTable, set_MappedPoint, set_MatchAllSubjectAltNames, set_MaxBaseCrlNumber, set_MaxChainLength, set_MaxCrlNumber, set_MaxPathLength, set_MinCrlNumber, set_Offset, set_OriginatorInformation, set_Parent, set_Password, set_Policy, set_Position, set_PreComp, set_PreCompNeg, set_PrivateKeyValid, set_PublicKey, set_Q, set_Resolution, set_ReverseSelector, set_RevocationDate, set_SecureRandom, set_SerialNumber, set_Start, set_Status, set_StrictLengthEnabled, set_Subject, set_SubjectAlternativeNames, set_SubjectKeyIdentifier, set_SubjectPublicKey, set_SubjectPublicKeyAlgID, set_Twice, set_Type, set_UnauthenticatedAttributeGenerator, set_UnprotectedAttributeGenerator, set_UseDefiniteLength, set_UseDerForCerts, set_UseDerForCrls, set_UserObject, set_ValidityModel, set_VerifyRequests, set_Width, version"
+        },
+        {
+          "name": "internal:ImportedModules",
+          "value": "<>c, <>c__DisplayClass11_0, <>c__DisplayClass1_0, <>c__DisplayClass24_0, <>c__DisplayClass34_0, <>c__DisplayClass35_0, <>c__DisplayClass45_0, <>c__DisplayClass46_0`1, <>c__DisplayClass4_0, <>c__DisplayClass55_0`1, <>c__DisplayClass56_0`1, <>c__DisplayClass8_0, <EnumerateAttributes>d__27, <EnumerateDPFullNames>d__30, <EnumerateElements>d__38, <EnumerateSquarePowersInv>d__22, <GetKeyRings>d__11, <Org-BouncyCastle-Utilities-Collections-IStore<T>-EnumerateMatches>d__2, <ParseAttrCerts>d__11, <ParseCertificates>d__11, <ParseCrls>d__13, <Select>d__15`2, A, A3, A4, A5, A6, A7, A8, AbstractECLookupTable, AbstractECMultiplier, AbstractF2mCurve, AbstractF2mFieldElement, AbstractF2mPoint, AbstractFpCurve, AbstractFpPoint, AbstractTlsClient, AbstractTlsContext, AbstractTlsCrypto, AbstractTlsKeyExchange, AbstractTlsKeyExchangeFactory, AbstractTlsPeer, AbstractTlsSecret, AbstractTlsServer, AccessDescription, Accuracy, AdditionalInformationSyntax, Adler32, AdmissionSyntax, Admissions, Adrs, AeadEncDataPacket, AeadParameters, AeadUtilities, AesEngine, AesEngine_X86, AesLightEngine, AesSymmetric, AesUtilities, AesWrapEngine, AesWrapPadEngine, AgreementUtilities, AlertDescription, AlertLevel, AlgorithmIdentifier, AlgorithmIdentifierFactory, Aligned, AltSignatureAlgorithm, AltSignatureValue, AnssiNamedCurves, ArchiveTimeStamp, ArchiveTimeStampChain, ArchiveTimeStampSequence, Argon2BytesGenerator, Argon2Parameters, Argon2Params, AriaEngine, AriaWrapEngine, AriaWrapPadEngine, ArmoredInputException, ArmoredInputStream, ArmoredOutputStream, Arrays, AsconAead128, AsconCXof128, AsconDigest, AsconEngine, AsconHash256, AsconXof, AsconXof128, Asn1BitStringParser, Asn1CipherBuilderWithKey, Asn1DigestFactory, Asn1Dump, Asn1Encodable, Asn1EncodableVector, Asn1Exception, Asn1GeneralizedTime, Asn1Generator, Asn1InputStream, Asn1KeyUnwrapper, Asn1KeyWrapper, Asn1Null, Asn1Object, Asn1ObjectDescriptor, Asn1OctetString, Asn1OctetStringParser, Asn1OutputStream, Asn1ParsingException, Asn1RelativeOid, Asn1Sequence, Asn1SequenceParser, Asn1SequenceParserImpl, Asn1Set, Asn1SetParser, Asn1SetParserImpl, Asn1SignatureFactory, Asn1StreamParser, Asn1TaggedObject, Asn1TaggedObjectParser, Asn1Tags, Asn1Type, Asn1UtcTime, Asn1Utilities, Asn1VerifierFactory, Asn1VerifierFactoryProvider, AsymmetricCipherKeyPair, AsymmetricKeyEntry, AsymmetricKeyParameter, AttCertIssuer, AttCertValidityPeriod, Attribute, AttributeCertificate, AttributeCertificateHolder, AttributeCertificateInfo, AttributeCertificateIssuer, AttributePkcs, AttributeTable, AttributeTableExtensions, AttributeTypeAndValue, AttributeX509, Attributes, AuthEnvelopedData, AuthEnvelopedDataParser, AuthEnvelopedSecureReadable, AuthInfo, AuthenticatedData, AuthenticatedDataParser, AuthenticatedSafe, AuthenticatorControl, AuthorityInformationAccess, AuthorityKeyIdentifier, AuthorityKeyIdentifierStructure, B, BCrypt, BZip2Constants, Base64, Base64Encoder, BaseInputStream, BaseKdfBytesGenerator, BaseOutputStream, BasicAlphabetMapper, BasicConstraints, BasicEntropySourceProvider, BasicGcmExponentiator, BasicGcmMultiplier, BasicOcspResp, BasicOcspRespGenerator, BasicOcspResponse, BasicTlsPskExternal, BasicTlsPskIdentity, BasicTlsSrpIdentity, BcChaCha20Poly1305, BcDefaultTlsCredentialedAgreement, BcDefaultTlsCredentialedDecryptor, BcDefaultTlsCredentialedSigner, BcSsl3Hmac, BcTls13Verifier, BcTlsAeadCipherImpl, BcTlsBlockCipherImpl, BcTlsCcmImpl, BcTlsCertificate, BcTlsCrypto, BcTlsDH, BcTlsDHDomain, BcTlsDsaSigner, BcTlsDsaVerifier, BcTlsDssSigner, BcTlsDssVerifier, BcTlsECDH, BcTlsECDomain, BcTlsECDsa13Signer, BcTlsECDsaSigner, BcTlsECDsaVerifier, BcTlsEd25519Signer, BcTlsEd448Signer, BcTlsHash, BcTlsHmac, BcTlsMLDsaSigner, BcTlsMLKem, BcTlsMLKemDomain, BcTlsNonceGenerator, BcTlsRawKeyCertificate, BcTlsRsaEncryptor, BcTlsRsaPssSigner, BcTlsRsaPssVerifier, BcTlsRsaSigner, BcTlsRsaVerifier, BcTlsSM2Signer, BcTlsSecret, BcTlsSigner, BcTlsSlhDsaSigner, BcTlsSrp6Client, BcTlsSrp6Server, BcTlsSrp6VerifierGenerator, BcTlsStreamSigner, BcTlsStreamVerifier, BcTlsVerifier, BcX25519, BcX25519Domain, BcX448, BcX448Domain, BcpgInputStream, BcpgObject, BcpgOutputStream, BerBitString, BerBitStringParser, BerGenerator, BerOctetString, BerOctetStringGenerator, BerOctetStringParser, BerSequence, BerSequenceGenerator, BerSequenceParser, BerSet, BerSetGenerator, BerSetParser, BerTaggedObject, BerTaggedObjectParser, BigInteger, BigIntegers, BikeKemExtractor, BikeKemGenerator, BikeKeyGenerationParameters, BikeKeyPairGenerator, BikeKeyParameters, BikeParameters, BikePrivateKeyParameters, BikePublicKeyParameters, BikeUtilities, BinPolyMulBase, BinPolys, BinaryReaders, BinaryTime, BinaryWriters, BiometricData, Blake2bDigest, Blake2sDigest, Blake2xsDigest, Blake3Digest, Blake3Parameters, BlowfishEngine, Buffer, BufferedAeadBlockCipher, BufferedAeadCipher, BufferedAsymmetricBlockCipher, BufferedBerOctetStream, BufferedBlockCipher, BufferedCipherBase, BufferedCipherWrapper, BufferedDecoder, BufferedEncoder, BufferedIesCipher, BufferedStreamCipher, Builder, ByteQueue, ByteQueueInputStream, ByteQueueOutputStream, Bytes, C, C5, C6, C7, C8, CAKeyUpdAnnContent, CBZip2InputStream, CBZip2InputStreamLeaveOpen, CBZip2OutputStream, CBZip2OutputStreamLeaveOpen, CMac, CRC, CShakeDigest, CachedInformationType, CamelliaEngine, CamelliaLightEngine, CamelliaWrapEngine, Cast5CbcParameters, Cast5Engine, Cast6Engine, CbcBlockCipher, CbcBlockCipherMac, CcmBlockCipher, CcmParameters, CertAnnContent, CertBag, CertChainType, CertConfirmContent, CertHash, CertID, CertId, CertOrEncCert, CertPolicyID, CertRepMessage, CertReqMessages, CertReqMsg, CertReqTemplateContent, CertRequest, CertResponse, CertStatus, CertTemplate, CertTemplateBuilder, Certificate, CertificateCompressionAlgorithm, CertificateConfirmationContent, CertificateConfirmationContentBuilder, CertificateEncodingException, CertificateEntry, CertificateException, CertificateExpiredException, CertificateID, CertificateList, CertificateNotYetValidException, CertificatePair, CertificateParsingException, CertificatePolicies, CertificateRepMessage, CertificateRepMessageBuilder, CertificateReqMessages, CertificateReqMessagesBuilder, CertificateRequest, CertificateRequestMessage, CertificateRequestMessageBuilder, CertificateResponse, CertificateResponseBuilder, CertificateStatus, CertificateStatusRequest, CertificateStatusRequestItemV2, CertificateType, CertificateUrl, CertificateValues, CertificateVerify, CertificationRequest, CertificationRequestInfo, CertifiedKeyPair, CfbBlockCipher, CfbBlockCipherMac, ChaCha20Poly1305, ChaCha7539Engine, ChaChaEngine, Challenge, CipherFactory, CipherKeyGenerator, CipherKeyGeneratorFactory, CipherStream, CipherSuite, CipherUtilities, ClientCertificateType, ClientHandshakeState, ClientHello, CmceEngine`1, CmceKemExtractor, CmceKemGenerator, CmceKeyGenerationParameters, CmceKeyPairGenerator, CmceKeyParameters, CmceParameters, CmcePrivateKey, CmcePrivateKeyParameters, CmcePublicKey, CmcePublicKeyParameters, CmpCertificate, CmpException, CmsAbsentContent, CmsAlgorithmNotAllowedException, CmsAlgorithmProtection, CmsAttributeTableGenerationException, CmsAttributeTableGenerator, CmsAuthEnvelopedData, CmsAuthEnvelopedGenerator, CmsAuthenticatedData, CmsAuthenticatedDataGenerator, CmsAuthenticatedDataOutputStream, CmsAuthenticatedDataParser, CmsAuthenticatedDataStreamGenerator, CmsAuthenticatedGenerator, CmsAuthenticatedSecureReadable, CmsCompressedData, CmsCompressedDataGenerator, CmsCompressedDataParser, CmsCompressedDataStreamGenerator, CmsCompressedOutputStream, CmsContentEncryptorBuilder, CmsContentInfoParser, CmsDigestedData, CmsEnvelopedData, CmsEnvelopedDataGenerator, CmsEnvelopedDataOutputStream, CmsEnvelopedDataParser, CmsEnvelopedDataStreamGenerator, CmsEnvelopedGenerator, CmsEnvelopedHelper, CmsEnvelopedSecureReadable, CmsException, CmsKeyTransRecipientInfoGenerator, CmsPbeKey, CmsProcessable, CmsProcessableByteArray, CmsProcessableCmpCertificate, CmsProcessableFile, CmsProcessableInputStream, CmsReadable, CmsSecureReadable, CmsSignedData, CmsSignedDataGenerator, CmsSignedDataOutputStream, CmsSignedDataParser, CmsSignedDataStreamGenerator, CmsSignedGenerator, CmsStreamException, CmsTagLengthException, CmsTypedData, CmsTypedProcessable, CmsTypedStream, CmsVerifierCertificateNotValidException, CollectionUtilities, CombinedHash, CommitmentTypeIndication, CommitmentTypeQualifier, CompleteCertificateRefs, CompleteRevocationRefs, Composer, CompressedData, CompressedDataPacket, CompressedDataParser, ConcatenationKdfGenerator, Config, Configuration, ConfigureBasepointCallback, ConstructedBitStream, ConstructedDerEncoding, ConstructedOctetStream, ContainedPacket, ContentHints, ContentIdentifier, ContentInfo, ContentInfoParser, ContentType, Controls, Converter, ConverterFunction, Crc24, CrlAnnContent, CrlBag, CrlDistPoint, CrlEntry, CrlException, CrlID, CrlIdentifier, CrlListID, CrlNumber, CrlOcspRef, CrlReason, CrlSource, CrlStatus, CrlValidatedID, CrmfException, CryptoApiEntropySourceProvider, CryptoApiRandomGenerator, CryptoException, CryptoInfos, CryptoServicesRegistrar, CscaMasterList, CtrDrbgProvider, CtrSP800Drbg, CtsBlockCipher, CustomNamedCurves, D, DHAgreement, DHBasicAgreement, DHBasicKeyPairGenerator, DHCredentialedAgreement, DHDomainParameters, DHGroup, DHKdfParameters, DHKekGenerator, DHKeyGenerationParameters, DHKeyPairGenerator, DHKeyParameters, DHParameter, DHParameters, DHParametersGenerator, DHParametersHelper, DHPrivateKeyParameters, DHPublicKey, DHPublicKeyParameters, DHStandardGroups, DHValidationParameters, DHValidationParms, DLBitString, DLBitStringParser, DLExternal, DLSequence, DLSet, DLTaggedObject, DLTaggedObjectParser, DataGroupHash, DataLengthException, DatagramReceiver, DatagramSender, DateTimeUtilities, DeclarationOfMajority, DefaultAuthenticatedAttributeTableGenerator, DefaultDigestAlgorithmFinder, DefaultDigestAlgorithmIdentifierFinder, DefaultDigestCalculator, DefaultDigestResult, DefaultF2mLookupTable, DefaultLookupTable, DefaultMacAlgorithmFinder, DefaultMacCalculator, DefaultMacResult, DefaultPKMacPrimitivesProvider, DefaultSignatureAlgorithmFinder, DefaultSignatureAlgorithmIdentifierFinder, DefaultSignatureCalculator, DefaultSignatureResult, DefaultSignedAttributeTableGenerator, DefaultTlsClient, DefaultTlsCredentialedSigner, DefaultTlsDHGroupVerifier, DefaultTlsHeartbeat, DefaultTlsKeyExchangeFactory, DefaultTlsServer, DefaultTlsSrpConfigVerifier, DefaultVerifierCalculator, DefaultVerifierResult, DeferredHash, DefiniteLengthInputStream, DeltaCertificateDescriptor, DeltaCertificateTool, DerBitString, DerBmpString, DerBoolean, DerEncoding, DerEnumerated, DerExternal, DerExternalParser, DerGeneralString, DerGeneralizedTime, DerGraphicString, DerIA5String, DerInteger, DerNumericString, DerObjectIdentifier, DerOctetString, DerOctetStringParser, DerOtherInfo, DerPrintableString, DerSequence, DerSequenceGenerator, DerSequenceParser, DerSet, DerSetGenerator, DerSetParser, DerStringBase, DerT61String, DerTaggedObject, DerUniversalString, DerUtcTime, DerUtf8String, DerUtilities, DerVideotexString, DerVisibleString, DesEdeEngine, DesEdeKeyGenerator, DesEdeParameters, DesEdeWrapEngine, DesEngine, DesKeyGenerator, DesParameters, DhbmParameter, DigestInfo, DigestInputBuffer, DigestRandomGenerator, DigestSink, DigestStream, DigestUtilities, DigestedData, DigitallySigned, DilithiumKeyGenerationParameters, DilithiumKeyPairGenerator, DilithiumKeyParameters, DilithiumPrivateKeyParameters, DilithiumPublicKeyParameters, DilithiumSigner, DirectoryString, DisplayText, DistributionPoint, DistributionPointName, DomainParameters, DotNetUtilities, DrbgUtilities, DsaDigestSigner, DsaKeyGenerationParameters, DsaKeyPairGenerator, DsaKeyParameters, DsaParameter, DsaParameterGenerationParameters, DsaParameters, DsaParametersGenerator, DsaPrivateKeyParameters, DsaPublicBcpgKey, DsaPublicKeyParameters, DsaSecretBcpgKey, DsaSigner, DsaValidationParameters, Dstu4145BinaryField, Dstu4145ECBinary, Dstu4145KeyPairGenerator, Dstu4145NamedCurves, Dstu4145Parameters, Dstu4145Params, Dstu4145PointEncoder, Dstu4145PublicKey, Dstu4145Signer, Dstu7564Digest, Dstu7564Mac, Dstu7624Engine, Dstu7624Mac, Dstu7624WrapEngine, DtlsClientProtocol, DtlsHandshakeRetransmit, DtlsRecordCallback, DtlsRecordLayer, DtlsReplayWindow, DtlsServerProtocol, DtlsTransport, DtlsVerifier, E, ECAlgorithms, ECC_CMS_SharedInfo, ECCredentialedAgreement, ECCurve, ECDHBasicAgreement, ECDHCBasicAgreement, ECDHCWithKdfBasicAgreement, ECDHKekGenerator, ECDHPublicBcpgKey, ECDHRawAgreement, ECDHWithKdfBasicAgreement, ECDhcRawAgreement, ECDomainParameters, ECDsaPublicBcpgKey, ECDsaSigner, ECEndomorphism, ECFieldElement, ECGost3410NamedCurves, ECGost3410ParamSetParameters, ECGost3410Parameters, ECGost3410Signer, ECKeyGenerationParameters, ECKeyPairGenerator, ECKeyParameters, ECLookupTable, ECMqvBasicAgreement, ECMqvWithKdfBasicAgreement, ECMultiplier, ECNRSigner, ECNamedCurveTable, ECNamedDomainParameters, ECPoint, ECPointBase, ECPointMap, ECPrivateKeyParameters, ECPrivateKeyStructure, ECPublicBcpgKey, ECPublicKeyParameters, ECSecretBcpgKey, ECVkoAgreement, EaxBlockCipher, EcbBlockCipher, Ed25519, Ed25519KeyGenerationParameters, Ed25519KeyPairGenerator, Ed25519PrivateKeyParameters, Ed25519PublicBcpgKey, Ed25519PublicKeyParameters, Ed25519SecretBcpgKey, Ed25519Signer, Ed25519ctxSigner, Ed25519phSigner, Ed448, Ed448KeyGenerationParameters, Ed448KeyPairGenerator, Ed448PrivateKeyParameters, Ed448PublicBcpgKey, Ed448PublicKeyParameters, Ed448SecretBcpgKey, Ed448Signer, Ed448phSigner, EdDsaPublicBcpgKey, EdDsaSigner, EdSecretBcpgKey, EdiPartyName, ElGamalEngine, ElGamalKeyGenerationParameters, ElGamalKeyPairGenerator, ElGamalKeyParameters, ElGamalParameter, ElGamalParameters, ElGamalParametersGenerator, ElGamalPrivateKeyParameters, ElGamalPublicBcpgKey, ElGamalPublicKeyParameters, ElGamalSecretBcpgKey, Element, EmbeddedAttribute, EmbeddedSignature, EncKeyWithID, EncMethod, EncryptedContentInfo, EncryptedContentInfoParser, EncryptedData, EncryptedKey, EncryptedPrivateKeyInfo, EncryptedPrivateKeyInfoFactory, EncryptedValue, EncryptedValueBuilder, EncryptedValueParser, EncryptionException, EncryptionInfo, EncryptionScheme, EndoPreCompInfo, EndoUtilities, EntropyUtilities, EnumerableProxy`1, EnvelopedData, EnvelopedDataParser, ErrorMsgContent, EssCertID, EssCertIDv2, Evidence, EvidenceRecord, ExpandedKey, ExperimentalPacket, Exportable, ExtendedKeyUsage, Extension, ExtensionType, Extensions, F2mCurve, F2mFieldElement, F2mPoint, FalconCommon, FalconKeyGenerationParameters, FalconKeyPairGenerator, FalconKeyParameters, FalconParameters, FalconPrivateKeyParameters, FalconPublicKeyParameters, FalconSigner, Features, FillBlock, FilterStream, FingerprintUtilities, FiniteFields, FixedPointCallback, FixedPointCombMultiplier, FixedPointPreCompInfo, FixedPointUtilities, FpCurve, FpFieldElement, FpPoint, FpeEngine, FpeFf1Engine, FpeFf3_1Engine, FpeParameters, FprEngine, FrodoEngine, FrodoKEMExtractor, FrodoKEMGenerator, FrodoKeyGenerationParameters, FrodoKeyPairGenerator, FrodoKeyParameters, FrodoMatrixGenerator, FrodoParameters, FrodoPrivateKeyParameters, FrodoPublicKeyParameters, GF, GF12, GF13, GF2Polynomial, GMNamedCurves, GMac, GOfbBlockCipher, GcmBlockCipher, GcmParameters, GcmSivBlockCipher, GenMsgContent, GenRepContent, GenTimeAccuracy, GeneralDigest, GeneralName, GeneralNames, GeneralPkiMessage, GeneralSecurityException, GeneralSubtree, GeneralSubtrees, GeneratorUtilities, GenericKey, GenericPolynomialExtensionField, GenericSigner, GlvEndomorphism, GlvMultiplier, GlvTypeAEndomorphism, GlvTypeAParameters, GlvTypeBEndomorphism, GlvTypeBParameters, Gost28147Engine, Gost28147Mac, Gost28147Parameters, Gost3410DigestSigner, Gost3410KeyGenerationParameters, Gost3410KeyPairGenerator, Gost3410KeyParameters, Gost3410NamedParameters, Gost3410ParamSetParameters, Gost3410Parameters, Gost3410ParametersGenerator, Gost3410PrivateKeyParameters, Gost3410PublicKeyAlgParameters, Gost3410PublicKeyParameters, Gost3410Signer, Gost3410ValidationParameters, Gost3411Digest, Gost3411_2012Digest, Gost3411_2012_256Digest, Gost3411_2012_512Digest, Grain128AeadEngine, HC128Engine, HC256Engine, HMac, HMacDrbgProvider, HMacDsaKCalculator, HMacSP800Drbg, HandshakeMessageInput, HandshakeType, Haraka256Digest, Haraka256_X86, Haraka512Digest, Haraka512_X86, HarakaBase, HarakaS256Digest, HarakaS512Digest, HarakaSEngine, HarakaSEngineProvider, HarakaSEngine_X86, HarakaSXof, HarakaS_X86, HashAlgorithm, HashDrbgProvider, HashMLDsaSigner, HashSP800Drbg, HashSlhDsaSigner, HeartbeatExtension, HeartbeatMessage, HeartbeatMessageType, HeartbeatMode, Hex, HexEncoder, HexTranslator, HkdfBytesGenerator, HkdfParameters, Holder, Hps4096Polynomial, HpsPolynomial, HqcKemExtractor, HqcKemGenerator, HqcKeyGenerationParameters, HqcKeyPairGenerator, HqcKeyParameters, HqcParameters, HqcPrivateKeyParameters, HqcPublicKeyParameters, Hrss1373Polynomial, HrssPolynomial, Hss, HssKeyGenerationParameters, HssKeyPairGenerator, HssPrivateKeyParameters, HssPublicKeyParameters, HssSignature, HssSigner, IAeadBlockCipher, IAeadCipher, IAlphabetMapper, IAsn1Convertible, IAsn1Encoding, IAsn1String, IAsymmetricBlockCipher, IAsymmetricCipherKeyPairGenerator, IBasicAgreement, IBcpgKey, IBinPolyInv, IBinPolyMul, IBlockCipher, IBlockCipherMode, IBlockCipherPadding, IBlockResult, IBufferedCipher, ICharToByteConverter, ICheckingCertificate, ICipher, ICipherBuilder, ICipherBuilderWithKey, ICmceEngine, IControl, IDecryptorBuilderProvider, IDerivationFunction, IDigest, IDigestAlgorithmFinder, IDigestFactory, IDrbgProvider, IDsa, IDsaEncoding, IDsaKCalculator, IEncapsulatedSecretExtractor, IEncapsulatedSecretGenerator, IEncodable, IEncoder, IEncryptedValuePadder, IEntropySource, IEntropySourceProvider, IExtensionField, IFiniteField, IGcmExponentiator, IGcmMultiplier, IKemDecapsulator, IKemEncapsulator, IKeyUnwrapper, IKeyWrapper, ILmsContextBasedSigner, ILmsContextBasedVerifier, IMac, IMacAlgorithmFinder, IMacDerivationFunction, IMacFactory, IMemoable, IMessageSigner, INameConstraintHostName, IPAddress, IPKMacPrimitivesProvider, IPasswordFinder, IPolynomial, IPolynomialExtensionField, IPreCompCallback, IRandomGenerator, IRawAgreement, IReduce, IRsa, ISO10126d2Padding, ISO7816d4Padding, ISO9796d1Encoding, ISO9797Alg3Mac, ISP80090Drbg, ISecretWithEncapsulation, ISelector`1, ISignatureAlgorithmFinder, ISignatureFactory, ISigner, ISignerWithRecovery, ISlhDsaEngineProvider, ISphincsPlusEngineProvider, IStore`1, IStreamCalculator`1, IStreamCipher, IStreamGenerator, ITranslator, IVerifier, IVerifierFactory, IVerifierFactoryProvider, IWrapper, IX509Extension, IXof, IdeaCbcPar, IdeaEngine, IdentifierType, IesEngine, IesParameters, IesWithCipherParameters, IetfAttrSyntax, IetfUtilities, ImageAttrib, IndefiniteLengthInputStream, InfTree, Inflate, InfoTypeAndValue, InputStreamPacket, Integers, IntendedRecipientFingerprint, Inv, InvalidCipherTextException, InvalidKeyException, InvalidParameterException, IsaacEngine, IsapDigest, Iso18033KdfParameters, Iso4217CurrencyCode, Iso9796d2PssSigner, Iso9796d2Signer, IsoTrailers, IssuerAndSerialNumber, IssuerFingerprint, IssuerKeyId, IssuerSerial, IssuingDistributionPoint, ItohTsujiiInv, JPakeParticipant, JPakePrimeOrderGroup, JPakePrimeOrderGroups, JPakeRound1Payload, JPakeRound2Payload, JPakeRound3Payload, JPakeUtilities, JZlib, JksStore, KCcmBlockCipher, KCtrBlockCipher, KMac, KMacWithShake128Params, KMacWithShake256Params, Kdf1BytesGenerator, Kdf2BytesGenerator, KdfCounterBytesGenerator, KdfCounterParameters, KdfDoublePipelineIterationBytesGenerator, KdfDoublePipelineIterationParameters, KdfFeedbackBytesGenerator, KdfFeedbackParameters, KdfParameters, KeccakDigest, KekIdentifier, KekRecipientInfo, KekRecipientInfoGenerator, KekRecipientInformation, KemBMParameter, KemCiphertextInfo, KemOtherInfo, KemRecipientInfo, KemUtilities, KeyAgreeRecipientIdentifier, KeyAgreeRecipientInfo, KeyAgreeRecipientInfoGenerator, KeyAgreeRecipientInformation, KeyDerivationFunc, KeyException, KeyExchangeAlgorithm, KeyExpirationTime, KeyFlags, KeyGenerationParameters, KeyParameter, KeyRecRepContent, KeyShareEntry, KeySpecificInfo, KeyTransRecipientInfo, KeyTransRecipientInfoGenerator, KeyTransRecipientInformation, KeyUpdateRequest, KeyUsage, KeyWrapperUtil, L1Constants, L3Constants, L5Constants, LMOts, LMOtsParameters, LMOtsPrivateKey, LMOtsPublicKey, LMOtsSignature, LMSigParameters, Large, LazyAsn1InputStream, LdsSecurityObject, LdsVersionInfo, LegacyTls13Verifier, Lib25519, LimitedBuffer, LimitedDecompressionStream, LimitedInputStream, LimitedMemoryStream, LinkedCertificate, LiteralDataPacket, Lms, LmsContext, LmsException, LmsKeyGenerationParameters, LmsKeyPairGenerator, LmsKeyParameters, LmsParameters, LmsPrivateKeyParameters, LmsPublicKeyParameters, LmsSignature, LmsSignedPubKey, LmsSigner, LmsUtilities, LongDigest, Longs, LowmcConstantsL1, LowmcConstantsL3, LowmcConstantsL5, MD2Digest, MD4Digest, MD5Digest, MLDsaKeyGenerationParameters, MLDsaKeyPairGenerator, MLDsaKeyParameters, MLDsaParameterSet, MLDsaParameters, MLDsaPrivateKeyParameters, MLDsaPublicKeyParameters, MLDsaSigner, MLKemDecapsulator, MLKemEncapsulator, MLKemEngine, MLKemKeyGenerationParameters, MLKemKeyPairGenerator, MLKemKeyParameters, MLKemParameterSet, MLKemParameters, MLKemPrivateKeyParameters, MLKemPublicKeyParameters, MPInteger, MQVuserKeyingMaterial, MROutput, MacAlgorithm, MacCfbBlockCipher, MacData, MacSink, MacStream, MacUtilities, MalformedPacketException, MapPointCallback, MarkerPacket, MaxBytesExceededException, MaxFragmentLength, Medium, MediumEven, MediumOdd, MemoableResetException, Message, MessageImprint, MetaData, Mgf1BytesGenerator, MgfParameters, MiscPemGenerator, Mod, ModDetectionCodePacket, MonetaryLimit, MonetaryValue, MqvPrivateParameters, MqvPublicParameters, Mul, MyS2k, NaccacheSternEngine, NaccacheSternKeyGenerationParameters, NaccacheSternKeyPairGenerator, NaccacheSternKeyParameters, NaccacheSternPrivateKeyParameters, NameConstraintDN, NameConstraintDns, NameConstraintEmail, NameConstraintIPRange, NameConstraintUri, NameConstraints, NameOrPseudonym, NameType, NamedGroup, NamingAuthority, Nat, Nat128, Nat160, Nat192, Nat224, Nat256, Nat320, Nat384, Nat448, Nat512, Nat576, NestedMessageContent, NetscapeCertType, NetscapeRevocationUrl, NewSessionTicket, NistNamedCurves, NoekeonEngine, NonMemoableDigest, NotationData, NoticeReference, NsriObjectIdentifiers, NtruEncapsulation, NtruHps40961229, NtruKemExtractor, NtruKemGenerator, NtruKeyGenerationParameters, NtruKeyPairGenerator, NtruKeyParameters, NtruLPRimeKemExtractor, NtruLPRimeKemGenerator, NtruLPRimeKeyGenerationParameters, NtruLPRimeKeyPairGenerator, NtruLPRimeKeyParameters, NtruLPRimeParameters, NtruLPRimePrivateKeyParameters, NtruLPRimePublicKeyParameters, NtruParameters, NtruPrimeEngine, NtruPrivateKeyParameters, NtruPublicKeyParameters, Ntt, NullDigest, NullableAttribute, NullableContextAttribute, OCSPRespGenerator, OaepEncoding, ObjectDigestInfo, Objects, OcbBlockCipher, OcspException, OcspIdentifier, OcspListID, OcspReq, OcspReqGenerator, OcspRequest, OcspResp, OcspResponse, OcspResponseStatus, OcspResponsesID, OcspStatusRequest, OcspUtilities, OctetArrayBcpgKey, OfbBlockCipher, OfferedPsks, OidCatalogue, OidTokenizer, OnePassSignaturePacket, OobCert, OobCertHash, OpenBsdBCrypt, OpenPgpCfbBlockCipher, OpenSshPrivateKeyUtilities, OpenSshPublicKeyUtilities, OpenSslPbeParametersGenerator, OptionalValidity, Org.BouncyCastle.Crypto.Agreement, Org.BouncyCastle.Crypto.Digests, Org.BouncyCastle.Crypto.Generators, Org.BouncyCastle.Crypto.Kems, Org.BouncyCastle.Crypto.Parameters, Org.BouncyCastle.Crypto.Signers, Org.BouncyCastle.Security, OriginatorID, OriginatorIdentifierOrKey, OriginatorInfo, OriginatorInfoGenerator, OriginatorInformation, OriginatorPublicKey, OtherCertID, OtherHash, OtherHashAlgAndValue, OtherInfo, OtherKeyAttribute, OtherName, OtherRecipientInfo, OtherRevRefs, OtherRevVals, OtherRevocationInfoFormat, OtherSigningCertificate, OutputLengthException, PKMacBuilder, PKMacFactory, PKMacValue, Packet, Packing, PaddedBufferedBlockCipher, PaddingPacket, ParallelHash, Parameter, ParameterUtilities, ParametersWithContext, ParametersWithID, ParametersWithIV, ParametersWithRandom, ParametersWithSBox, ParametersWithSalt, ParametersWithUkm, ParseOptions, PartModPreCompCallback, PartialHashtree, PartialInputStream, PartyU, PartyV, PasswordConverter, PasswordException, PasswordRecipientInfo, PasswordRecipientInfoGenerator, PasswordRecipientInformation, PbeMethod, PbeParameter, PbeParametersGenerator, PbeS2Parameters, PbeUtilities, PbkdKeyData, Pbkdf2Params, PbmParameter, Pbmac1Params, PemException, PemGenerationException, PemHeader, PemObject, PemObjectGenerator, PemObjectParser, PemReader, PemUtilities, PemWriter, PersonalData, Pfx, PgpCompressedData, PgpCompressedDataGenerator, PgpDataValidationException, PgpEncryptedData, PgpEncryptedDataGenerator, PgpEncryptedDataList, PgpException, PgpExperimental, PgpKdfParameters, PgpKeyPair, PgpKeyRingGenerator, PgpKeyValidationException, PgpLiteralData, PgpLiteralDataGenerator, PgpMarker, PgpObjectFactory, PgpOnePassSignature, PgpOnePassSignatureList, PgpPad, PgpPadding, PgpPbeEncryptedData, PgpPrivateKey, PgpPublicKey, PgpPublicKeyEncryptedData, PgpPublicKeyRing, PgpPublicKeyRingBundle, PgpSecretKey, PgpSecretKeyRing, PgpSecretKeyRingBundle, PgpSignature, PgpSignatureGenerator, PgpSignatureList, PgpSignatureSubpacketGenerator, PgpSignatureSubpacketVector, PgpTrust, PgpUnknown, PgpUserAttributeSubpacketVector, PgpUserAttributeSubpacketVectorGenerator, PgpUtilities, PgpV3SignatureGenerator, PhotonBeetleDigest, PicnicKeyGenerationParameters, PicnicKeyPairGenerator, PicnicKeyParameters, PicnicParameters, PicnicPrivateKeyParameters, PicnicPublicKeyParameters, PicnicSigner, Pkcs10CertificationRequest, Pkcs10CertificationRequestDelaySigned, Pkcs12Entry, Pkcs12ParametersGenerator, Pkcs12PbeParams, Pkcs12Store, Pkcs12StoreBuilder, Pkcs12Utilities, Pkcs1Encoding, Pkcs5S1ParametersGenerator, Pkcs5S2ParametersGenerator, Pkcs5Scheme2PbeKey, Pkcs5Scheme2Utf8PbeKey, Pkcs7Padding, Pkcs7ProcessableObject, Pkcs8EncryptedPrivateKeyInfo, Pkcs8EncryptedPrivateKeyInfoBuilder, Pkcs8Generator, PkcsException, PkcsIOException, PkiArchiveControl, PkiArchiveControlBuilder, PkiArchiveOptions, PkiBody, PkiConfirmContent, PkiFailureInfo, PkiFreeText, PkiHeader, PkiHeaderBuilder, PkiMessage, PkiMessages, PkiPublicationInfo, PkiStatusEncodable, PkiStatusInfo, PkixAttrCertChecker, PkixAttrCertPathBuilder, PkixAttrCertPathValidator, PkixBuilderParameters, PkixCertPath, PkixCertPathBuilder, PkixCertPathBuilderException, PkixCertPathBuilderResult, PkixCertPathChecker, PkixCertPathValidator, PkixCertPathValidatorException, PkixCertPathValidatorResult, PkixCrlUtilities, PkixNameConstraintValidator, PkixNameConstraintValidatorException, PkixParameters, PkixPolicyNode, PlainDsaEncoding, PolicyInformation, PolicyMappings, PolicyQualifierInfo, PolicyUrl, PollRepContent, PollReqContent, Poly, Poly1305, Poly1305KeyGenerator, PolyVecMatrix, Polynomial, PolynomialPair, PopoDecKeyChallContent, PopoDecKeyRespContent, PopoPrivKey, PopoSigningKey, PopoSigningKeyInput, PqcPrivateKeyFactory, PqcPrivateKeyInfoFactory, PqcPublicKeyFactory, PqcSubjectPublicKeyInfoFactory, PqcUtilities, PrecomputeCallback, PrecomputeWithPointMapCallback, PreferredAlgorithms, Prehash, PreserveAbsentParameters, PrfAlgorithm, PrimaryUserId, PrimeField, Primes, PrimitiveDerEncoding, PrimitiveDerEncodingSuffixed, PrincipalUtilities, PrivateKeyFactory, PrivateKeyInfo, PrivateKeyInfoFactory, PrivateKeyUsagePeriod, ProcurationSyntax, ProfessionInfo, ProofOfPossession, ProofOfPossessionSigningKeyBuilder, Properties, ProtectedPart, ProtectedPkiMessage, ProtectedPkiMessageBuilder, ProtocolName, ProtocolVersion, PskIdentity, PskKeyExchangeMode, PskTlsClient, PskTlsServer, PssSigner, PubMethod, PublicKeyAndChallenge, PublicKeyEncSessionPacket, PublicKeyFactory, PublicKeyPacket, PublicSubkeyPacket, PushbackStream, QCStatement, RC2CbcParameter, RC2CbcUtilities, RC2Engine, RC2Parameters, RC2WrapEngine, RC4Engine, RC532Engine, RC564Engine, RC5Parameters, RC6Engine, Rand, RandomDsaKCalculator, Range, Rdn, ReadOnlyCollectionProxy`1, ReadOnlyCollection`1, ReadOnlyDictionaryProxy`2, ReadOnlyDictionary`2, ReadOnlyListProxy`1, ReadOnlyList`1, ReadOnlySetProxy`1, ReadOnlySet`1, ReasonFlags, RecipientEncryptedKey, RecipientID, RecipientIdentifier, RecipientInfo, RecipientInfoGenerator, RecipientInformation, RecipientInformationStore, RecipientKeyIdentifier, RecordPreview, Reduce, ReedMuller, RegTokenControl, RegularExpression, Req, Request, RequestObject, RequestedCertificate, ReservedPacket, RespData, RespID, ResponderID, ResponseBytes, ResponseData, ResponseObject, Restriction, Retransmit, RevAnnContent, RevDetails, RevRepContent, RevRepContentBuilder, RevReqContent, Revocable, RevocationDetails, RevocationDetailsBuilder, RevocationKey, RevocationReason, RevocationValues, RevokedCertificatesEnumeration, RevokedCertificatesEnumerator, RevokedInfo, RevokedStatus, Rfc3211WrapEngine, Rfc3394WrapEngine, Rfc4211Asn1Utilities, Rfc5280Asn1Utilities, Rfc5649WrapEngine, Rfc6637Utilities, RijndaelEngine, RipeMD128Digest, RipeMD160Digest, RipeMD256Digest, RipeMD320Digest, RoleSyntax, RootCaKeyUpdateContent, Rounding, RsaBlindedEngine, RsaBlindingEngine, RsaBlindingFactorGenerator, RsaBlindingParameters, RsaCoreEngine, RsaDigestSigner, RsaEngine, RsaKeyGenerationParameters, RsaKeyPairGenerator, RsaKeyParameters, RsaOaepWrapper, RsaPkcs1Wrapper, RsaPrivateCrtKeyParameters, RsaPrivateKeyStructure, RsaPublicBcpgKey, RsaPublicKeyStructure, RsaSecretBcpgKey, RsaUtilities, RsaesOaepParameters, RsassaPssParameters, S2k, SCrypt, SHAKE256, SIG, SM2Engine, SM2KeyExchange, SM2KeyExchangePrivateParameters, SM2KeyExchangePublicParameters, SM2P256V1Curve, SM2P256V1Field, SM2P256V1FieldElement, SM2P256V1LookupTable, SM2P256V1Point, SM2Signer, SM3Digest, SM4Engine, SNtruPrimeKemExtractor, SNtruPrimeKemGenerator, SNtruPrimeKeyGenerationParameters, SNtruPrimeKeyPairGenerator, SNtruPrimeKeyParameters, SNtruPrimeParameters, SNtruPrimePrivateKeyParameters, SNtruPrimePublicKeyParameters, SP800SecureRandom, SP800SecureRandomBuilder, STOutput, SaberEngine, SaberKemExtractor, SaberKemGenerator, SaberKeyGenerationParameters, SaberKeyPairGenerator, SaberKeyParameters, SaberParameters, SaberPrivateKeyParameters, SaberPublicKeyParameters, SaberUtilities, SafeBag, Salsa20Engine, ScalarSplitParameters, ScaleXNegateYPointMap, ScaleXPointMap, ScaleYNegateXPointMap, ScaleYPointMap, ScryptParams, ScvpReqRes, SecNamedCurves, SecP128R1Curve, SecP128R1Field, SecP128R1FieldElement, SecP128R1LookupTable, SecP128R1Point, SecP160K1Curve, SecP160K1LookupTable, SecP160K1Point, SecP160R1Curve, SecP160R1Field, SecP160R1FieldElement, SecP160R1LookupTable, SecP160R1Point, SecP160R2Curve, SecP160R2Field, SecP160R2FieldElement, SecP160R2LookupTable, SecP160R2Point, SecP192K1Curve, SecP192K1Field, SecP192K1FieldElement, SecP192K1LookupTable, SecP192K1Point, SecP192R1Curve, SecP192R1Field, SecP192R1FieldElement, SecP192R1LookupTable, SecP192R1Point, SecP224K1Curve, SecP224K1Field, SecP224K1FieldElement, SecP224K1LookupTable, SecP224K1Point, SecP224R1Curve, SecP224R1Field, SecP224R1FieldElement, SecP224R1LookupTable, SecP224R1Point, SecP256K1Curve, SecP256K1Field, SecP256K1FieldElement, SecP256K1LookupTable, SecP256K1Point, SecP256R1Curve, SecP256R1Field, SecP256R1FieldElement, SecP256R1LookupTable, SecP256R1Point, SecP384R1Curve, SecP384R1Field, SecP384R1FieldElement, SecP384R1LookupTable, SecP384R1Point, SecP521R1Curve, SecP521R1Field, SecP521R1FieldElement, SecP521R1LookupTable, SecP521R1Point, SecT113Field, SecT113FieldElement, SecT113R1Curve, SecT113R1LookupTable, SecT113R1Point, SecT113R2Curve, SecT113R2LookupTable, SecT113R2Point, SecT131Field, SecT131FieldElement, SecT131R1Curve, SecT131R1LookupTable, SecT131R1Point, SecT131R2Curve, SecT131R2LookupTable, SecT131R2Point, SecT163Field, SecT163FieldElement, SecT163K1Curve, SecT163K1LookupTable, SecT163K1Point, SecT163R1Curve, SecT163R1LookupTable, SecT163R1Point, SecT163R2Curve, SecT163R2LookupTable, SecT163R2Point, SecT193Field, SecT193FieldElement, SecT193R1Curve, SecT193R1LookupTable, SecT193R1Point, SecT193R2Curve, SecT193R2LookupTable, SecT193R2Point, SecT233Field, SecT233FieldElement, SecT233K1Curve, SecT233K1LookupTable, SecT233K1Point, SecT233R1Curve, SecT233R1LookupTable, SecT233R1Point, SecT239Field, SecT239FieldElement, SecT239K1Curve, SecT239K1LookupTable, SecT239K1Point, SecT283Field, SecT283FieldElement, SecT283K1Curve, SecT283K1LookupTable, SecT283K1Point, SecT283R1Curve, SecT283R1LookupTable, SecT283R1Point, SecT409Field, SecT409FieldElement, SecT409K1Curve, SecT409K1LookupTable, SecT409K1Point, SecT409R1Curve, SecT409R1LookupTable, SecT409R1Point, SecT571Field, SecT571FieldElement, SecT571K1Curve, SecT571K1LookupTable, SecT571K1Point, SecT571R1Curve, SecT571R1LookupTable, SecT571R1Point, SecretKeyPacket, SecretSubkeyPacket, SecretWithEncapsulationImpl, SecureRandom, SecurityParameters, SecurityUtilityException, SeedDerive, SeedEngine, SeedWrapEngine, SemanticsInformation, SequenceNumber, SerpentEngine, SerpentEngineBase, ServerHandshakeState, ServerHello, ServerName, ServerNameList, ServerOnlyTlsAuthentication, ServerSrpParams, ServiceLocator, SessionParameters, Sha1Digest, Sha224Digest, Sha256Digest, Sha2Engine, Sha2EngineProvider, Sha384Digest, Sha3Digest, Sha512Digest, Sha512tDigest, Shake256Engine, Shake256EngineProvider, Shake256RandomGenerator, ShakeDigest, ShakeSymmetric, ShortenedDigest, Shorts, SicBlockCipher, SigPolicyQualifierInfo, Signature, SignatureAlgorithm, SignatureAndHashAlgorithm, SignatureCheck, SignatureCreationTime, SignatureException, SignatureExpirationTime, SignaturePacket, SignaturePolicyId, SignaturePolicyIdentifier, SignatureScheme, SignatureSubpacket, SignatureSubpacketsParser, SignatureTarget, SignedData, SignedDataParser, SignedPublicKeyAndChallenge, SignerAttribute, SignerID, SignerIdentifier, SignerInfo, SignerInfoGenerator, SignerInfoGeneratorBuilder, SignerInformation, SignerInformationStore, SignerLocation, SignerSink, SignerStream, SignerUserId, SignerUtilities, SigningCertificate, SigningCertificateV2, SimpleAttributeTableGenerator, SimpleBigDecimal, SimpleBlockResult, SimpleLookupTable, SimulatedTlsSrpIdentityManager, SinglePubInfo, SingleResp, SingleResponse, SipHash, Size1, Size10, Size2, Size3, Size4, Size5, Size6, Size7, Size8, Size9, SkeinDigest, SkeinEngine, SkeinMac, SkeinParameters, SkipjackEngine, SlhDsaEngine, SlhDsaKeyGenerationParameters, SlhDsaKeyPairGenerator, SlhDsaKeyParameters, SlhDsaParameterSet, SlhDsaParameters, SlhDsaPrivateKeyParameters, SlhDsaPublicKeyParameters, SlhDsaSigner, SmimeCapabilities, SmimeCapabilitiesAttribute, SmimeCapability, SmimeCapabilityVector, SmimeEncryptionKeyPreferenceAttribute, SparkleDigest, SparkleEngine, SphincsPlusEngine, SphincsPlusKeyGenerationParameters, SphincsPlusKeyPairGenerator, SphincsPlusKeyParameters, SphincsPlusParameters, SphincsPlusPrivateKey, SphincsPlusPrivateKeyParameters, SphincsPlusPublicKey, SphincsPlusPublicKeyParameters, SphincsPlusSigner, Srp6Client, Srp6Group, Srp6GroupParameters, Srp6Server, Srp6StandardGroups, Srp6Utilities, Srp6VerifierGenerator, SrpTlsClient, SrpTlsServer, SshBuffer, SshBuilder, SshNamedCurves, StackElem, StandardDsaEncoding, StreamBlockCipher, StreamOverflowException, Streams, Strings, SubjectAltPublicKeyInfo, SubjectDirectoryAttributes, SubjectKeyIdentifier, SubjectKeyIdentifierStructure, SubjectPublicKeyInfo, SubjectPublicKeyInfoFactory, SubsequentMessage, SupplementalDataEntry, Symmetric, SymmetricEncDataPacket, SymmetricEncIntegrityPacket, SymmetricKeyEncSessionPacket, SymmetricKeyUtilities, TableGen, TableGen2, Tables1kGcmExponentiator, Tables4kGcmMultiplier, Tables64kGcmMultiplier, Tables8kGcmMultiplier, TaggedDerEncoding, Target, TargetInformation, Targets, TbcPadding, TbsCertificateList, TbsCertificateStructure, TbsRequest, TeaEngine, TeeInputStream, TeeOutputStream, TeleTrusTNamedCurves, Threefish1024Cipher, Threefish256Cipher, ThreefishEngine, TigerDigest, Time, TimeStampAndCrl, TimeStampReq, TimeStampRequest, TimeStampRequestGenerator, TimeStampResp, TimeStampResponse, TimeStampResponseGenerator, TimeStampToken, TimeStampTokenEvidence, TimeStampTokenGenerator, TimeStampTokenInfo, TimeStampedData, TimeStampedDataParser, Tls13NullCipher, Tls13Verifier, TlsAeadCipher, TlsAeadCipherImpl, TlsAgreement, TlsAuthentication, TlsBlockCipher, TlsBlockCipherImpl, TlsCertificate, TlsCipher, TlsCipherExt, TlsClient, TlsClientContextImpl, TlsClientProtocol, TlsCloseable, TlsContext, TlsCredentialedAgreement, TlsCredentialedDecryptor, TlsCredentialedSigner, TlsCredentials, TlsCrypto, TlsCryptoException, TlsCryptoParameters, TlsCryptoUtilities, TlsDHConfig, TlsDHDomain, TlsDHGroupVerifier, TlsDHKeyExchange, TlsDHUtilities, TlsDHanonKeyExchange, TlsDecodeResult, TlsDheKeyExchange, TlsECConfig, TlsECDHKeyExchange, TlsECDHanonKeyExchange, TlsECDheKeyExchange, TlsECDomain, TlsEccUtilities, TlsEncodeResult, TlsEncryptor, TlsException, TlsExtensionsUtilities, TlsFatalAlert, TlsFatalAlertReceived, TlsHandshakeHash, TlsHash, TlsHashSink, TlsHeartbeat, TlsHmac, TlsHybridAgreement, TlsImplUtilities, TlsKemConfig, TlsKemDomain, TlsKeyExchange, TlsKeyExchangeFactory, TlsMac, TlsMacSink, TlsNoCloseNotifyException, TlsNonceGenerator, TlsNullCipher, TlsNullNullCipher, TlsPeer, TlsProtocol, TlsPsk, TlsPskIdentity, TlsPskIdentityManager, TlsPskKeyExchange, TlsRsaKeyExchange, TlsSecret, TlsServer, TlsServerCertificate, TlsServerCertificateImpl, TlsServerContextImpl, TlsServerProtocol, TlsSession, TlsSessionImpl, TlsSigner, TlsSrp6Client, TlsSrp6Server, TlsSrp6VerifierGenerator, TlsSrpConfig, TlsSrpConfigVerifier, TlsSrpIdentity, TlsSrpIdentityManager, TlsSrpKeyExchange, TlsSrpLoginParameters, TlsSrpUtilities, TlsSrtpUtilities, TlsStream, TlsStreamSigner, TlsStreamVerifier, TlsStreamVerifierImpl, TlsSuiteHmac, TlsSuiteMac, TlsTimeoutException, TlsUtilities, TlsVerifier, Tnaf, TnepresEngine, Tree, TruncatedStream, TrustAnchor, TrustPacket, TrustSignature, TrustedAuthority, TspException, TspUtil, TspValidationException, TstInfo, TupleHash, TweakableBlockCipherParameters, TwofishEngine, TypeOfBiometricData, UBI, UbiTweak, Unaligned, UniqueAlgID, UnknownBcpgKey, UnknownPacket, UnknownStatus, UnsupportedPacketVersionException, UrlAndHash, UrlBase64, UrlBase64Encoder, UseSrtpData, UserAttributePacket, UserAttributeSubpacket, UserAttributeSubpacketsParser, UserIdPacket, UserNotice, Utilities, V1TbsCertificateGenerator, V2AttributeCertificateInfoGenerator, V2Form, V2TbsCertListGenerator, V3TbsCertificateGenerator, ValidationParams, Validity, ValidityCallback, ValidityCheck, ValidityPreCompInfo, VerisignCzagExtension, VmpcEngine, VmpcKsa3Engine, VmpcMac, VmpcRandomGenerator, WNafL2RMultiplier, WNafPreCompInfo, WNafUtilities, WTauNafCallback, WTauNafMultiplier, WTauNafPreCompInfo, WhirlpoolDigest, WrapperDigest, WrapperProvider, WrapperUtilities, X25519, X25519Agreement, X25519Field, X25519KeyGenerationParameters, X25519KeyPairGenerator, X25519PrivateKeyParameters, X25519PublicBcpgKey, X25519PublicKeyParameters, X25519SecretBcpgKey, X448, X448Agreement, X448Field, X448KeyGenerationParameters, X448KeyPairGenerator, X448PrivateKeyParameters, X448PublicBcpgKey, X448PublicKeyParameters, X448SecretBcpgKey, X509AttrCertParser, X509AttrCertStoreSelector, X509Attribute, X509Attributes, X509CertPairParser, X509CertPairStoreSelector, X509CertStoreSelector, X509Certificate, X509CertificateEntry, X509CertificatePair, X509CertificateParser, X509CertificateStructure, X509Crl, X509CrlEntry, X509CrlParser, X509CrlStoreSelector, X509DefaultEntryConverter, X509Extension, X509ExtensionBase, X509ExtensionUtilities, X509Extensions, X509ExtensionsGenerator, X509KeyUsage, X509Name, X509NameEntryConverter, X509NameTokenizer, X509SignatureUtilities, X509Utilities, X509V1CertificateGenerator, X509V2AttributeCertificate, X509V2AttributeCertificateGenerator, X509V2CrlGenerator, X509V3CertificateGenerator, X923Padding, X931SecureRandom, X931SecureRandomBuilder, X931Signer, X962NamedCurves, X962Parameters, X9Curve, X9ECParameters, X9ECParametersHolder, X9ECPoint, X9FieldElement, X9FieldID, X9IntegerConverter, XChaCha20Engine, XChaCha20Poly1305, XSalsa20Engine, XofUtilities, XoodyakDigest, XteaEngine, ZInputStream, ZInputStreamLeaveOpen, ZOutputStream, ZOutputStreamLeaveOpen, ZStream, ZTauElement, ZeroBytePadding"
+        },
+        {
+          "name": "internal:PackageFiles",
+          "value": "BouncyCastle.Cryptography.dll"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/CSharp/CryptoShowcase.csproj"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/CSharp/obj/project.assets.json"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/home/claude/work/scan-whole/baseline/CSharp/obj/project.assets.json"
+              },
+              {
+                "technique": "manifest-analysis",
+                "confidence": 0.7,
+                "value": "/home/claude/work/scan-whole/baseline/CSharp/CryptoShowcase.csproj"
+              },
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "CSharp/Program.cs#123"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "CSharp/Program.cs",
+            "line": 123
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 13
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 130
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 137
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 138
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 14
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 140
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 148
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 149
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 15
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 16
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 17
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 18
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 19
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 205
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 206
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 207
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 208
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 209
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 210
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 255
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 256
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 257
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 258
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 259
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 260
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 261
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 262
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 263
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 264
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 265
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 270
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 271
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 272
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 273
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 285
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 286
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 287
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 288
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 305
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 306
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 307
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 308
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 309
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 310
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 311
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 312
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 313
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 314
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 315
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 316
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 323
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 324
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 325
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 326
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 327
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 328
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 329
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 330
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 331
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 332
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 333
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 75
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 76
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 77
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 78
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 79
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 93
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 94
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "line": 96
+          }
+        ]
+      },
+      "tags": [
+        "framework"
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "md5",
+      "bom-ref": "crypto/algorithm/md5@1.2.840.113549.2.5",
+      "description": "Rivest, Shamir and Adleman (RSA) algorithm coupled with an Message Digest #5 (MD5) algorithm",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "oid": "1.2.840.113549.2.5",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "algorithmFamily": "MD5"
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:crypto:primitive",
+          "value": "hash"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "TypeScript/src/main.ts:94:21"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "dosai:asset"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "dosai:operation"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "js-ast:node:crypto.createHash"
+        },
+        {
+          "name": "cdx:dosai:crypto:entryPointCount",
+          "value": "1"
+        },
+        {
+          "name": "cdx:dosai:crypto:id",
+          "value": "cas3"
+        },
+        {
+          "name": "cdx:dosai:crypto:reachableFromEntryPoint",
+          "value": "true"
+        },
+        {
+          "name": "cdx:dosai:crypto:strength",
+          "value": "weak"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "CSharp/Program.cs"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "concludedValue": "md5",
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "TypeScript/src/main.ts#94"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "CSharp/Program.cs",
+            "additionalContext": "hash",
+            "line": 86,
+            "symbol": "dosai"
+          },
+          {
+            "location": "TypeScript/src/main.ts",
+            "additionalContext": "hash",
+            "line": 94,
+            "symbol": "node:crypto.createHash"
+          }
+        ]
+      },
+      "tags": [
+        "cryptographic-asset"
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "rsa",
+      "bom-ref": "crypto/algorithm/rsa@2.5.8.1.1",
+      "description": "X.500 algorithms.  Ambiguous, since no padding rules specified",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "oid": "2.5.8.1.1",
+        "algorithmProperties": {}
+      },
+      "properties": [
+        {
+          "name": "cdx:crypto:primitive",
+          "value": "key-generation"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "TypeScript/src/main.ts:210:36"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "dosai:asset"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "dosai:operation"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "js-ast:node:crypto.generateKeyPairSync"
+        },
+        {
+          "name": "cdx:dosai:crypto:entryPointCount",
+          "value": "1"
+        },
+        {
+          "name": "cdx:dosai:crypto:id",
+          "value": "cas49"
+        },
+        {
+          "name": "cdx:dosai:crypto:reachableFromEntryPoint",
+          "value": "false"
+        },
+        {
+          "name": "cdx:dosai:crypto:strength",
+          "value": "acceptable"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "CSharp/Program.cs"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "concludedValue": "rsa",
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "TypeScript/src/main.ts#210"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "CSharp/Program.cs",
+            "additionalContext": "asymmetric",
+            "line": 225,
+            "symbol": "dosai"
+          },
+          {
+            "location": "TypeScript/src/main.ts",
+            "additionalContext": "key-generation",
+            "line": 210,
+            "symbol": "node:crypto.generateKeyPairSync"
+          }
+        ]
+      },
+      "tags": [
+        "cryptographic-asset"
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "sha-1",
+      "bom-ref": "crypto/algorithm/sha-1@1.3.14.3.2.26",
+      "description": "SHA-1 secure hash standard (OIW)",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "oid": "1.3.14.3.2.26",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "algorithmFamily": "SHA-1"
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:crypto:primitive",
+          "value": "hash"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "TypeScript/src/main.ts:95:23"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "dosai:asset"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "dosai:operation"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "js-ast:node:crypto.createHash"
+        },
+        {
+          "name": "cdx:dosai:crypto:entryPointCount",
+          "value": "1"
+        },
+        {
+          "name": "cdx:dosai:crypto:id",
+          "value": "cas4"
+        },
+        {
+          "name": "cdx:dosai:crypto:reachableFromEntryPoint",
+          "value": "true"
+        },
+        {
+          "name": "cdx:dosai:crypto:strength",
+          "value": "weak"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "CSharp/Program.cs"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "concludedValue": "sha-1",
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "TypeScript/src/main.ts#95"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "CSharp/Program.cs",
+            "additionalContext": "hash",
+            "line": 87,
+            "symbol": "dosai"
+          },
+          {
+            "location": "TypeScript/src/main.ts",
+            "additionalContext": "hash",
+            "line": 95,
+            "symbol": "node:crypto.createHash"
+          }
+        ]
+      },
+      "tags": [
+        "cryptographic-asset"
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "sha-256",
+      "bom-ref": "crypto/algorithm/sha-256@2.16.840.1.101.3.4.2.1",
+      "description": "NIST Algorithm",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "oid": "2.16.840.1.101.3.4.2.1",
+        "algorithmProperties": {
+          "algorithmFamily": "SHA-2",
+          "primitive": "kdf"
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:crypto:primitive",
+          "value": "hash"
+        },
+        {
+          "name": "cdx:crypto:primitive",
+          "value": "hmac"
+        },
+        {
+          "name": "cdx:crypto:primitive",
+          "value": "kdf"
+        },
+        {
+          "name": "cdx:crypto:primitive",
+          "value": "signature"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "TypeScript/src/main.ts:106:14"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "TypeScript/src/main.ts:112:14"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "TypeScript/src/main.ts:222:23"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "TypeScript/src/main.ts:227:16"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "TypeScript/src/main.ts:235:25"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "TypeScript/src/main.ts:239:18"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "TypeScript/src/main.ts:266:14"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "TypeScript/src/main.ts:82:25"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "dosai:operation"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "js-ast:node:crypto.createHash"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "js-ast:node:crypto.createHmac"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "js-ast:node:crypto.hkdfSync"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "js-ast:node:crypto.sign"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "js-ast:node:crypto.verify"
+        },
+        {
+          "name": "cdx:dosai:crypto:dataFlowSliceIds",
+          "value": "dfs1"
+        },
+        {
+          "name": "cdx:dosai:crypto:entryPointCount",
+          "value": "1"
+        },
+        {
+          "name": "cdx:dosai:crypto:id",
+          "value": "cop1"
+        },
+        {
+          "name": "cdx:dosai:crypto:reachableFromEntryPoint",
+          "value": "true"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "CSharp/Program.cs"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "concludedValue": "sha-256",
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "TypeScript/src/main.ts#106"
+              },
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "TypeScript/src/main.ts#112"
+              },
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "TypeScript/src/main.ts#222"
+              },
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "TypeScript/src/main.ts#227"
+              },
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "TypeScript/src/main.ts#235"
+              },
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "TypeScript/src/main.ts#239"
+              },
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "TypeScript/src/main.ts#266"
+              },
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "TypeScript/src/main.ts#82"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "CSharp/Program.cs",
+            "additionalContext": "use",
+            "line": 68,
+            "symbol": "dosai"
+          },
+          {
+            "location": "TypeScript/src/main.ts",
+            "additionalContext": "hmac",
+            "line": 106,
+            "symbol": "node:crypto.createHmac"
+          }
+        ]
+      },
+      "tags": [
+        "cryptographic-asset"
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "sha-512",
+      "bom-ref": "crypto/algorithm/sha-512@2.16.840.1.101.3.4.2.3",
+      "description": "NIST Algorithm",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "oid": "2.16.840.1.101.3.4.2.3",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "algorithmFamily": "SHA-2"
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:crypto:primitive",
+          "value": "hash"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "TypeScript/src/main.ts:87:25"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "dosai:asset"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "dosai:operation"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "js-ast:node:crypto.createHash"
+        },
+        {
+          "name": "cdx:dosai:crypto:entryPointCount",
+          "value": "1"
+        },
+        {
+          "name": "cdx:dosai:crypto:id",
+          "value": "cas2"
+        },
+        {
+          "name": "cdx:dosai:crypto:reachableFromEntryPoint",
+          "value": "true"
+        },
+        {
+          "name": "cdx:dosai:crypto:strength",
+          "value": "strong"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "CSharp/Program.cs"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "concludedValue": "sha-512",
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "TypeScript/src/main.ts#87"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "CSharp/Program.cs",
+            "additionalContext": "hash",
+            "line": 74,
+            "symbol": "dosai"
+          },
+          {
+            "location": "TypeScript/src/main.ts",
+            "additionalContext": "hash",
+            "line": 87,
+            "symbol": "node:crypto.createHash"
+          }
+        ]
+      },
+      "tags": [
+        "cryptographic-asset"
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "shake128",
+      "bom-ref": "crypto/algorithm/shake128@2.16.840.1.101.3.4.2.11",
+      "description": "NIST Algorithm",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "oid": "2.16.840.1.101.3.4.2.11",
+        "algorithmProperties": {
+          "primitive": "hash"
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:crypto:primitive",
+          "value": "hash"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "TypeScript/src/main.ts:100:14"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "js-ast:node:crypto.createHash"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/TypeScript/src/main.ts"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "concludedValue": "shake128",
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "TypeScript/src/main.ts#100"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "TypeScript/src/main.ts",
+            "additionalContext": "hash",
+            "line": 100,
+            "symbol": "node:crypto.createHash"
+          }
+        ]
+      },
+      "tags": [
+        "cryptographic-asset"
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "x25519",
+      "bom-ref": "crypto/algorithm/x25519@1.3.101.110",
+      "description": "X25519 Diffie-Hellman key agreement (RFC 7748)",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "oid": "1.3.101.110",
+        "algorithmProperties": {}
+      },
+      "properties": [
+        {
+          "name": "cdx:crypto:primitive",
+          "value": "key-generation"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "TypeScript/src/main.ts:272:16"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "TypeScript/src/main.ts:273:14"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "js-ast:node:crypto.generateKeyPairSync"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/TypeScript/src/main.ts"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "concludedValue": "x25519",
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "TypeScript/src/main.ts#272"
+              },
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "TypeScript/src/main.ts#273"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "TypeScript/src/main.ts",
+            "additionalContext": "key-generation",
+            "line": 272,
+            "symbol": "node:crypto.generateKeyPairSync"
+          },
+          {
+            "location": "TypeScript/src/main.ts",
+            "additionalContext": "key-generation",
+            "line": 273,
+            "symbol": "node:crypto.generateKeyPairSync"
+          }
+        ]
+      },
+      "tags": [
+        "cryptographic-asset"
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "aes",
+      "bom-ref": "crypto/algorithm/aes@2.16.840.1.101.3.4.1",
+      "description": "NIST Algorithm",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "oid": "2.16.840.1.101.3.4.1",
+        "algorithmProperties": {
+          "algorithmFamily": "AES"
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:crypto:primitive",
+          "value": "encrypt/decrypt"
+        },
+        {
+          "name": "cdx:crypto:primitive",
+          "value": "symmetric"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "CSharp/Program.cs:182:25"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "CSharp/Program.cs:194:25"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "dosai:asset"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "dosai:operation"
+        },
+        {
+          "name": "cdx:dosai:crypto:entryPointCount",
+          "value": "1"
+        },
+        {
+          "name": "cdx:dosai:crypto:id",
+          "value": "cas13"
+        },
+        {
+          "name": "cdx:dosai:crypto:id",
+          "value": "cas15"
+        },
+        {
+          "name": "cdx:dosai:crypto:id",
+          "value": "cop13"
+        },
+        {
+          "name": "cdx:dosai:crypto:id",
+          "value": "cop15"
+        },
+        {
+          "name": "cdx:dosai:crypto:reachableFromEntryPoint",
+          "value": "true"
+        },
+        {
+          "name": "cdx:dosai:crypto:strength",
+          "value": "acceptable"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/CSharp/Program.cs"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "concludedValue": "aes",
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "CSharp/Program.cs#182"
+              },
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "CSharp/Program.cs#194"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "CSharp/Program.cs",
+            "additionalContext": "symmetric",
+            "line": 182,
+            "symbol": "dosai"
+          },
+          {
+            "location": "CSharp/Program.cs",
+            "additionalContext": "symmetric",
+            "line": 194,
+            "symbol": "dosai"
+          }
+        ]
+      },
+      "tags": [
+        "cryptographic-asset"
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "EcbKey",
+      "bom-ref": "crypto/material/key-or-secret@cma3",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "secret-key",
+          "id": "sha256:d65df89f702eec58ca3c7bf2001c9ffc7cd80553ae01d42a799ba26756142d96"
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "CSharp/Program.cs:49:67"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "dosai:material"
+        },
+        {
+          "name": "cdx:dosai:crypto:id",
+          "value": "cma3"
+        },
+        {
+          "name": "cdx:dosai:crypto:reachableFromEntryPoint",
+          "value": "false"
+        },
+        {
+          "name": "cdx:dosai:crypto:storage",
+          "value": "hardcoded"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/CSharp/Program.cs"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "concludedValue": "EcbKey",
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "CSharp/Program.cs#49"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "CSharp/Program.cs",
+            "line": 49,
+            "symbol": "dosai"
+          }
+        ]
+      },
+      "tags": [
+        "cryptographic-asset"
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "GcmIv",
+      "bom-ref": "crypto/material/iv-or-nonce@cma2",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "initialization-vector",
+          "id": "sha256:3e6f6e08f8eea4d9cf6f94720974a1e70d8633d93af2a2c85db4d01674c4f31d"
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "CSharp/Program.cs:43:66"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "dosai:material"
+        },
+        {
+          "name": "cdx:dosai:crypto:dataFlowSliceIds",
+          "value": "dfs2,dfs3"
+        },
+        {
+          "name": "cdx:dosai:crypto:id",
+          "value": "cma2"
+        },
+        {
+          "name": "cdx:dosai:crypto:reachableFromEntryPoint",
+          "value": "false"
+        },
+        {
+          "name": "cdx:dosai:crypto:storage",
+          "value": "hardcoded"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/CSharp/Program.cs"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "concludedValue": "GcmIv",
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "CSharp/Program.cs#43"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "CSharp/Program.cs",
+            "line": 43,
+            "symbol": "dosai"
+          }
+        ]
+      },
+      "tags": [
+        "cryptographic-asset"
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "GcmKey",
+      "bom-ref": "crypto/material/key-or-secret@cma1",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "secret-key",
+          "id": "sha256:4c0ef241e6e98accb3b1ed32a21f61fe8990d85518c172917f67f906f714115d"
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "CSharp/Program.cs:42:67"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "dosai:material"
+        },
+        {
+          "name": "cdx:dosai:crypto:id",
+          "value": "cma1"
+        },
+        {
+          "name": "cdx:dosai:crypto:reachableFromEntryPoint",
+          "value": "false"
+        },
+        {
+          "name": "cdx:dosai:crypto:storage",
+          "value": "hardcoded"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/CSharp/Program.cs"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "concludedValue": "GcmKey",
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "CSharp/Program.cs#42"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "CSharp/Program.cs",
+            "line": 42,
+            "symbol": "dosai"
+          }
+        ]
+      },
+      "tags": [
+        "cryptographic-asset"
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "name": "PBKDF2",
+      "bom-ref": "crypto/algorithm/PBKDF2@1.2.840.113549.1.5.12",
+      "description": "PBKDF2 key derivation algorithm",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "oid": "1.2.840.113549.1.5.12",
+        "algorithmProperties": {
+          "primitive": "kdf",
+          "algorithmFamily": "PBKDF2"
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:crypto:primitive",
+          "value": "kdf"
+        },
+        {
+          "name": "cdx:crypto:primitive",
+          "value": "key-derivation"
+        },
+        {
+          "name": "cdx:crypto:sourceLocation",
+          "value": "CSharp/Program.cs:116:23"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "dosai:asset"
+        },
+        {
+          "name": "cdx:crypto:sourceType",
+          "value": "dosai:operation"
+        },
+        {
+          "name": "cdx:dosai:crypto:entryPointCount",
+          "value": "1"
+        },
+        {
+          "name": "cdx:dosai:crypto:id",
+          "value": "cas6"
+        },
+        {
+          "name": "cdx:dosai:crypto:id",
+          "value": "cop6"
+        },
+        {
+          "name": "cdx:dosai:crypto:reachableFromEntryPoint",
+          "value": "true"
+        },
+        {
+          "name": "cdx:dosai:crypto:strength",
+          "value": "acceptable"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "/home/claude/work/scan-whole/baseline/CSharp/Program.cs"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "concludedValue": "PBKDF2",
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "CSharp/Program.cs#116"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "CSharp/Program.cs",
+            "additionalContext": "kdf",
+            "line": 116,
+            "symbol": "dosai"
+          }
+        ]
+      },
+      "tags": [
+        "cryptographic-asset"
+      ]
+    }
+  ],
+  "services": [],
+  "dependencies": [
+    {
+      "ref": "pkg:pypi/baseline@latest",
+      "dependsOn": [
+        "pkg:pypi/argon2@0.1.10",
+        "pkg:pypi/nacl@0.0.0",
+        "pkg:pypi/python-bcrypt@0.3.2"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/argon2@0.1.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/python-bcrypt@0.3.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/nacl@0.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:golang/example.com/cbom-corpus",
+      "dependsOn": [
+        "pkg:golang/github.com/cloudflare/circl@v1.6.5",
+        "pkg:golang/golang.org/x/crypto@v0.58.0"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/CryptoShowcase@1.0.0",
+      "dependsOn": [
+        "pkg:nuget/BouncyCastle.Cryptography@2.7.0"
+      ]
+    },
+    {
+      "ref": "pkg:nuget/BouncyCastle.Cryptography@2.7.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/example.cbom/crypto-showcase@1.0.0?type=jar",
+      "dependsOn": [
+        "pkg:golang/example.com/cbom-corpus",
+        "pkg:nuget/CryptoShowcase@1.0.0",
+        "pkg:pypi/baseline@latest"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "bom-ref": "metadata-annotations",
+      "subjects": [
+        "pkg:maven/example.cbom/crypto-showcase@1.0.0?type=jar"
+      ],
+      "annotator": {
+        "component": {
+          "group": "@cdxgen",
+          "name": "cdxgen",
+          "version": "13.7.0",
+          "purl": "pkg:npm/%40cdxgen/cdxgen@13.7.0",
+          "type": "application",
+          "bom-ref": "pkg:npm/@cdxgen/cdxgen@13.7.0",
+          "publisher": "OWASP Foundation",
+          "authors": [
+            {
+              "name": "OWASP Foundation"
+            }
+          ]
+        }
+      },
+      "timestamp": "2026-11-13T23:55:03Z",
+      "text": "This Cryptography Bill-of-Materials (CBOM) document was created on Friday, November 13, 2026. The xBOM tools used are: dosai-linux-amd64, go, and cdxgen. The data was captured during the pre-build lifecycle phase without building the application. The document describes an application named 'crypto-showcase' with version '1.0.0'. There are 12 cryptographic assets listed under components in this CBOM. The application also has 3 child modules/components. There are 26 components. 4 package type(s) and 3 purl namespaces are described in the document under components."
+    }
+  ],
+  "citations": [
+    {
+      "expressions": [
+        "$.components"
+      ],
+      "attributedTo": "pkg:npm/@cdxgen/cdxgen@13.7.0",
+      "note": "Component inventory collected by cdxgen 13.7.0.",
+      "timestamp": "2026-11-13T23:54:55Z"
+    }
+  ]
+}

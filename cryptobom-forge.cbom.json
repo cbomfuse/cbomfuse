@@ -1,0 +1,909 @@
+{
+    "components": [
+        {
+            "bom-ref": "cryptography:private_key:4a1dd91d-9ac1-4547-802d-233642acbd3e",
+            "cryptoProperties": {
+                "assetType": "relatedCryptoMaterial",
+                "detectionContext": [
+                    {
+                        "additionalContext": "# S17: RSA-3072 - OAEP, PSS and PKCS#1 v1.5 with one key pair\ndef s17_rsa3072() -> None:\n    private_key = rsa.generate_private_key(public_exponent=65537, key_size=3072)\n    public_key = private_key.public_key()\n\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            232,
+                            233,
+                            234,
+                            235,
+                            236
+                        ]
+                    }
+                ],
+                "relatedCryptoMaterialProperties": {
+                    "relatedCryptoMaterialType": "privateKey",
+                    "size": 3072
+                }
+            },
+            "name": "4a1dd91d-9ac1-4547-802d-233642acbd3e",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:aeb32feb-5718-49e2-ab0e-fc3fbd0ad8b3",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "cryptoFunctions": [
+                        "encrypt"
+                    ],
+                    "mode": "cbc",
+                    "padding": "pkcs7",
+                    "primitive": "blockcipher",
+                    "variant": "AES-128-CBC"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "    padder = padding.PKCS7(128).padder()\n    padded = padder.update(MESSAGE) + padder.finalize()\n    cipher = Cipher(algorithms.AES(key), modes.CBC(iv))\n    encryptor = cipher.encryptor()\n    ciphertext = encryptor.update(padded) + encryptor.finalize()\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            190,
+                            191,
+                            192,
+                            193,
+                            194
+                        ]
+                    }
+                ]
+            },
+            "name": "AES-128-CBC-PKCS7",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:c18b001f-da9b-4c45-a139-3344e76895a8",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "cryptoFunctions": [
+                        "encrypt"
+                    ],
+                    "mode": "ecb",
+                    "padding": "pkcs7",
+                    "primitive": "blockcipher",
+                    "variant": "AES-128-ECB"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "    padder = padding.PKCS7(128).padder()\n    padded = padder.update(ECB_PLAINTEXT) + padder.finalize()\n    cipher = Cipher(algorithms.AES(ECB_KEY), modes.ECB())\n    encryptor = cipher.encryptor()\n    emit(\"S14\", \"AES-128-ECB\", (encryptor.update(padded) + encryptor.finalize()).hex())\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            203,
+                            204,
+                            205,
+                            206,
+                            207
+                        ]
+                    }
+                ]
+            },
+            "name": "AES-128-ECB-PKCS7",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:b6683c90-7278-4ece-8fe3-715e674a5567",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "mode": "cbc",
+                    "padding": "pkcs7",
+                    "primitive": "blockcipher",
+                    "variant": "AES-256-CBC"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "def s13_aes256_cbc() -> None:\n    key = os.urandom(32)\n    iv = os.urandom(16)\n    padder = padding.PKCS7(128).padder()\n    padded = padder.update(MESSAGE) + padder.finalize()\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            187,
+                            188,
+                            189,
+                            190,
+                            191
+                        ]
+                    }
+                ]
+            },
+            "name": "AES-256-CBC-PKCS7",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:efbd7817-da04-4cf6-8092-c78949b3b6a6",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "mode": "gcm",
+                    "padding": "unknown",
+                    "primitive": "blockcipher",
+                    "variant": "AES-GCM"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "from cryptography.hazmat.primitives.asymmetric import padding as asym_padding\nfrom cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes\nfrom cryptography.hazmat.primitives.ciphers.aead import AESGCM\nfrom cryptography.hazmat.primitives.kdf.hkdf import HKDF\nfrom cryptography.hazmat.primitives.kdf.scrypt import Scrypt\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            32,
+                            33,
+                            34,
+                            35,
+                            36
+                        ]
+                    }
+                ]
+            },
+            "name": "AES-GCM",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:0cdbad63-8544-404b-9239-2cbc68c6f7c1",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "padding": "unknown",
+                    "primitive": "hash",
+                    "variant": "BLAKE2B"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "    emit(\"S02\", \"SHA-512\", hashlib.sha512(MESSAGE).hexdigest())\n    emit(\"S02\", \"SHA3-256\", SHA3_256.new(MESSAGE).hexdigest())\n    blake = hashes.Hash(hashes.BLAKE2b(64))\n    blake.update(MESSAGE)\n    emit(\"S02\", \"BLAKE2b-512\", blake.finalize().hex())\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            91,
+                            92,
+                            93,
+                            94,
+                            95
+                        ]
+                    }
+                ]
+            },
+            "name": "BLAKE2B",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:6a1cb3ed-3ef9-49ce-8515-96d479034fbe",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "padding": "unknown",
+                    "primitive": "kdf",
+                    "variant": "HKDF"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "# S06: HKDF-SHA256 (RFC 5869)\ndef s06_hkdf_sha256() -> None:\n    hkdf = HKDF(\n        algorithm=hashes.SHA256(),\n        length=42,\n        salt=HKDF_SALT,\n        info=HKDF_INFO,\n    )\n    emit(\"S06\", \"HKDF-SHA256\", hkdf.derive(HKDF_IKM).hex())\n\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            119,
+                            120,
+                            121,
+                            122,
+                            123,
+                            124,
+                            125,
+                            126,
+                            127,
+                            128
+                        ]
+                    },
+                    {
+                        "additionalContext": "from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes\nfrom cryptography.hazmat.primitives.ciphers.aead import AESGCM\nfrom cryptography.hazmat.primitives.kdf.hkdf import HKDF\nfrom cryptography.hazmat.primitives.kdf.scrypt import Scrypt\nfrom cryptography.x509.oid import NameOID\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            33,
+                            34,
+                            35,
+                            36,
+                            37
+                        ]
+                    }
+                ]
+            },
+            "name": "HKDF",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:a0dea14d-1fb0-4cdd-a15e-1d4a8b4393ae",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "padding": "unknown",
+                    "primitive": "kdf",
+                    "variant": "HKDF-256"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "\ndef derive_session_key(shared_secret: bytes) -> bytes:\n    hkdf = HKDF(algorithm=hashes.SHA256(), length=32, salt=None, info=SESSION_INFO)\n    return hkdf.derive(shared_secret)\n\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            276,
+                            277,
+                            278,
+                            279,
+                            280
+                        ]
+                    }
+                ]
+            },
+            "name": "HKDF-256",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:6fa437e7-5927-49cd-877c-eb50b681d07b",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "padding": "unknown",
+                    "primitive": "hash",
+                    "variant": "MD5"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "# S03: legacy digests - deliberately weak\ndef s03_legacy_hashes() -> None:\n    md5 = hashlib.md5(MESSAGE, usedforsecurity=False)\n    emit(\"S03\", \"MD5\", md5.hexdigest())\n    sha1 = hashes.Hash(hashes.SHA1())\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            98,
+                            99,
+                            100,
+                            101,
+                            102
+                        ]
+                    }
+                ]
+            },
+            "name": "MD5",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:9edd3862-2dbb-4620-8073-73de3cb624a8",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "cryptoFunctions": [
+                        "sign",
+                        "verify"
+                    ],
+                    "padding": "oaep",
+                    "primitive": "signature",
+                    "variant": "PSS-3072"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "    emit(\"S17\", \"RSA-3072 OAEP\", f\"roundtrip={flag(plaintext == MESSAGE)}\")\n\n    pss = asym_padding.PSS(\n        mgf=asym_padding.MGF1(hashes.SHA256()),\n        salt_length=32,\n    )\n    signature = private_key.sign(MESSAGE, pss, hashes.SHA256())\n    ok = verifies(lambda: public_key.verify(signature, MESSAGE, pss, hashes.SHA256()))\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            244,
+                            245,
+                            246,
+                            247,
+                            248,
+                            249,
+                            250,
+                            251
+                        ]
+                    }
+                ]
+            },
+            "name": "PSS-3072-OAEP",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:82cae16e-66b9-4eb8-8203-459c84b30942",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "padding": "unknown",
+                    "primitive": "pke",
+                    "variant": "RSA"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "from cryptography.exceptions import InvalidSignature\nfrom cryptography.hazmat.primitives import hashes, padding\nfrom cryptography.hazmat.primitives.asymmetric import ec, mldsa, mlkem, rsa, x25519\nfrom cryptography.hazmat.primitives.asymmetric import padding as asym_padding\nfrom cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            29,
+                            30,
+                            31,
+                            32,
+                            33
+                        ]
+                    }
+                ]
+            },
+            "name": "RSA",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:06fb1268-888a-47a9-aa16-2a1be8ab6a4f",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "cryptoFunctions": [
+                        "generate"
+                    ],
+                    "padding": "oaep",
+                    "primitive": "pke",
+                    "variant": "RSA-3072"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "# S17: RSA-3072 - OAEP, PSS and PKCS#1 v1.5 with one key pair\ndef s17_rsa3072() -> None:\n    private_key = rsa.generate_private_key(public_exponent=65537, key_size=3072)\n    public_key = private_key.public_key()\n\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            232,
+                            233,
+                            234,
+                            235,
+                            236
+                        ]
+                    }
+                ]
+            },
+            "name": "RSA-3072-OAEP",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:b23ea679-a9d3-4d01-bd59-68ccdae2da3f",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "cryptoFunctions": [
+                        "sign",
+                        "verify"
+                    ],
+                    "padding": "pkcs1v15",
+                    "primitive": "pke",
+                    "variant": "RSA-3072"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "    emit(\"S17\", \"RSA-3072 PSS\", f\"verify={flag(ok)}\")\n\n    pkcs1 = asym_padding.PKCS1v15()\n    signature = private_key.sign(MESSAGE, pkcs1, hashes.SHA256())\n    ok = verifies(lambda: public_key.verify(signature, MESSAGE, pkcs1, hashes.SHA256()))\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            252,
+                            253,
+                            254,
+                            255,
+                            256
+                        ]
+                    }
+                ]
+            },
+            "name": "RSA-3072-PKCS1V15",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:7edc1059-c3ea-4e93-937a-1f85e13cf2fe",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "padding": "unknown",
+                    "primitive": "hash",
+                    "variant": "SCRYPT"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "# S08: scrypt\ndef s08_scrypt() -> None:\n    kdf = Scrypt(salt=SCRYPT_SALT, length=64, n=2**14, r=8, p=1)\n    emit(\"S08\", \"scrypt\", kdf.derive(SCRYPT_PASSWORD).hex())\n\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            138,
+                            139,
+                            140,
+                            141,
+                            142
+                        ]
+                    },
+                    {
+                        "additionalContext": "from cryptography.hazmat.primitives.ciphers.aead import AESGCM\nfrom cryptography.hazmat.primitives.kdf.hkdf import HKDF\nfrom cryptography.hazmat.primitives.kdf.scrypt import Scrypt\nfrom cryptography.x509.oid import NameOID\nfrom nacl.exceptions import BadSignatureError\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            34,
+                            35,
+                            36,
+                            37,
+                            38
+                        ]
+                    }
+                ]
+            },
+            "name": "SCRYPT",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:2310a9fe-ae55-4bbe-9a1a-e5a13f24cfc4",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "cryptoFunctions": [
+                        "generate",
+                        "sign",
+                        "verify"
+                    ],
+                    "padding": "unknown",
+                    "primitive": "other",
+                    "variant": "SECP256R1-256"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "# S18: ECDSA P-256 with SHA-256\ndef s18_ecdsa_p256() -> None:\n    private_key = ec.generate_private_key(ec.SECP256R1())\n    signature = private_key.sign(MESSAGE, ec.ECDSA(hashes.SHA256()))\n    ok = verifies(lambda: private_key.public_key().verify(signature, MESSAGE, ec.ECDSA(hashes.SHA256())))\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            260,
+                            261,
+                            262,
+                            263,
+                            264
+                        ]
+                    },
+                    {
+                        "additionalContext": "    emit(\"S20\", \"X25519\", f\"agree={flag(x_alice == x_bob)}\")\n\n    alice_ec = ec.generate_private_key(ec.SECP256R1())\n    bob_ec = ec.generate_private_key(ec.SECP256R1())\n    z_alice = alice_ec.exchange(ec.ECDH(), bob_ec.public_key())\n    z_bob = bob_ec.exchange(ec.ECDH(), alice_ec.public_key())\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            288,
+                            289,
+                            290,
+                            291,
+                            292,
+                            293
+                        ]
+                    },
+                    {
+                        "additionalContext": "# S23: self-signed X.509 certificate\ndef s23_x509_self_signed() -> None:\n    key = ec.generate_private_key(ec.SECP256R1())\n    name = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, TLS_SERVER_NAME)])\n    now = datetime.now(timezone.utc)\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            318,
+                            319,
+                            320,
+                            321,
+                            322
+                        ]
+                    }
+                ]
+            },
+            "name": "SECP256R1-256",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:bba71656-0e98-4910-bc5b-17a9b70e7de1",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "padding": "unknown",
+                    "primitive": "hash",
+                    "variant": "SHA1"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "    md5 = hashlib.md5(MESSAGE, usedforsecurity=False)\n    emit(\"S03\", \"MD5\", md5.hexdigest())\n    sha1 = hashes.Hash(hashes.SHA1())\n    sha1.update(MESSAGE)\n    emit(\"S03\", \"SHA-1\", sha1.finalize().hex())\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            100,
+                            101,
+                            102,
+                            103,
+                            104
+                        ]
+                    }
+                ]
+            },
+            "name": "SHA1",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:615e173e-b016-4e8e-b8ca-91338122eda1",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "cryptoFunctions": [
+                        "generate",
+                        "sign",
+                        "verify"
+                    ],
+                    "padding": "unknown",
+                    "primitive": "hash",
+                    "variant": "SHA256"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "# S07: PBKDF2-HMAC-SHA256\ndef s07_pbkdf2() -> None:\n    derived = hashlib.pbkdf2_hmac(\n        \"sha256\", PBKDF2_PASSWORD, PBKDF2_SALT, 80_000, dklen=64\n    )\n    emit(\"S07\", \"PBKDF2-SHA256\", derived.hex())\n\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            130,
+                            131,
+                            132,
+                            133,
+                            134,
+                            135,
+                            136
+                        ]
+                    },
+                    {
+                        "additionalContext": "# S01: SHA-256 (FIPS 180-4)\ndef s01_sha256() -> None:\n    emit(\"S01\", \"SHA-256\", hashlib.sha256(MESSAGE).hexdigest())\n\n\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            84,
+                            85,
+                            86,
+                            87,
+                            88
+                        ]
+                    },
+                    {
+                        "additionalContext": "# S05: HMAC-SHA256\ndef s05_hmac_sha256() -> None:\n    tag = hmac.new(HMAC_KEY, MESSAGE, hashlib.sha256)\n    emit(\"S05\", \"HMAC-SHA256\", tag.hexdigest())\n\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            113,
+                            114,
+                            115,
+                            116,
+                            117
+                        ]
+                    },
+                    {
+                        "additionalContext": "def s06_hkdf_sha256() -> None:\n    hkdf = HKDF(\n        algorithm=hashes.SHA256(),\n        length=42,\n        salt=HKDF_SALT,\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            120,
+                            121,
+                            122,
+                            123,
+                            124
+                        ]
+                    },
+                    {
+                        "additionalContext": "\n    pss = asym_padding.PSS(\n        mgf=asym_padding.MGF1(    )\n    signature = private_key.sign(MESSAGE, pss, hashes.SHA256())\n    ok = verifies(lambda: public_key.verify(signature, MESSAGE, pss, hashes.SHA256()))\n    emit(\"S17\", \"RSA-3072 PSS\", f\"verify={flag(ok)}\")\n\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            245,
+                            246,
+                            247,
+                            248,
+                            249,
+                            250,
+                            251,
+                            252,
+                            253
+                        ]
+                    },
+                    {
+                        "additionalContext": "def s18_ecdsa_p256() -> None:\n    private_key = ec.generate_private_key(ec.SECP256R1())\n    signature = private_key.sign(MESSAGE, ec.ECDSA(hashes.SHA256()))\n    ok = verifies(lambda: private_key.public_key().verify(signature, MESSAGE, ec.ECDSA(hashes.SHA256())))\n    emit(\"S18\", \"ECDSA P-256\", f\"verify={flag(ok)}\")\n\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            261,
+                            262,
+                            263,
+                            264,
+                            265,
+                            266
+                        ]
+                    },
+                    {
+                        "additionalContext": "\ndef derive_session_key(shared_secret: bytes) -> bytes:\n    hkdf = HKDF(algorithm=hashes.SHA256(), length=32, salt=None, info=SESSION_INFO)\n    return hkdf.derive(shared_secret)\n\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            276,
+                            277,
+                            278,
+                            279,
+                            280
+                        ]
+                    },
+                    {
+                        "additionalContext": "        .not_valid_after(now + timedelta(days=365))\n    )\n    certificate = builder.sign(key, hashes.SHA256())\n    ok = verifies(\n        lambda: certificate.public_key().verify(\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            330,
+                            331,
+                            332,
+                            333,
+                            334
+                        ]
+                    }
+                ]
+            },
+            "name": "SHA256",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:de257158-9400-4adc-93d0-113f4d8370a2",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "padding": "oaep",
+                    "primitive": "hash",
+                    "variant": "SHA256"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "    public_key = private_key.public_key()\n\n    oaep = asym_padding.OAEP(\n        mgf=asym_padding.MGF1(hashes.SHA256()),\n        algorithm=hashes.SHA256(),\n        label=None,\n    )\n    ciphertext = public_key.encrypt(MESSAGE, oaep)\n    plaintext = private_key.decrypt(ciphertext, oaep)\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            235,
+                            236,
+                            237,
+                            238,
+                            239,
+                            240,
+                            241,
+                            242,
+                            243
+                        ]
+                    }
+                ]
+            },
+            "name": "SHA256-OAEP",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:32f8849d-b556-406d-9366-c714bfdb6f4d",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "cryptoFunctions": [
+                        "sign",
+                        "verify"
+                    ],
+                    "padding": "pkcs1v15",
+                    "primitive": "hash",
+                    "variant": "SHA256"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "\n    pkcs1 = asym_padding.PKCS1v15()\n    signature = private_key.sign(MESSAGE, pkcs1, hashes.SHA256())\n    ok = verifies(lambda: public_key.verify(signature, MESSAGE, pkcs1, hashes.SHA256()))\n    emit(\"S17\", \"RSA-3072 PKCS1v15\", f\"verify={flag(ok)}\")\n\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            253,
+                            254,
+                            255,
+                            256,
+                            257,
+                            258
+                        ]
+                    }
+                ]
+            },
+            "name": "SHA256-PKCS1V15",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:788e975d-e94a-4e69-b4e7-9fbb7bbc7ea3",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "padding": "unknown",
+                    "primitive": "hash",
+                    "variant": "SHA512"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "# S02: SHA-512, SHA3-256, BLAKE2b-512\ndef s02_sha2_sha3_blake2() -> None:\n    emit(\"S02\", \"SHA-512\", hashlib.sha512(MESSAGE).hexdigest())\n    emit(\"S02\", \"SHA3-256\", SHA3_256.new(MESSAGE).hexdigest())\n    blake = hashes.Hash(hashes.BLAKE2b(64))\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            89,
+                            90,
+                            91,
+                            92,
+                            93
+                        ]
+                    }
+                ]
+            },
+            "name": "SHA512",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:algorithm:135946af-6d9d-461a-8df3-13c10a20f82f",
+            "cryptoProperties": {
+                "algorithmProperties": {
+                    "padding": "unknown",
+                    "primitive": "unknown",
+                    "variant": "SHAKE"
+                },
+                "assetType": "algorithm",
+                "detectionContext": [
+                    {
+                        "additionalContext": "# S04: SHAKE128 extendable-output function\ndef s04_shake128() -> None:\n    xof = hashlib.shake_128(MESSAGE)\n    emit(\"S04\", \"SHAKE128\", xof.hexdigest(32))\n\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            107,
+                            108,
+                            109,
+                            110,
+                            111
+                        ]
+                    }
+                ]
+            },
+            "name": "SHAKE",
+            "type": "crypto-asset"
+        },
+        {
+            "bom-ref": "cryptography:private_key:e2ca667b-2110-449b-a1d4-010d6000eb91",
+            "cryptoProperties": {
+                "assetType": "relatedCryptoMaterial",
+                "detectionContext": [
+                    {
+                        "additionalContext": "    emit(\"S17\", \"RSA-3072 PSS\", f\"verify={flag(ok)}\")\n\n    pkcs1 = asym_padding.PKCS1v15()\n    signature = private_key.sign(MESSAGE, pkcs1, hashes.SHA256())\n    ok = verifies(lambda: public_key.verify(signature, MESSAGE, pkcs1, hashes.SHA256()))\n",
+                        "filePath": "crypto_showcase.py",
+                        "lineNumbers": [
+                            252,
+                            253,
+                            254,
+                            255,
+                            256
+                        ]
+                    }
+                ],
+                "relatedCryptoMaterialProperties": {
+                    "relatedCryptoMaterialType": "privateKey",
+                    "size": 3072
+                }
+            },
+            "name": "e2ca667b-2110-449b-a1d4-010d6000eb91",
+            "type": "crypto-asset"
+        }
+    ],
+    "dependencies": [
+        {
+            "dependsOn": [
+                "cryptography:algorithm:06fb1268-888a-47a9-aa16-2a1be8ab6a4f",
+                "cryptography:algorithm:0cdbad63-8544-404b-9239-2cbc68c6f7c1",
+                "cryptography:algorithm:135946af-6d9d-461a-8df3-13c10a20f82f",
+                "cryptography:algorithm:2310a9fe-ae55-4bbe-9a1a-e5a13f24cfc4",
+                "cryptography:algorithm:32f8849d-b556-406d-9366-c714bfdb6f4d",
+                "cryptography:algorithm:615e173e-b016-4e8e-b8ca-91338122eda1",
+                "cryptography:algorithm:6a1cb3ed-3ef9-49ce-8515-96d479034fbe",
+                "cryptography:algorithm:6fa437e7-5927-49cd-877c-eb50b681d07b",
+                "cryptography:algorithm:788e975d-e94a-4e69-b4e7-9fbb7bbc7ea3",
+                "cryptography:algorithm:7edc1059-c3ea-4e93-937a-1f85e13cf2fe",
+                "cryptography:algorithm:82cae16e-66b9-4eb8-8203-459c84b30942",
+                "cryptography:algorithm:9edd3862-2dbb-4620-8073-73de3cb624a8",
+                "cryptography:algorithm:a0dea14d-1fb0-4cdd-a15e-1d4a8b4393ae",
+                "cryptography:algorithm:aeb32feb-5718-49e2-ab0e-fc3fbd0ad8b3",
+                "cryptography:algorithm:b23ea679-a9d3-4d01-bd59-68ccdae2da3f",
+                "cryptography:algorithm:b6683c90-7278-4ece-8fe3-715e674a5567",
+                "cryptography:algorithm:bba71656-0e98-4910-bc5b-17a9b70e7de1",
+                "cryptography:algorithm:c18b001f-da9b-4c45-a139-3344e76895a8",
+                "cryptography:algorithm:de257158-9400-4adc-93d0-113f4d8370a2",
+                "cryptography:algorithm:efbd7817-da04-4cf6-8092-c78949b3b6a6"
+            ],
+            "ref": "80d29959-3e48-41d0-b8bb-9f66399cc508"
+        },
+        {
+            "dependsOn": [
+                "cryptography:private_key:4a1dd91d-9ac1-4547-802d-233642acbd3e"
+            ],
+            "ref": "cryptography:algorithm:06fb1268-888a-47a9-aa16-2a1be8ab6a4f"
+        },
+        {
+            "ref": "cryptography:algorithm:0cdbad63-8544-404b-9239-2cbc68c6f7c1"
+        },
+        {
+            "ref": "cryptography:algorithm:135946af-6d9d-461a-8df3-13c10a20f82f"
+        },
+        {
+            "ref": "cryptography:algorithm:2310a9fe-ae55-4bbe-9a1a-e5a13f24cfc4"
+        },
+        {
+            "ref": "cryptography:algorithm:32f8849d-b556-406d-9366-c714bfdb6f4d"
+        },
+        {
+            "ref": "cryptography:algorithm:615e173e-b016-4e8e-b8ca-91338122eda1"
+        },
+        {
+            "ref": "cryptography:algorithm:6a1cb3ed-3ef9-49ce-8515-96d479034fbe"
+        },
+        {
+            "ref": "cryptography:algorithm:6fa437e7-5927-49cd-877c-eb50b681d07b"
+        },
+        {
+            "ref": "cryptography:algorithm:788e975d-e94a-4e69-b4e7-9fbb7bbc7ea3"
+        },
+        {
+            "ref": "cryptography:algorithm:7edc1059-c3ea-4e93-937a-1f85e13cf2fe"
+        },
+        {
+            "ref": "cryptography:algorithm:82cae16e-66b9-4eb8-8203-459c84b30942"
+        },
+        {
+            "ref": "cryptography:algorithm:9edd3862-2dbb-4620-8073-73de3cb624a8"
+        },
+        {
+            "ref": "cryptography:algorithm:a0dea14d-1fb0-4cdd-a15e-1d4a8b4393ae"
+        },
+        {
+            "ref": "cryptography:algorithm:aeb32feb-5718-49e2-ab0e-fc3fbd0ad8b3"
+        },
+        {
+            "dependsOn": [
+                "cryptography:private_key:e2ca667b-2110-449b-a1d4-010d6000eb91"
+            ],
+            "ref": "cryptography:algorithm:b23ea679-a9d3-4d01-bd59-68ccdae2da3f"
+        },
+        {
+            "ref": "cryptography:algorithm:b6683c90-7278-4ece-8fe3-715e674a5567"
+        },
+        {
+            "ref": "cryptography:algorithm:bba71656-0e98-4910-bc5b-17a9b70e7de1"
+        },
+        {
+            "ref": "cryptography:algorithm:c18b001f-da9b-4c45-a139-3344e76895a8"
+        },
+        {
+            "ref": "cryptography:algorithm:de257158-9400-4adc-93d0-113f4d8370a2"
+        },
+        {
+            "ref": "cryptography:algorithm:efbd7817-da04-4cf6-8092-c78949b3b6a6"
+        },
+        {
+            "ref": "cryptography:private_key:4a1dd91d-9ac1-4547-802d-233642acbd3e"
+        },
+        {
+            "ref": "cryptography:private_key:e2ca667b-2110-449b-a1d4-010d6000eb91"
+        }
+    ],
+    "metadata": {
+        "component": {
+            "bom-ref": "80d29959-3e48-41d0-b8bb-9f66399cc508",
+            "name": "cbomfuse/baseline",
+            "type": "application"
+        },
+        "timestamp": "2026-11-13T23:31:00.516402+00:00",
+        "tools": [
+            {
+                "externalReferences": [
+                    {
+                        "type": "build-system",
+                        "url": "https://github.com/CycloneDX/cyclonedx-python-lib/actions"
+                    },
+                    {
+                        "type": "distribution",
+                        "url": "https://pypi.org/project/cyclonedx-python-lib/"
+                    },
+                    {
+                        "type": "documentation",
+                        "url": "https://cyclonedx.github.io/cyclonedx-python-lib/"
+                    },
+                    {
+                        "type": "issue-tracker",
+                        "url": "https://github.com/CycloneDX/cyclonedx-python-lib/issues"
+                    },
+                    {
+                        "type": "license",
+                        "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/LICENSE"
+                    },
+                    {
+                        "type": "release-notes",
+                        "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/CHANGELOG.md"
+                    },
+                    {
+                        "type": "vcs",
+                        "url": "https://github.com/CycloneDX/cyclonedx-python-lib"
+                    },
+                    {
+                        "type": "website",
+                        "url": "https://cyclonedx.org"
+                    }
+                ],
+                "name": "cyclonedx-python-lib",
+                "vendor": "CycloneDX",
+                "version": "4.2.2"
+            },
+            {
+                "name": "CodeQL",
+                "vendor": "GitHub",
+                "version": "2.27.4"
+            }
+        ]
+    },
+    "serialNumber": "urn:uuid:2ab29933-0c77-4abb-a815-30a96e4607eb",
+    "version": 1,
+    "$schema": "https://raw.githubusercontent.com/IBM/CBOM/main/bom-1.4-cbom-1.0.schema.json",
+    "bomFormat": "CBOM",
+    "specVersion": "1.4-cbom-1.0"
+}
